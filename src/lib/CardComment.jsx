@@ -35,7 +35,7 @@ export const CardComment = ({ excursions }) => {
       setOpinions(allOpinions);
     }
     fetchOpinions();
-  }, [opinions]);
+  }, []);
   function count(id, opinon) {
 
     const sortData = language === "es"

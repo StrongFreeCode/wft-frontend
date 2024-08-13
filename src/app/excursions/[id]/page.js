@@ -19,7 +19,7 @@ function DetailPage({ params }) {
       setOpinions(allOpinions);
     }
     fetchOpinions();
-  }, [opinions]);
+  }, []);
 
   const sortData = language === "es"
     ? excursionsData.excursions_es.sort((a, b) => a.precio_final - b.precio_final)

@@ -34,7 +34,8 @@ export const CardComponet = ({ excursions }) => {
       setOpinions(allOpinions);
     }
     fetchOpinions();
-  }, [opinions]);
+  }, []);
+
   function count(id, opinon) {
 
 
@@ -44,6 +45,7 @@ export const CardComponet = ({ excursions }) => {
     const result = calcularPromedioValoraciones(opinon, idNumero)
     return result
   }
+
   const Rate = (id) => {
     const test = opinions ? count(id, opinions) : 'no data'
     const rate = test.promedio

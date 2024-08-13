@@ -20,7 +20,7 @@ export default function Comments() {
       setOpinions(allOpinions);
     }
     fetchOpinions();
-  }, [opinions]);
+  }, []);
   return (
     <div className=" dark:text-slate-400 text-center text-slate-600 h-72">
       <h1 className="md:text-6xl text-2xl dark:text-white text-center uppercase py-6 font-bold ">

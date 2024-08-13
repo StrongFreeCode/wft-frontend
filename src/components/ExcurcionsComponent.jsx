@@ -23,17 +23,7 @@ export const ExcurcionsComponet = () => {
             <div className="text-center">
               <h1 className="text-2xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-cyan-400  font-bold mb-4">Wonderfulltime</h1>
 
-              <video width="1280" height="1024" controls preload="none">
-                <source src="/assets/video/promo1.mp4" type="video/mp4" />
-                <track
-                  src="/path/to/captions.vtt"
-                  kind="subtitles"
-                  srcLang="en"
-                  label="English"
-                  allowfullscreen
-                />
-                Your browser does not support the video tag.
-              </video>
+
             </div>
 
           </div>

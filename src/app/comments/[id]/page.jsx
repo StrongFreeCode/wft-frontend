@@ -15,7 +15,7 @@ export default function CommentPage({ params }) {
   const { id } = params;
   const [opinions, setOpinions] = useState([]);
   const [isLoading, setLoading] = useState(true)
-  useEffect(() => {
+  useEffect((id) => {
     async function fetchOpinions() {
       const pureData = await getOpinons();
       const allOpinions = pureData.filter(
@@ -25,7 +25,7 @@ export default function CommentPage({ params }) {
       setLoading(false)
     }
     fetchOpinions();
-  }, [opinions]);
+  }, []);
 
   function EmptyReviews() {
 
