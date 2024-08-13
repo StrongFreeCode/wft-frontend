@@ -1,0 +1,47 @@
+{
+  "about_es": [
+    {
+      "data": [
+        {
+          "mision": "Wonder fulltime fue creada con el objetivo de brindar toures por los principales centros turísticos del archipiélago cubano ,garantizando su logística y ofreciendo un servicio con calidad ,profesionalismo en el conocimiento de la Isla de Cuba .Cuenta con el personal calificado en las diferentes áreas de Servicio.",
+          "vision": "Satisfacemos las necesidades de nuestros clientes que visitan la isla con fines turísticos,mediante diferentes modalidades de toures a los principales centros más visitados de la isla de Cuba y los solicitados por los clientes como especializaciones .Contribuyendo al desarollo de la gestión turística y cumplimiento con los requisitos de calidad como lo exige la norma ISO 9001-2015."
+        }
+      ],
+      "valores": [
+        {
+          "aventura": "Promover la exploración intrépida y emocionante de destinos únicos y fuera de lo común.",
+          "sostenibilidad": "Compromiso con la protección y preservación del medio ambiente en cada destino que se visita.",
+          "compromiso": "Rigurosa ejecución de tareas, protegiendo los recursos de la empresa, el entorno natural y las personas, y velando por los servicios ofrecidos a la clientela.",
+          "lealtad": "Cumplimiento y devoción hacia la empresa, prácticas de trabajo, clientela y colegas.",
+          "respeto": "Tratar a los clientes, proveedores y comunidades locales con respeto y dignidad.",
+          "además": ", una buena declaración de misión y visión también es esencial para destacar en el mercado:",
+          "visión": "Enriquecer la vida de los clientes a través de experiencias de viaje excepcionales que no solo satisfagan sus expectativas, sino que las superen con creces. Convertir cada travesía en un viaje lleno de significado y descubrimiento, proporcionando atención personalizada y servicios de alta calidad que garanticen la satisfacción total de quienes confían en la empresa para dar vida a sus sueños de viajar. Ser los guardianes de las experiencias más preciadas de los viajeros.",
+          "misión": "Ser la gestora de viajes corporativos más confiable, innovadora y sostenible"
+        }
+      ]
+    }
+  ],
+  "about_en": [
+    {
+      "data": [
+        {
+          "mision": "Wonder fulltime was created with the aim of providing tours through the main tourist centers of the Cuban archipelago, guaranteeing its logistics and offering a service with quality, professionalism in the knowledge of the Island of Cuba. It has qualified personnel in the different areas of Service.",
+          "vision": "We satisfy the needs of our clients who visit the island for tourism purposes, through different modalities of tours to the main most visited centers of the island of Cuba and those requested by clients as specializations. Contributing to the development of tourism management and compliance with quality requirements as required by the ISO 9001-2015 standard."
+        }
+      ],
+      "valores": [
+        {
+          "aventura": "Promote intrepid and exciting exploration of unique and off-the-beaten-path destinations.",
+          "sostenibilidad": "Commitment to the protection and preservation of the environment at each destination visited.",
+          "compromiso": "Rigorous execution of tasks, protecting the resources of the company, the natural environment and people, and ensuring the services offered to the clientele.",
+          "lealtad": "Compliance and devotion to the company, work practices, clientele and colleagues.",
+          "respeto": "Treat customers, suppliers and local communities with respect and dignity.",
+          "además": "A good mission and vision statement is also essential to stand out in the market:",
+          "visión": "Enrich the lives of customers through exceptional travel experiences that not only meet their expectations, but far exceed them. Turn each journey into a journey full of meaning and discovery, providing personalized attention and high-quality services that guarantee the total satisfaction of those who trust the company to bring their travel dreams to life. Be the guardians of the most cherished experiences of travelers.",
+          "misión": "To be the most reliable, innovative and sustainable corporate travel manager"
+        }
+      ]
+    }
+    
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "excursions": [
+    {
+      "id": 1,
+      "nombre": "Viñales Valley",
+      "descripcion": "The Viñales Valley is one of the main tourist attractions on the Island of Cuba. Declared a world heritage site since 1999, it is located in the Sierra de los Órganos, the westernmost part of the Guaniguanico Mountain Range, province of Pinar del Río. The mogotes of Viñales are confirmed by limestone rocks to be the oldest in the world. archipelago with more than 120 million years and in which there are countless caves. It is an exceptional example of cultural landscape where one of the traditional forms of agriculture is tobacco, the best tobacco in the world. Visit the valley and enjoy its charms .",
+      "descripcion_resumen": "The Viñales valley is one of the main tourist attractions of the Island of Cuba.",
+      "fecha_inicio": "2024-04-15",
+      "hora_salida": "04:17:53",
+      "fecha_fin": "2024-05-21",
+      "hora_regreso": "22:45:40",
+      "precio_entrada": "1384.91",
+      "precio_final": 120,
+      "capacidad_max": 832,
+      "places": [
+        {
+          "id": 14,
+          "nombre": "Garden Viewpoint",
+          "time": "00:30:00",
+          "descripcion": "Garden Viewpoint.  ( You can see the mogotes ) .",
+          "images": [
+            { "id": 9, "url": "/assets/images/Mirador de los jardines/img-2068-1-1-large.jpg" },
+            { "id": 10, "url": "/assets/images/Mirador de los jardines/paisaje-natural-en-pinar-del-rio-cuba-83466-xl.jpg" },
+            { "id": 11, "url": "/assets/images/Mirador de los jardines/valle-vinales.jpg" },
+            { "id": 12, "url": "/assets/images/Mirador de los jardines/vista-desde-el-hotel.jpg" }
+            
+          ]
+        },
+        {
+          "id": 1,
+          "nombre": "Tobacco farm",
+          "time": "00:30:00",
+          "descripcion": "Tobacco farm. (The entire process from planting the tobacco to its production is explained by the farmers. In addition to being able to taste tobacco).",
+          "images": [
+            { "id": 5, "url": "/assets/images/Granja de tabaco/1ad9fe2c9be13ccd671c6481f216990e_XL.jpg"  },
+            { "id": 10, "url": "/assets/images/Granja de tabaco/images.jpg"  },
+            { "id": 12, "url": "/assets/images/Granja de tabaco/tobacco-plantation-in-the-vinales-valley-north-of-cuba-photo.jpg"  }
+          ]
+        }
+      ],
+      "images": [
+        { "id": 20, "url": "/img-2068-1-1-large.jpg"},
+        { "id": 13, "url": "/Varadero.jpg" }
+      ],
+      "created_at": "2024-04-14T12:39:05.000000Z",
+      "updated_at": "2024-04-14T12:39:05.000000Z"
+    },
+    {
+      "id": 2,
+      "nombre": "Zapata Swamp Excursion",
+      "descripcion": "Beautiful swamp ecosystem located in the province of the same name. Belonging to the province of Matanzas. The immersed biosphere reserve includes swamps, peat bogs, peat bogs, mangroves, coral reefs and forests that are home to a wide variety of species. Guamá is the first stop to make in the Cienaga National Park. In its architectural design, the place reproduces the Cuban aboriginal homes built on stilts in the waters of Laguna del Tesoro. The Bay of Pigs has great tourist attractions in its history since the invasion of the bay by the Americans occurred in 1961. There is also the fish cave, a beautiful place to visit and enjoy a natural view and dominate the fish. Discover more of the Zapata Peninsula",
+      "descripcion_resumen": "The Zapata swamp is a beautiful swampy ecosystem located in the province of the same name. Belonging to the province of Matanzas",
+      "fecha_inicio": "2024-06-14",
+      "hora_salida": "08:24:27",
+      "fecha_fin": "2024-06-14",
+      "hora_regreso": "18:41:19",
+      "precio_entrada": "3954.42",
+      "precio_final": 115,
+      "capacidad_max": 378,
+      "places": [
+        {
+          "id": 9,
+          "nombre":"Guamá" ,
+          "time": "00:30:00",
+          "descripcion": "Guamá visits the Taíno villages and crocodile farm.",
+          "images": [
+            { "id": 1, "url": "/assets/images/Guama/hotel-guama.jpg" },
+            { "id": 16, "url": "/assets/images/Guama/hotel-guama1.jpg" },
+            { "id": 19, "url": "/assets/images/Guama/la-laguna-del-tesoro.jpg" }
+          ]
+        },
+        {
+            "id": 14,
+            "nombre": "Bay of Pigs",
+            "time": "00:30:00",
+            "descripcion": " Enjoy one of the most beautiful beaches and for snorkeling, observing the coral reef is perfect.",
+            "images": [
+              { "id": 9, "url": "/assets/images/Bahía de cochinos/24832f8519fe310ff9daef8f1826dd61.jpg" },
+              { "id": 9, "url": "/assets/images/Bahía de cochinos/maxresdefault.jpg" }
+            ]
+          },
+          {
+            "id": 1,
+            "nombre": "Fish cave",
+            "time": "00:30:00",
+            "descripcion": "Beautiful cenote to enjoy its waters is explained by the farmers.",
+            "images": [
+              { "id": 5, "url": "/assets/images/Cueva de los peces/20220403_134445-r.jpg" },
+              { "id": 10, "url": "/assets/images/Cueva de los peces/20220403_135708.jpg" },
+              { "id": 12, "url": "/assets/images/Cueva de los peces/Cueva_de_los_peces-1290x540.jpg" }
+            ]
+          }
+      ],
+      "images": [
+        { "id": 15, "url": "/cienaga de zapata.jpg" }
+      ],
+      "created_at": "2024-04-14T12:39:05.000000Z",
+      "updated_at": "2024-04-14T12:39:05.000000Z"
+    },
+    {
+      "id": 3,
+      "nombre": "Trip to Trinidad",
+      "descripcion": "The colonial and historical city of Trinidad or Villa de la Santísima Trinidad is located in the central region of the island, specifically in the south of the Cuban province of Sancti Spíritus, and is the capital of the municipality of the same name. The main places to visit on this panoramic tour are:.",
+      "descripcion_resumen": "Excursion to Trinidad. The colonial and historical city of Trinidad or Villa de la Santísima Trinidad",
+      "fecha_inicio": "2024-11-09",
+      "hora_salida": "19:22:06",
+      "fecha_fin": "2022-11-09",
+      "hora_regreso": "16:52:22",
+      "precio_entrada": "37917.82",
+      "precio_final": 300,
+      "capacidad_max": 133,
+      "places": [
+        {
+          "id": 17,
+          "nombre": "Guamuhaya Archeology Museum",
+          "time": "00:30:00",
+          "descripcion": "Founded on May 15, 1976, it displays in eight permanent rooms objects belonging to the aboriginal communities that lived in the south-central region of the Island of Cuba during the pre-Columbian period, in addition to some valuable items from the colonial period of the city. and the nearby valleys. It is located in the old Casa de Padrón.",  
+          "images": [
+            { "id": 5, "url": "/assets/images/Museo de Arqueología Guamuhaya/cuba-1233131_1280-1024x768.jpg" },
+            { "id": 6, "url": "/assets/images/Museo de Arqueología Guamuhaya/museo-de-arqueologia.jpg" },
+            { "id": 7, "url": "/assets/images/Museo de Arqueología Guamuhaya/museo-de-arqueologia-guamuhaya.jpg" },
+            { "id": 8, "url": "/assets/images/Museo de Arqueología Guamuhaya/Trinidad.jpg" }
+          ]
+        },
+        {
+          "id": 13,
+          "nombre": "Romantic Museum",
+          "time": "00:30:00",
+          "descripcion": "The Romantic Museum occupies the former palace of the Counts of Casa Brunet, located in the Plaza Mayor of the city of Trinidad. Inaugurated on May 26, 1974, it was the first institution of its type created in the town, after the Triumph of the Revolution. The property is an example of domestic architecture from the 18th and 19th centuries...",
+          "images": [
+            { "id": 15, "url": "/assets/images/Museo Romántico/MuseoRomantico.jpg" },
+            { "id": 13, "url": "/assets/images/Museo Romántico/museo-romantico-palacio-brunet.jpg" },
+            { "id": 12, "url": "/assets/images/Museo Romántico/Trinidad-Museo-Romántico.jpg" },
+            { "id": 11, "url": "/assets/images/Museo Romántico/img-20180109-1553352.jpg" }
+          ]
+        },
+        {
+          "id": 8,
+          "nombre": "Museum of Colonial Architecture",
+          "time": "00:30:00",
+          "descripcion": "It has seven exhibition rooms and is located in the old house of the wealthy Sánchez Iznaga family, showing the architectural development of the city over the centuries..",
+          "images": [
+            { "id": 14, "url": "/assets/images/Museo de Arquitectura Colonial/02-1140.jpg" },
+            { "id": 17, "url": "/assets/images/Museo de Arquitectura Colonial/vista-interior.jpg" },
+            { "id": 16, "url": "/assets/images/Museo de Arquitectura Colonial/museo-de-arquitectura.jpg" },
+            { "id": 15, "url": "/assets/images/Museo de Arquitectura Colonial/images.jpg" }
+            
+          ]
+        }
+      ],
+      
+      "images": [
+        { "id": 3, "url": "/trinidad.jpg" }
+      ],
+      "created_at": "2024-04-14T12:39:06.000000Z",
+      "updated_at": "2024-04-14T12:39:06.000000Z"
+    }
+  ],
+  "links": {
+    "first": "http://127.0.0.1:8000/api/excursions?page=1",
+    "last": "http://127.0.0.1:8000/api/excursions?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "links": [
+      { "url": null, "label": "&laquo; Previous", "active": false },
+      {
+        "url": "http://127.0.0.1:8000/api/excursions?page=1",
+        "label": "1",
+        "active": true
+      },
+      { "url": null, "label": "Next &raquo;", "active": false }
+    ],
+    "path": "http://127.0.0.1:8000/api/excursions",
+    "per_page": 15,
+    "to": 6,
+    "total": 6
+  }
+}

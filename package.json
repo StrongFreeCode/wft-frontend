@@ -1,0 +1,33 @@
+{
+  "name": "website_app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "1.7.18",
+    "@heroicons/react": "2.1.1",
+    "@paypal/checkout-server-sdk": "1.0.3",
+    "@paypal/react-paypal-js": "8.5.0",
+    "@supabase/supabase-js": "2.43.4",
+    "flowbite-react": "0.7.2",
+    "framer-motion": "11.0.8",
+    "next": "14.1.0",
+    "react": "18",
+    "react-dom": "18",
+    "react-icons": "5.0.1",
+    "react-type-animation": "3.2.0",
+    "tw-elements-react": "1.0.0-alpha2"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.0.1",
+    "eslint": "8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "8",
+    "tailwindcss": "3.3.0"
+  }
+}

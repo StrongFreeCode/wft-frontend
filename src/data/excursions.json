@@ -1,0 +1,186 @@
+{
+  "excursions": [
+    {
+      "id": 1,
+      "nombre": "Valle de viñales",
+      "url": "valle-de-viñales",
+      "descripcion": "El valle de viñales es una de las principales atracciones turística de la Isla de Cuba. Declarado patrimonio mundial de la humanidad desde el año 1999,se encuentra ubicado en la Sierra de los Órganos,la parte más occidental de la Cordillera de Guaniguanico,provincia de Pinar del Río.Los mogotes de viñales están confirmandos por rocas calizas los más antiguos del archipiélago con más de 120 millones de años y en los que se encuentran innumerables cuevas.Es un ejemplo excepcional de paisaje cultural donde una de las formas tradicionales de agricultura es el tabaco,  El mejor tabaco del mundo.Visite El valle y disfrute de sus encantos .",
+      "descripcion_resumen": "El valle de viñales es una de las principales atracciones turística de la Isla de Cuba.",
+      "fecha_inicio": "2024-04-15",
+      "hora_salida": "04:17:53",
+      "fecha_fin": "2024-05-21",
+      "hora_regreso": "22:45:40",
+      "precio_entrada": "1384.91",
+      "precio_final": 120,
+      "capacidad_max": 832,
+      "places": [
+        {
+          "id": 14,
+          "nombre": "Mirador de los jardines",
+          "time": "00:30:00",
+          "descripcion": "Mirador de los jardines.  ( se pueden apreciar los mogotes ) .",
+          "images": [
+            { "id": 9, "url": "/assets/images/Mirador de los jardines/img-2068-1-1-large.jpg" },
+            { "id": 10, "url": "/assets/images/Mirador de los jardines/paisaje-natural-en-pinar-del-rio-cuba-83466-xl.jpg" },
+            { "id": 11, "url": "/assets/images/Mirador de los jardines/valle-vinales.jpg" },
+            { "id": 12, "url": "/assets/images/Mirador de los jardines/vista-desde-el-hotel.jpg" }
+            
+          ]
+        },
+        {
+          "id": 1,
+          "nombre": "Granja de tabaco",
+          "time": "00:30:00",
+          "descripcion": "Granja de tabaco. (todo el proceso desde la plantación del tabaco hasta su elaboración se explica por los granjeros. Además de poder degustar el tabaco).",
+          "images": [
+            { "id": 5, "url": "/assets/images/Granja de tabaco/1ad9fe2c9be13ccd671c6481f216990e_XL.jpg"  },
+            { "id": 10, "url": "/assets/images/Granja de tabaco/images.jpg"  },
+            { "id": 12, "url": "/assets/images/Granja de tabaco/tobacco-plantation-in-the-vinales-valley-north-of-cuba-photo.jpg"  }
+          ]
+        }
+      ],
+      "images": [
+        { "id": 20, "url": "/img-2068-1-1-large.jpg"},
+        { "id": 13, "url": "/Varadero.jpg" }
+      ],
+      "created_at": "2024-04-14T12:39:05.000000Z",
+      "updated_at": "2024-04-14T12:39:05.000000Z"
+    },
+    {
+      "id": 2,
+      "nombre": "Excursión ciénaga de Zapata",
+      "url": "excursión-ciénaga-de-zapata",
+      "descripcion": "Hermoso ecosistema pantanoso ubicado en la provincia homónima.Perteneciente a la provincia de Matanzas. La inmersa reserva de la biosfera incluye pantanos,turberas, turberas, manglares, arrecifes de coral y bosques que albergan un gran variedad de especies. Guamá es la primera parada a realizar en el parque nacional de la cienaga. En su diseño arquitectónico el lugar reproduce las viviendas aborígenes cubanas construidas sobre pilotes en las aguas de la Laguna del Tesoro.La bahía de cochinos tiene grandes atracciones turística por si historia ya que ocurrió la invasión a la bahía por los estadounidenses en el año 1961. Además se encuentra la cueva de los peces ,hermoso lugar para visitar y disfrutar de una vista natural y dominar a los peces. Descubra más de la península de Zapata",
+      "descripcion_resumen": "La ciénaga de Zapata es un hermoso ecosistema pantanoso ubicado en la provincia homónima.Perteneciente a la provincia de Matanzas",
+      "fecha_inicio": "2024-06-14",
+      "hora_salida": "08:24:27",
+      "fecha_fin": "2024-06-14",
+      "hora_regreso": "18:41:19",
+      "precio_entrada": "3954.42",
+      "precio_final": 115,
+      "capacidad_max": 378,
+      "places": [
+        {
+          "id": 9,
+          "nombre":"Guamá " ,
+          "time": "00:30:00",
+          "descripcion": "Guamá visita a la aldeas taínas y criadero de cocodrilo.",
+          "images": [
+            { "id": 1, "url": "/assets/images/Guama/hotel-guama.jpg" },
+            { "id": 16, "url": "/assets/images/Guama/hotel-guama1.jpg" },
+            { "id": 19, "url": "/assets/images/Guama/la-laguna-del-tesoro.jpg" }
+          ]
+        },
+        {
+            "id": 14,
+            "nombre": "Bahía de cochinos",
+            "time": "00:30:00",
+            "descripcion": " Disfrute de una de las playas más preciosas y para realizar snorkeling,observar el arrecife coralino es perfecto.",
+            "images": [
+              { "id": 9, "url": "/assets/images/Bahía de cochinos/24832f8519fe310ff9daef8f1826dd61.jpg" },
+              { "id": 9, "url": "/assets/images/Bahía de cochinos/maxresdefault.jpg" }
+            ]
+          },
+          {
+            "id": 1,
+            "nombre": "Cueva de los peces",
+            "time": "00:30:00",
+            "descripcion": "Precioso cenote para disfrutar de sus aguas se explica por los granjeros.",
+            "images": [
+              { "id": 5, "url": "/assets/images/Cueva de los peces/20220403_134445-r.jpg" },
+              { "id": 10, "url": "/assets/images/Cueva de los peces/20220403_135708.jpg" },
+              { "id": 12, "url": "/assets/images/Cueva de los peces/Cueva_de_los_peces-1290x540.jpg" }
+            ]
+          }
+      ],
+      "images": [
+        { "id": 15, "url": "/cienaga de zapata.jpg" }
+      ],
+      "created_at": "2024-04-14T12:39:05.000000Z",
+      "updated_at": "2024-04-14T12:39:05.000000Z"
+    },
+    {
+      "id": 3,
+      "nombre": "Excursión a Trinidad",
+      "url": "excursión-a-trinidad",
+      "descripcion": "La ciudad colonial e histórica de Trinidad o Villa de la Santísima Trinidad se halla ubicada en la región central de la isla, específicamente en el sur de la provincia cubana de Sancti Spíritus, y es la capital del municipio del mismo nombre. Los principales lugares a visitar en este tour panorámico son:.",
+      "descripcion_resumen": "Excursión a Trinidad.La ciudad colonial e histórica de Trinidad o Villa de la Santísima Trinidad ",
+      "fecha_inicio": "2024-11-09",
+      "hora_salida": "19:22:06",
+      "fecha_fin": "2022-11-09",
+      "hora_regreso": "16:52:22",
+      "precio_entrada": "37917.82",
+      "precio_final": 300,
+      "capacidad_max": 133,
+      "places": [
+        {
+          "id": 17,
+          "nombre": "Museo de Arqueología Guamuhaya",
+          "time": "00:30:00",
+          "descripcion": "Fundado el 15 de mayo de 1976, muestra en ocho salas permanentes objetos pertenecientes a las comunidades aborígenes que vivían en la región centro-sur de la Isla de Cuba durante la etapa precolombina, además de algunos artículos valiosos de la etapa colonial, de la ciudad y los valles cercanos. Se encuentra ubicado en la antigua Casa de Padrón.",
+          "images": [
+            { "id": 5, "url": "/assets/images/Museo de Arqueología Guamuhaya/cuba-1233131_1280-1024x768.jpg" },
+            { "id": 6, "url": "/assets/images/Museo de Arqueología Guamuhaya/museo-de-arqueologia.jpg" },
+            { "id": 7, "url": "/assets/images/Museo de Arqueología Guamuhaya/museo-de-arqueologia-guamuhaya.jpg" },
+            { "id": 8, "url": "/assets/images/Museo de Arqueología Guamuhaya/Trinidad.jpg" }
+          ]
+        },
+        {
+          "id": 13,
+          "nombre": "Museo Romántico",
+          "time": "00:30:00",
+          "descripcion": "El Museo Romántico ocupa el antiguo palacio de los Condes de Casa Brunet,situado en la Plaza Mayor de la ciudad de Trinidad. Inaugurado el 26 de mayo de 1974, fue la primera institución de su tipo creada en la localidad, después del Triunfo de la Revolución. El inmueble constituye un ejemplo de la arquitectura doméstica de los siglos XVIII y XIX..",
+          "images": [
+            { "id": 15, "url": "/assets/images/Museo Romántico/MuseoRomantico.jpg" },
+            { "id": 13, "url": "/assets/images/Museo Romántico/museo-romantico-palacio-brunet.jpg" },
+            { "id": 12, "url": "/assets/images/Museo Romántico/Trinidad-Museo-Romántico.jpg" },
+            { "id": 11, "url": "/assets/images/Museo Romántico/img-20180109-1553352.jpg" }
+          ]
+        },
+        {
+          "id": 8,
+          "nombre": "Museo de Arquitectura Colonial",
+          "time": "00:30:00",
+          "descripcion": "Posee siete salas de exposiciones y está ubicado en la antigua casa de la acaudalada familia Sánchez Iznaga, muestra el desarrollo arquitectónico de la ciudad en el transcurso de los siglos.",
+          "images": [
+            { "id": 14, "url": "/assets/images/Museo de Arquitectura Colonial/02-1140.jpg" },
+            { "id": 17, "url": "/assets/images/Museo de Arquitectura Colonial/vista-interior.jpg" },
+            { "id": 16, "url": "/assets/images/Museo de Arquitectura Colonial/museo-de-arquitectura.jpg" },
+            { "id": 15, "url": "/assets/images/Museo de Arquitectura Colonial/images.jpg" }
+            
+          ]
+        }
+      ],
+      
+      "images": [
+        { "id": 3, "url": "/trinidad.jpg" }
+      ],
+      "created_at": "2024-04-14T12:39:06.000000Z",
+      "updated_at": "2024-04-14T12:39:06.000000Z"
+    }
+  ],
+  "links": {
+    "first": "http://127.0.0.1:8000/api/excursions?page=1",
+    "last": "http://127.0.0.1:8000/api/excursions?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "links": [
+      { "url": null, "label": "&laquo; Previous", "active": false },
+      {
+        "url": "http://127.0.0.1:8000/api/excursions?page=1",
+        "label": "1",
+        "active": true
+      },
+      { "url": null, "label": "Next &raquo;", "active": false }
+    ],
+    "path": "http://127.0.0.1:8000/api/excursions",
+    "per_page": 15,
+    "to": 6,
+    "total": 6
+  }
+}

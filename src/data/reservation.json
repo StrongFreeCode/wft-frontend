@@ -1,0 +1,19 @@
+{
+    "data": [
+      {
+        "client": {
+          "id": 5,
+          "nombre": "Alysa Cartwright",
+          "direccion": "22834 Carroll Islands\nEast Dennisborough, NJ 68804-6647",
+          "telefono": "+1-918-865-6594",
+          "email": "zachary65@example.org",
+          "created_at": "2024-04-14T12:39:05.000000Z",
+          "updated_at": "2024-04-14T12:39:05.000000Z"
+        },
+        "fecha_reserva": "2014-08-17 16:21:39",
+        "cantidad_personas": 46,
+        "estado": "cancelada",
+        "excursion": 1
+      }
+    ]
+  }
