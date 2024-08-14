@@ -4,10 +4,11 @@ import about from "../../data/about.json";
 import { Caveat, Inter, Roboto } from "next/font/google";
 import { Valores } from "@/components/Valores";
 import { useGlobalContext } from "@/helpers/Global";
+import { useEffect, useState } from "react";
+import { Spinner } from "flowbite-react";
 
 const inter = Inter({
   weight: ["700"],
-  //: ["italic", "normal"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -21,10 +22,28 @@ const roboto = Roboto({
   weight: "700",
   subsets: ["latin"],
 });
+
 export default function Example() {
-  const { language } = useGlobalContext()
-  const aboutData = language === 'es' ? about.about_es[0].data[0] : about.about_en[0].data[0];
-  const valoresData = language === 'es' ? about.about_es[0].valores[0] : about.about_en[0].valores[0];
+  const { language } = useGlobalContext();
+  const [aboutData, setAboutData] = useState(null);
+  const [valoresData, setValoresData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const data = language === 'es' ? about.about_es[0].data[0] : about.about_en[0].data[0];
+    const valores = language === 'es' ? about.about_es[0].valores[0] : about.about_en[0].valores[0];
+    setAboutData(data);
+    setValoresData(valores);
+    setIsLoading(false);
+  }, [language]);
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <Spinner size="xl" />
+      </div>
+    );
+  }
 
   return (
     <main className={`text-slate-500 mb-8`}>
