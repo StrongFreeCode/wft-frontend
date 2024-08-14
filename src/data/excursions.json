@@ -20,11 +20,22 @@
           "time": "00:30:00",
           "descripcion": "Mirador de los jardines.  ( se pueden apreciar los mogotes ) .",
           "images": [
-            { "id": 9, "url": "/assets/images/Mirador de los jardines/img-2068-1-1-large.jpg" },
-            { "id": 10, "url": "/assets/images/Mirador de los jardines/paisaje-natural-en-pinar-del-rio-cuba-83466-xl.jpg" },
-            { "id": 11, "url": "/assets/images/Mirador de los jardines/valle-vinales.jpg" },
-            { "id": 12, "url": "/assets/images/Mirador de los jardines/vista-desde-el-hotel.jpg" }
-            
+            {
+              "id": 9,
+              "url": "/assets/images/Mirador de los jardines/img-2068-1-1-large.jpg"
+            },
+            {
+              "id": 10,
+              "url": "/assets/images/Mirador de los jardines/paisaje-natural-en-pinar-del-rio-cuba-83466-xl.jpg"
+            },
+            {
+              "id": 11,
+              "url": "/assets/images/Mirador de los jardines/valle-vinales.jpg"
+            },
+            {
+              "id": 12,
+              "url": "/assets/images/Mirador de los jardines/vista-desde-el-hotel.jpg"
+            }
           ]
         },
         {
@@ -33,14 +44,20 @@
           "time": "00:30:00",
           "descripcion": "Granja de tabaco. (todo el proceso desde la plantación del tabaco hasta su elaboración se explica por los granjeros. Además de poder degustar el tabaco).",
           "images": [
-            { "id": 5, "url": "/assets/images/Granja de tabaco/1ad9fe2c9be13ccd671c6481f216990e_XL.jpg"  },
-            { "id": 10, "url": "/assets/images/Granja de tabaco/images.jpg"  },
-            { "id": 12, "url": "/assets/images/Granja de tabaco/tobacco-plantation-in-the-vinales-valley-north-of-cuba-photo.jpg"  }
+            {
+              "id": 5,
+              "url": "/assets/images/Granja de tabaco/1ad9fe2c9be13ccd671c6481f216990e_XL.jpg"
+            },
+            { "id": 10, "url": "/assets/images/Granja de tabaco/images.jpg" },
+            {
+              "id": 12,
+              "url": "/assets/images/Granja de tabaco/tobacco-plantation-in-the-vinales-valley-north-of-cuba-photo.jpg"
+            }
           ]
         }
       ],
       "images": [
-        { "id": 20, "url": "/img-2068-1-1-large.jpg"},
+        { "id": 20, "url": "/img-2068-1-1-large.jpg" },
         { "id": 13, "url": "/Varadero.jpg" }
       ],
       "created_at": "2024-04-14T12:39:05.000000Z",
@@ -62,7 +79,7 @@
       "places": [
         {
           "id": 9,
-          "nombre":"Guamá " ,
+          "nombre": "Guamá ",
           "time": "00:30:00",
           "descripcion": "Guamá visita a la aldeas taínas y criadero de cocodrilo.",
           "images": [
@@ -72,30 +89,43 @@
           ]
         },
         {
-            "id": 14,
-            "nombre": "Bahía de cochinos",
-            "time": "00:30:00",
-            "descripcion": " Disfrute de una de las playas más preciosas y para realizar snorkeling,observar el arrecife coralino es perfecto.",
-            "images": [
-              { "id": 9, "url": "/assets/images/Bahía de cochinos/24832f8519fe310ff9daef8f1826dd61.jpg" },
-              { "id": 9, "url": "/assets/images/Bahía de cochinos/maxresdefault.jpg" }
-            ]
-          },
-          {
-            "id": 1,
-            "nombre": "Cueva de los peces",
-            "time": "00:30:00",
-            "descripcion": "Precioso cenote para disfrutar de sus aguas se explica por los granjeros.",
-            "images": [
-              { "id": 5, "url": "/assets/images/Cueva de los peces/20220403_134445-r.jpg" },
-              { "id": 10, "url": "/assets/images/Cueva de los peces/20220403_135708.jpg" },
-              { "id": 12, "url": "/assets/images/Cueva de los peces/Cueva_de_los_peces-1290x540.jpg" }
-            ]
-          }
+          "id": 14,
+          "nombre": "Bahía de cochinos",
+          "time": "00:30:00",
+          "descripcion": " Disfrute de una de las playas más preciosas y para realizar snorkeling,observar el arrecife coralino es perfecto.",
+          "images": [
+            {
+              "id": 9,
+              "url": "/assets/images/Bahía de cochinos/24832f8519fe310ff9daef8f1826dd61.jpg"
+            },
+            {
+              "id": 9,
+              "url": "/assets/images/Bahía de cochinos/maxresdefault.jpg"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "nombre": "Cueva de los peces",
+          "time": "00:30:00",
+          "descripcion": "Precioso cenote para disfrutar de sus aguas se explica por los granjeros.",
+          "images": [
+            {
+              "id": 5,
+              "url": "/assets/images/Cueva de los peces/20220403_134445-r.jpg"
+            },
+            {
+              "id": 10,
+              "url": "/assets/images/Cueva de los peces/20220403_135708.jpg"
+            },
+            {
+              "id": 12,
+              "url": "/assets/images/Cueva de los peces/Cueva_de_los_peces-1290x540.jpg"
+            }
+          ]
+        }
       ],
-      "images": [
-        { "id": 15, "url": "/cienaga de zapata.jpg" }
-      ],
+      "images": [{ "id": 15, "url": "/cienaga de zapata.jpg" }],
       "created_at": "2024-04-14T12:39:05.000000Z",
       "updated_at": "2024-04-14T12:39:05.000000Z"
     },
@@ -119,10 +149,22 @@
           "time": "00:30:00",
           "descripcion": "Fundado el 15 de mayo de 1976, muestra en ocho salas permanentes objetos pertenecientes a las comunidades aborígenes que vivían en la región centro-sur de la Isla de Cuba durante la etapa precolombina, además de algunos artículos valiosos de la etapa colonial, de la ciudad y los valles cercanos. Se encuentra ubicado en la antigua Casa de Padrón.",
           "images": [
-            { "id": 5, "url": "/assets/images/Museo de Arqueología Guamuhaya/cuba-1233131_1280-1024x768.jpg" },
-            { "id": 6, "url": "/assets/images/Museo de Arqueología Guamuhaya/museo-de-arqueologia.jpg" },
-            { "id": 7, "url": "/assets/images/Museo de Arqueología Guamuhaya/museo-de-arqueologia-guamuhaya.jpg" },
-            { "id": 8, "url": "/assets/images/Museo de Arqueología Guamuhaya/Trinidad.jpg" }
+            {
+              "id": 5,
+              "url": "/assets/images/Museo de Arqueología Guamuhaya/cuba-1233131_1280-1024x768.jpg"
+            },
+            {
+              "id": 6,
+              "url": "/assets/images/Museo de Arqueología Guamuhaya/museo-de-arqueologia.jpg"
+            },
+            {
+              "id": 7,
+              "url": "/assets/images/Museo de Arqueología Guamuhaya/museo-de-arqueologia-guamuhaya.jpg"
+            },
+            {
+              "id": 8,
+              "url": "/assets/images/Museo de Arqueología Guamuhaya/Trinidad.jpg"
+            }
           ]
         },
         {
@@ -131,10 +173,22 @@
           "time": "00:30:00",
           "descripcion": "El Museo Romántico ocupa el antiguo palacio de los Condes de Casa Brunet,situado en la Plaza Mayor de la ciudad de Trinidad. Inaugurado el 26 de mayo de 1974, fue la primera institución de su tipo creada en la localidad, después del Triunfo de la Revolución. El inmueble constituye un ejemplo de la arquitectura doméstica de los siglos XVIII y XIX..",
           "images": [
-            { "id": 15, "url": "/assets/images/Museo Romántico/MuseoRomantico.jpg" },
-            { "id": 13, "url": "/assets/images/Museo Romántico/museo-romantico-palacio-brunet.jpg" },
-            { "id": 12, "url": "/assets/images/Museo Romántico/Trinidad-Museo-Romántico.jpg" },
-            { "id": 11, "url": "/assets/images/Museo Romántico/img-20180109-1553352.jpg" }
+            {
+              "id": 15,
+              "url": "/assets/images/Museo Romántico/MuseoRomantico.jpg"
+            },
+            {
+              "id": 13,
+              "url": "/assets/images/Museo Romántico/museo-romantico-palacio-brunet.jpg"
+            },
+            {
+              "id": 12,
+              "url": "/assets/images/Museo Romántico/Trinidad-Museo-Romántico.jpg"
+            },
+            {
+              "id": 11,
+              "url": "/assets/images/Museo Romántico/img-20180109-1553352.jpg"
+            }
           ]
         },
         {
@@ -143,18 +197,27 @@
           "time": "00:30:00",
           "descripcion": "Posee siete salas de exposiciones y está ubicado en la antigua casa de la acaudalada familia Sánchez Iznaga, muestra el desarrollo arquitectónico de la ciudad en el transcurso de los siglos.",
           "images": [
-            { "id": 14, "url": "/assets/images/Museo de Arquitectura Colonial/02-1140.jpg" },
-            { "id": 17, "url": "/assets/images/Museo de Arquitectura Colonial/vista-interior.jpg" },
-            { "id": 16, "url": "/assets/images/Museo de Arquitectura Colonial/museo-de-arquitectura.jpg" },
-            { "id": 15, "url": "/assets/images/Museo de Arquitectura Colonial/images.jpg" }
-            
+            {
+              "id": 14,
+              "url": "/assets/images/Museo de Arquitectura Colonial/02-1140.jpg"
+            },
+            {
+              "id": 17,
+              "url": "/assets/images/Museo de Arquitectura Colonial/vista-interior.jpg"
+            },
+            {
+              "id": 16,
+              "url": "/assets/images/Museo de Arquitectura Colonial/museo-de-arquitectura.jpg"
+            },
+            {
+              "id": 15,
+              "url": "/assets/images/Museo de Arquitectura Colonial/images.jpg"
+            }
           ]
         }
       ],
-      
-      "images": [
-        { "id": 3, "url": "/trinidad.jpg" }
-      ],
+
+      "images": [{ "id": 3, "url": "/trinidad.jpg" }],
       "created_at": "2024-04-14T12:39:06.000000Z",
       "updated_at": "2024-04-14T12:39:06.000000Z"
     }

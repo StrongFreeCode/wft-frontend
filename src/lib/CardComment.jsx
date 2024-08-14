@@ -8,6 +8,7 @@ import excursionsData from "../data/excursions_lang.json"
 import { calcularPromedioValoraciones } from "@/helpers/promedio";
 import ModalComponent from "@/components/ModalComponent";
 import { FaCommentAlt } from "react-icons/fa";
+import useOpinions from "@/hook/useOpinions";
 
 const customTheme = {
   root: {
@@ -26,17 +27,8 @@ const customTheme = {
 
 export const CardComment = ({ excursions }) => {
   const { language } = useGlobalContext();
-  const [opinions, setOpinions] = useState();
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    async function fetchOpinions() {
-      const allOpinions = await getOpinons();
-      setOpinions(allOpinions);
-      setIsLoading(false);
-    }
-    fetchOpinions();
-  }, []);
+  const { opinions, isLoading } = useOpinions()
 
   function count(id, opinon) {
     const sortData = language === "es"
@@ -74,7 +66,7 @@ export const CardComment = ({ excursions }) => {
           theme={customTheme}
           key={excursion.id}
         >
-          <Link href={"/excursions/" + excursion.id}>
+          <Link href={"/excursions/" + excursion.slug}>
             <div className="flex content-center justify-between">
               <h1 className="text-lg font-semibold">{excursion.nombre}</h1>
             </div>
@@ -95,7 +87,7 @@ export const CardComment = ({ excursions }) => {
             />
           </div>
           <Link
-            href={"/comments/" + excursion.id}
+            href={"/comments/" + excursion.slug}
             className="rounded-lg bg-cyan-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
           >
             {language == "es" ? "Ver reseñas" : "See review"}

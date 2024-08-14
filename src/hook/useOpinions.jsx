@@ -8,10 +8,12 @@ export default function useOpinions(id) {
 
     useEffect(() => {
         async function fetchOpinions() {
+            setLoading(true);
+            setError(null); // Resetear el error antes de cada fetch
             try {
                 const pureData = await getOpinons();
                 const allOpinions = id
-                    ? pureData.filter((pureData) => pureData.excursion_id === Number(id))
+                    ? pureData.filter((opinion) => opinion.excursion_id === Number(id))
                     : pureData;
                 setOpinions(allOpinions);
             } catch (err) {
@@ -23,5 +25,5 @@ export default function useOpinions(id) {
         fetchOpinions();
     }, [id]);
 
-    return { opinions, isLoading, error };
+    return { opinions, isLoading, error, setOpinions };
 }

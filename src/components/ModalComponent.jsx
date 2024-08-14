@@ -25,7 +25,7 @@ async function createOpinions(params) {
   if (error) throw error;
 }
 
-export default function ModalComponent({ idDatos, texto }) {
+export default function ModalComponent({ idDatos, texto, onAddOpinion }) {
   const { language } = useGlobalContext();
 
   const [openModal, setOpenModal] = useState(false);
@@ -39,17 +39,26 @@ export default function ModalComponent({ idDatos, texto }) {
     setComment("");
     setSelectedStar(0);
   }
+
   const handleClick = (star) => {
     setSelectedStar(star === selectedStar ? 0 : star);
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const fields = Object.fromEntries(new window.FormData(event.target));
     fields.rate = Number(fields.rate);
     fields.idComment = Number(fields.idComment);
 
-    createOpinions(fields);
+    const newOpinion = {
+      email: fields.email,
+      text: fields.comment,
+      puntuacion: fields.rate,
+      excursion_id: fields.idComment,
+      created_at: new Date().toISOString(),
+    };
 
+    await createOpinions(fields);
+    onAddOpinion && onAddOpinion(newOpinion); // Llamar a la función onAddOpinion si está definida
     onCloseModal();
   };
 
