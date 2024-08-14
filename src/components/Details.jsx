@@ -6,6 +6,9 @@ import { FaClock, FaCommentAlt } from "react-icons/fa";
 import { services } from "@/data/servicios.json";
 import Link from "next/link";
 import ModalComponent from "./ModalComponent";
+
+
+
 export const Details = ({ datos, resultado }) => {
   const { language } = useGlobalContext();
   const whatsapp = {
@@ -36,7 +39,7 @@ export const Details = ({ datos, resultado }) => {
                   <span className="ml-3">
                     {resultado.promedio.toFixed(2)}/
                     <Link
-                      href={`/comments/${datos.id}`}
+                      href={`/comments/${datos.slug}`}
                       className="underline hover:text-blue-600"
                     >
                       {resultado.contadorValoraciones}
