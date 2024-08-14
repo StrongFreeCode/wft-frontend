@@ -8,34 +8,32 @@ import { useEffect, useState } from "react";
 import Loading from "@/app/loading";
 import { redirect } from "next/navigation";
 import { getOpinons } from "@/services/comment";
+import useOpinions from "@/hook/useOpinions";
 
 function DetailPage({ params }) {
   const { language } = useGlobalContext();
-  const [opinions, setOpinions] = useState();
   const [excursion, setExcursion] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const { opinions, isLoading, setLoading } = useOpinions()
+
+  const getIdExcursion = (params) => {
+    const excursionDataGet = excursionsData
+    const filtersBySlug = excursionDataGet.excursions_es.find(obj => obj.slug = params.slug)
+    const id = filtersBySlug ? filtersBySlug.id : null;
+    return id
+  }
+  const idExcursion = getIdExcursion(params)
 
   useEffect(() => {
-    async function fetchOpinions() {
-      const allOpinions = await getOpinons();
-      setOpinions(allOpinions);
-    }
-    fetchOpinions();
+
+    const dataExcursions = language === 'es' ? excursionsData.excursions_es : excursionsData.excursions_en
+    const objetExcursions = dataExcursions[idExcursion]
+
+    setExcursion(objetExcursions)
+
   }, []);
 
-  useEffect(() => {
-    const sortData = language === "es"
-      ? excursionsData.excursions_es.sort((a, b) => a.precio_final - b.precio_final)
-      : excursionsData.excursions_en.sort((a, b) => a.precio_final - b.precio_final);
 
-    const endData = sortData.find(obj => obj.slug === params.slug);
-    if (!endData) redirect('/');
-
-    setExcursion(endData);
-    setLoading(false);
-  }, [language, params.slug]);
-
-  if (loading) {
+  if (isLoading) {
     return <Loading />;
   }
 
@@ -48,8 +46,8 @@ function DetailPage({ params }) {
   return (
     <>
       {opinions ? <Details datos={excursion} resultado={result} /> : <Loading />}
-      {excursion.places.map((i, index) => (
-        <Places key={index} datos={i} />
+      {excursion.places.map((i) => (
+        <Places key={crypto.randomUUID()} datos={i} />
       ))}
     </>
   );
