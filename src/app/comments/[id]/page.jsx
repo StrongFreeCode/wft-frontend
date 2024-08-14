@@ -4,6 +4,7 @@ import DataComment from "@/components/DataComment";
 import DataCommentlist from "@/components/DataCommentlist";
 import ModalComponent from "@/components/ModalComponent";
 import { useGlobalContext } from "@/helpers/Global";
+import useOpinions from "@/hook/useOpcions";
 import { getOpinons } from "@/services/comment";
 import { Label, Spinner, TextInput, Textarea } from "flowbite-react";
 import Link from "next/link";
@@ -13,19 +14,12 @@ import { HiMail } from "react-icons/hi";
 export default function CommentPage({ params }) {
   const { language } = useGlobalContext()
   const { id } = params;
-  const [opinions, setOpinions] = useState([]);
-  const [isLoading, setLoading] = useState(true)
-  useEffect((id) => {
-    async function fetchOpinions() {
-      const pureData = await getOpinons();
-      const allOpinions = pureData.filter(
-        (pureData) => pureData.excursion_id === Number(id)
-      );
-      setOpinions(allOpinions);
-      setLoading(false)
-    }
-    fetchOpinions();
-  }, []);
+  /*  const [opinions, setOpinions] = useState([]);
+   const [isLoading, setLoading] = useState(true) */
+
+  const { opinions, isLoading } = useOpinions(id)
+
+
 
   function EmptyReviews() {
 
