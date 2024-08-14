@@ -25,5 +25,5 @@ export default function useOpinions(id) {
         fetchOpinions();
     }, [id]);
 
-    return { opinions, isLoading, error, setOpinions };
+    return { opinions, isLoading, error, setOpinions, setLoading };
 }

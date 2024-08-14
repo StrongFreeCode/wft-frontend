@@ -38,7 +38,7 @@ export const Places = ({ datos }) => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-1 lg:grid-cols-5 ">
             {datos.images.map((i) => (
-              <div key={i.id} className="flex justify-center items-center">
+              <div key={crypto.randomUUID()} className="flex justify-center items-center">
                 <img
                   className="sm:w-[200px] sm:h-[200px] object-cover  rounded-lg shadow-lg dark:shadow-slate-400 shadow-slate-900 transform transition duration-500 hover:scale-105"
                   src={i.url}

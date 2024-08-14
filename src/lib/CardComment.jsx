@@ -57,7 +57,7 @@ export const CardComment = ({ excursions }) => {
   };
 
   return (
-    <div className="grid items-center object-center gap-4 md:container mx-4 xl:container grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 min-h-80">
+    <div className="grid items-center object-center gap-4 md:container mx-4 xl:container grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 min-h-80">
       {excursions.map((excursion, index) => (
         <Card
           className="md:max-w-sm sm:min-h-[400px] sm:max-h-[400px] my-4 mx-full hover:shadow-2xl hover:bg-blue-500 hover:dark:bg-blue-900 transform transition duration-500 hover:scale-105 text-gray-900 dark:text-white"
@@ -74,11 +74,11 @@ export const CardComment = ({ excursions }) => {
               {excursion.descripcion_resumen}
             </h5>
           </Link>
-          <div className="xl:text-xl text-2xl">
+          <div className="xl:text-lg text-xl">
             {isLoading ? <Spinner /> : <MostrarEstrellas puntuacion={Rate(excursion.id)} />}
           </div>
-          <div className="flex items-center justify-between">
-            <span className="text-xl font-bold">
+          <div className="flex items-center justify-between ">
+            <span className="text-md font-bold flex-nowrap whitespace-nowrap">
               {isLoading ? "Loading..." : `${Rate(excursion.id).toFixed(2)} of ${Reviews(excursion.id)} ${language == 'es' ? 'Reseñas' : 'Reviews'}`}
             </span>
             <ModalComponent
