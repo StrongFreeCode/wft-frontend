@@ -52,10 +52,10 @@ const customTheme = {
     },
   },
   link: {
-    base: "block py-2 pr-4 pl-3 md:p-0",
+    base: "block py-2 pr-4 pl-3 md:p-0 w-full",
     active: {
       on:
-        "bg-cyan-700 text-white dark:text-white md:bg-transparent md:text-cyan-700",
+        "bg-cyan-700 text-white dark:text-white  md:text-cyan-700",
       off:
         "border-b border-gray-100  text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white",
     },
@@ -70,13 +70,15 @@ const customTheme = {
     icon: "h-6 w-6 shrink-0",
   },
 };
+
 export const NavbarComponent = () => {
   const { language, setLanguage } = useGlobalContext();
   const pathname = usePathname();
 
   function handleClick() {
-    return setLanguage((prevLang) => (prevLang === "en" ? "es" : "en"));
+    setLanguage((prevLang) => (prevLang === "en" ? "es" : "en"));
   }
+
   return (
     <Navbar fluid theme={customTheme}>
       <NavbarToggle />
@@ -103,54 +105,58 @@ export const NavbarComponent = () => {
         />
       </div>
       <NavbarCollapse>
-        <Link
+        <NavbarLink
+          as={Link}
+          href="/"
+          active={pathname === "/"}
           className={`
             ${pathname === "/"
               ? customTheme.link.active.on
               : customTheme.link.active.off
             } ${customTheme.newtheme.base}
             `}
-          href="/"
-          active={pathname === "/" ? true : false}
         >
           {language === "es" ? "Inicio" : "Home"}
-        </Link>
-        <Link
+        </NavbarLink>
+        <NavbarLink
+          as={Link}
+          href="/excursions"
+          active={pathname === "/excursions"}
           className={`
           ${pathname === "/excursions"
               ? customTheme.link.active.on
               : customTheme.link.active.off
             } ${customTheme.newtheme.base}
           `}
-          href="/excursions"
-          active={pathname === "/excursions" ? true : false}
         >
           {language === "es" ? "Excursiones" : "Excursions"}
-        </Link>
-        <Link
+        </NavbarLink>
+        <NavbarLink
+          as={Link}
+          href="/comments"
+          active={pathname === "/comments"}
           className={`
           ${pathname === "/comments"
               ? customTheme.link.active.on
               : customTheme.link.active.off
             } ${customTheme.newtheme.base}
           `}
-          href="/comments"
-          active={pathname === "/comments" ? true : false}
         >
           {language === "es" ? "Reseñas" : "Reviews"}
-        </Link>
-        <Link
+        </NavbarLink>
+        <NavbarLink
+          as={Link}
+          href="/about"
+          active={pathname === "/about"}
           className={`
           ${pathname === "/about"
               ? customTheme.link.active.on
               : customTheme.link.active.off
             } ${customTheme.newtheme.base}
           `}
-          href="/about"
-          active={pathname === "/about" ? true : false}
         >
           {language === "es" ? "Acerca" : "About"}
-        </Link>
+        </NavbarLink>
       </NavbarCollapse>
 
       <div className=" hidden md:flex md:flex-cols-1">

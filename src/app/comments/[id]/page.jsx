@@ -4,7 +4,7 @@ import DataComment from "@/components/DataComment";
 import DataCommentlist from "@/components/DataCommentlist";
 import ModalComponent from "@/components/ModalComponent";
 import { useGlobalContext } from "@/helpers/Global";
-import useOpinions from "@/hook/useOpcions";
+import useOpinions from "@/hook/useOpinions";
 import { getOpinons } from "@/services/comment";
 import { Label, Spinner, TextInput, Textarea } from "flowbite-react";
 import Link from "next/link";
