@@ -15,7 +15,7 @@ export default function Comments() {
       const pureData = await getOpinons();
       const allOpinions = pureData.filter(
         (pureData) => pureData.puntuacion === 5
-      );
+      ).slice(0, 5);
 
       setOpinions(allOpinions);
     }

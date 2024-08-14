@@ -1,6 +1,7 @@
 
 import { useGlobalContext } from '@/helpers/Global';
 import { Footer, FooterBrand, FooterCopyright, FooterDivider, FooterLink, FooterLinkGroup } from 'flowbite-react';
+import SocialMediaIcons from './SocialMediaIcons';
 
 const customTheme = {
   "root": {
@@ -51,11 +52,12 @@ export const FooterComponent = () => {
             name="WonderFullTime"
           />
           <FooterLinkGroup>
-            {/* <FooterLink href="/about">{language == 'es' ? 'Acerca' : 'About'}</FooterLink>  */}
+            {/*  <FooterLink href="/about">{language == 'es' ? 'Acerca' : 'About'}</FooterLink> */}
           </FooterLinkGroup>
         </div>
+        <SocialMediaIcons />
         <FooterDivider />
-        <FooterCopyright href="https://github.com/StrongFreeCode" by="StrongFreeCode™" year={2024} />
+        <FooterCopyright href="https://www.strongfreecode.com" by="StrongFreeCode™" year={new Date().getFullYear()} />
       </div>
     </Footer>
   );

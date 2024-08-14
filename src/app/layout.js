@@ -33,19 +33,19 @@ export default function RootLayout({ children }) {
           </div>
 
         </div> */}
-        <div class="flex flex-col min-h-screen">
+        <div className="">
           <GlobalProvider>
-            <header class="dark:bg-slate-700  drak:bg-clip-text dark:bg-gradient-to-r dark:from-primary-800 dark:to-secondary-900">
+            <header className="">
               <NavbarComponent />
 
             </header>
 
-            <main class="flex-grow">
+            <main className="">
 
               {children}
             </main>
 
-            <footer class="dark:bg-slate-700  drak:bg-clip-text dark:bg-gradient-to-r dark:from-primary-800 dark:to-secondary-900">
+            <footer className="">
 
               <FooterComponent />
             </footer>
