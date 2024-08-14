@@ -109,7 +109,7 @@ export const Contact = () => {
                   stroke-linejoin="round"
                 ></path>
               </svg>
-              <h1 className="text-blue-600 dark:text-blue-100">
+              <h1 className="text-gren-950 dark:text-blue-100 hover:text-blue-500 dark:hover:text-blue-400">
                 <a href={`mailto:${i.email}`}>{i.email}</a>
               </h1>
             </div>
@@ -130,7 +130,7 @@ export const Contact = () => {
                     : `Hi ${i.nombre.split(" ")[0]} need help`
                     }`}
                   target="_blank"
-                  className="text-green-950 dark:text-green-100"
+                  className="text-green-950 dark:text-green-100 hover:text-blue-500 dark:hover:text-blue-400"
                 >
                   +{i.number}
                 </a>
