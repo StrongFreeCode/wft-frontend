@@ -29,7 +29,7 @@ function DetailPage({ params }) {
 
   return (
     <>
-      {opinions ? <Details datos={endData} resultado={result} /> : <Loading />}
+      {opinions ? <Details datos={endData} resultado={result} isLoading={isLoading} /> : <Loading />}
       {endData.places.map((i, index) => (
         <Places key={index} datos={i} />
       ))}
