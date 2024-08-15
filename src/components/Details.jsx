@@ -6,10 +6,11 @@ import { FaClock, FaCommentAlt } from "react-icons/fa";
 import { services } from "@/data/servicios.json";
 import Link from "next/link";
 import ModalComponent from "./ModalComponent";
+import { Spinner } from "flowbite-react";
 
 
 
-export const Details = ({ datos, resultado }) => {
+export const Details = ({ datos, resultado, isLoading }) => {
   const { language } = useGlobalContext();
   const whatsapp = {
     number: 5363137847,
@@ -34,7 +35,7 @@ export const Details = ({ datos, resultado }) => {
                 {datos.nombre}
               </h1>
               <div className="flex mb-4 ml-4">
-                <span className="flex items-center">
+                {isLoading ? <Spinner></Spinner> : (<span className="flex items-center">
                   <MostrarEstrellas puntuacion={resultado.promedio} />
                   <span className="ml-3">
                     {resultado.promedio.toFixed(2)}/
@@ -46,7 +47,7 @@ export const Details = ({ datos, resultado }) => {
                       {language == "es" ? " Comentarios" : " Reviews"}
                     </Link>
                   </span>
-                </span>
+                </span>)}
                 <span className="flex ml-3 pl-3 py-2 border-l-2 space-x-2 underline hover:text-blue-600">
                   <div className="flex flex-row-1 justify-center items-center ">
                     {/*  <Link href={`/comments/${datos.id}`}>
