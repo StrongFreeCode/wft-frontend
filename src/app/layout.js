@@ -1,15 +1,16 @@
-'use client'
+
 import { NavbarComponent } from "@/components/NavbarComponent"
 import "./page.css";
 import { Roboto } from 'next/font/google'
 import { ThemeModeScript } from 'flowbite-react';
 import { FooterComponent } from "@/components/FooterComponent";
 import { GlobalProvider } from "@/helpers/Global";
-/* 
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 export const metadata = {
   title: 'Tour-WEB',
   description: 'Home page site for tour on cuba'
-} */
+}
 const roboto = Roboto({
   weight: ["300", "400", "700"],
   style: ["italic", "normal"],
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
           </GlobalProvider>
         </div>
       </body>
+      <GoogleAnalytics gaId="G-J9VX435LXW" />
     </html>
   );
 }

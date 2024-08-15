@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/react": "1.7.18",
     "@heroicons/react": "2.1.1",
+    "@next/third-parties": "^14.2.5",
     "@paypal/checkout-server-sdk": "1.0.3",
     "@paypal/react-paypal-js": "8.5.0",
     "@supabase/supabase-js": "2.43.4",
