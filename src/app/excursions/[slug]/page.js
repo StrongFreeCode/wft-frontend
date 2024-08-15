@@ -4,10 +4,9 @@ import { Places } from "@/components/Places";
 import { useGlobalContext } from "@/helpers/Global";
 import excursionsData from "../../../data/excursions_lang.json"
 import { calcularPromedioValoraciones } from "@/helpers/promedio";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Loading from "@/app/loading";
 import { redirect } from "next/navigation";
-import { getOpinons } from "@/services/comment";
 import useOpinions from "@/hook/useOpinions";
 
 function DetailPage({ params }) {
@@ -30,12 +29,10 @@ function DetailPage({ params }) {
 
   return (
     <>
-
       {opinions ? <Details datos={endData} resultado={result} /> : <Loading />}
       {endData.places.map((i, index) => (
         <Places key={index} datos={i} />
       ))}
-
     </>
   );
 }

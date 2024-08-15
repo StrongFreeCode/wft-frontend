@@ -8,15 +8,66 @@ import { GlobalProvider } from "@/helpers/Global";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
-  title: 'Tour-WEB',
-  description: 'Home page site for tour on cuba'
-}
-const roboto = Roboto({
-  weight: ["300", "400", "700"],
-  style: ["italic", "normal"],
-  subsets: ["latin"]
-})
+  metadataBase: new URL('https://wonderfulltime.com/'),
+  title: {
+    template: '%s | WONDERFULLTIME',
+    default: 'WONDERFULLTIME', // a default is required when creating a template
+  },
+  //generator: 'Next.js',
+  applicationName: 'WONDERFULLTIME',
+  referrer: 'origin-when-cross-origin',
+  keywords: [
+    "Turismo en Cuba",
+    "Playas cubanas",
+    "La Habana",
+    "Varadero",
+    "Cultura cubana",
+    "Cayo Coco",
+    "Rutas de senderismo",
+    "Música cubana",
+    "Historia de Cuba",
+    "Gastronomía cubana",
+    "Arte en Cuba",
+    "Hoteles en Cuba",
+    "Tradiciones cubanas",
+    "Naturaleza en Cuba",
+    "Eventos en Cuba",
+    "Arquitectura cubana",
+    "Buceo en Cuba",
+    "Fiestas populares en Cuba",
+    "Transporte en Cuba",
+    "Reservas naturales en Cuba"],
+  description: "Descubre la magia de Cuba con nuestro sitio web de turismo. Explora playas paradisíacas, la vibrante cultura de La Habana y la rica historia de esta isla caribeña. Desde la música cubana hasta la exquisita gastronomía, te llevaremos en un viaje inolvidable. ¡Bienvenido a Cuba!",
+  authors: [{ name: 'StrongFreeCode' }, { name: 'StrongFreeCode', url: 'https://strongfreecode.com/' }],
+  creator: 'StrongFreeCode',
+  publisher: 'Franklin Campos',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: 'WONDERFULLTIME',
+    description: '"Descubre Cuba, la joya del Caribe, donde la historia se encuentra con la modernidad. Explora La Habana vibrante, relájate en las playas de Varadero y sumérgete en la cultura única de la isla. ¡Tu aventura inolvidable te espera!"',
+    siteName: 'wonderfulltime',
+    images: [
+      {
+        url: '/assets/wft/logo X en jpg.jpg', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: '/assets/wft/logo X en jpg.jpg', // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: 'wonderfulltime logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 
+}
 
 export default function RootLayout({ children }) {
   return (
