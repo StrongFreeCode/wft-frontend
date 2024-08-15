@@ -40,7 +40,7 @@ const customTheme = {
 }
 
 export const FooterComponent = () => {
-  const { language } = useGlobalContext()
+
   return (
     <Footer container theme={customTheme}>
       <div className="w-full text-center">
@@ -52,7 +52,7 @@ export const FooterComponent = () => {
             name="WonderFullTime"
           />
           <FooterLinkGroup>
-            {/*  <FooterLink href="/about">{language == 'es' ? 'Acerca' : 'About'}</FooterLink> */}
+
           </FooterLinkGroup>
         </div>
         <SocialMediaIcons />
