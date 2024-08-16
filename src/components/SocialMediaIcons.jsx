@@ -4,7 +4,7 @@ import { SiTwitter, SiWhatsapp } from 'react-icons/si';
 
 const SocialMediaIcons = () => {
     return (
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center space-x-4 p-6">
             <a href="https://www.facebook.com" aria-label="Icon para abri red social facebook" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-600">
                 <FaFacebook className="w-6 h-6" />
             </a>
