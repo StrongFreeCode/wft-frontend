@@ -43,7 +43,7 @@ export const FooterComponent = () => {
   return (
     <Footer container theme={customTheme} className='border-t-4 border-dotted border-black dark:border-white'>
       <div className="w-full text-center">
-        <div className="w-full justify-between sm:flex sm:items-center sm:justify-between ">
+        <div className="flex justify-center space-x-4 p-6 ">
           <FooterLinkGroup>
             <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/">Home</FooterLink>
             <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/excursions">Excursions</FooterLink>
