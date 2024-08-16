@@ -6,6 +6,8 @@ import { FooterComponent } from "@/components/FooterComponent";
 import { GlobalProvider } from "@/helpers/Global";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
+
 export const metadata = {
   metadataBase: new URL('https://wonderfulltime.com/'),
   alternates: {
@@ -90,6 +92,7 @@ export default function RootLayout({ children }) {
             </header>
             <main className="">
               {children}
+              <Analytics />
               <SpeedInsights />
             </main>
             <footer className="">
