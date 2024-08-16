@@ -19,35 +19,28 @@ export const ExcurcionsComponet = () => {
     <div className="h-sreen">
       <div className="bg-gradient-to-r from-blue-800 to-cyan-700 bg-teal-400 bg-cover  bg-no-repeat">
         <div className="content-center ">
-          <div className="flex justify-center mt-6 mx-2">
-            <div className="text-center">
-              <h1 className="text-2xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-cyan-400  font-bold mb-4">Wonderfulltime</h1>
 
-
-            </div>
-
-          </div>
-          <h1 className="mb-2 text-2xl font-extrabold text-center dark:text-white sm:text-3xl lg:text-5xl lg:leading-normal ">
+          <h2 className="mb-2 text-2xl font-extrabold text-center dark:text-white sm:text-3xl lg:text-5xl lg:leading-normal ">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-cyan-400">
               {language == "es" ? "Descubre Cuba" : "Discover Cuba"}
             </span>{" "}
-          </h1>
-          <h1 className="z-10 text-2xl font-extrabold text-center dark:text-white sm:text-3xl lg:text-5xl lg:leading-normal ">
+          </h2>
+          <h3 className="z-10 text-2xl font-extrabold text-center dark:text-white sm:text-3xl lg:text-5xl lg:leading-normal ">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-cyan-400">
               {language == "es"
                 ? "Oportunidad única de conocerla"
                 : "Unique opportunity to know Cuba"}
             </span>{" "}
-          </h1>
+          </h3>
 
           <div className="text-center">
-            <h1>
+            <h4>
               <span className="my-5 text-xl text-warning-200">
                 {language == "es"
                   ? "Selecciona la fecha para encontrar excursiones disponibles"
                   : "Select the date to find available excursions"}
               </span>
-            </h1>
+            </h4>
             <FiltersComponet
               onChange={setfilters}
               startMinPrice={maxPrice}

@@ -59,66 +59,69 @@ export const CardComponet = ({ excursions }) => {
         const reviews = Reviews(excursion.id);
 
         return (
-          <Card
-            className="md:max-w-sm  sm:min-h-[400px] sm:max-h-[400px]  my-4 mx-full hover:shadow-2xl hover:bg-blue-500 hover:dark:bg-blue-900  transform transition duration-500 hover:scale-105 text-gray-900 dark:text-white"
-            imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
-            imgSrc={"/assets/yainie" + excursion.images[0].url}
-            theme={customTheme}
-            key={excursion.id}
-          >
-            <Link href={"/excursions/" + excursion.slug}>
-              <div className="flex content-center justify-between ">
-                <h1>{excursion.nombre}</h1>
-                <div className="text-xs">
-                  <h3 className="">
-                    {rate.isLoading ? <Spinner size={'sm'} /> : rate.value == 0 ? "0" : rate.value ? rate.value.toFixed(2) : "N/A"} / {reviews.isLoading ? <Spinner size={'sm'} /> : reviews.value} {language == 'es' ? 'Reseñas' : 'Reviews'}
-                  </h3>
-                  {
-                    !rate.isLoading && opinions ? <MostrarEstrellas puntuacion={rate.value} /> : <Spinner size={'xs'} />
-                  }
+          <article key={excursion.id}>
+
+            <Card
+              className="md:max-w-sm  sm:min-h-[400px] sm:max-h-[400px]  my-4 mx-full hover:shadow-2xl hover:bg-blue-500 hover:dark:bg-blue-900  transform transition duration-500 hover:scale-105 text-gray-900 dark:text-white"
+              imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
+              imgSrc={"/assets/yainie" + excursion.images[0].url}
+              theme={customTheme}
+
+            >
+              <Link href={"/excursions/" + excursion.slug}>
+                <div className="flex content-center justify-between ">
+                  <h2>{excursion.nombre}</h2>
+                  <div className="text-xs">
+                    <h3 className="">
+                      {rate.isLoading ? <Spinner size={'sm'} /> : rate.value == 0 ? "0" : rate.value ? rate.value.toFixed(2) : "N/A"} / {reviews.isLoading ? <Spinner size={'sm'} /> : reviews.value} {language == 'es' ? 'Reseñas' : 'Reviews'}
+                    </h3>
+                    {
+                      !rate.isLoading && opinions ? <MostrarEstrellas puntuacion={rate.value} /> : <Spinner size={'xs'} />
+                    }
+                  </div>
                 </div>
-              </div>
 
-              <h5 className=" font-semibold text-xs tracking-tight min-h-[100px] max-h-[100px] overflow-hidden ">
-                {excursion.descripcion_resumen}
-              </h5>
-            </Link>
-
-            <div className="mb-5 mt-2.5 flex items-center">
-              <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800  dark:text-slate-200">
-                M
-              </span>
-              <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800 bg-cyan-400  dark:text-slate-200">
-                T
-              </span>
-              <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800 bg-cyan-400  dark:text-slate-200">
-                W
-              </span>
-              <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800 bg-cyan-400  dark:text-slate-200">
-                T
-              </span>
-              <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800  dark:text-slate-200">
-                F
-              </span>
-              <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800  dark:text-slate-200">
-                S
-              </span>
-              <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800 bg-cyan-400  dark:text-slate-200">
-                S
-              </span>
-            </div>
-            <div className="flex items-center justify-between ">
-              <span className="text-3xl font-bold">
-                ${excursion.precio_final}
-              </span>
-              <Link
-                href={"/excursions/" + excursion.slug}
-                className="rounded-lg bg-cyan-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
-              >
-                {language == "es" ? "Detalles" : "Details"}
+                <h5 className=" font-semibold text-xs tracking-tight min-h-[100px] max-h-[100px] overflow-hidden ">
+                  {excursion.descripcion_resumen}
+                </h5>
               </Link>
-            </div>
-          </Card>
+
+              <div className="mb-5 mt-2.5 flex items-center">
+                <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800  dark:text-slate-200">
+                  M
+                </span>
+                <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800 bg-cyan-400  dark:text-slate-200">
+                  T
+                </span>
+                <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800 bg-cyan-400  dark:text-slate-200">
+                  W
+                </span>
+                <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800 bg-cyan-400  dark:text-slate-200">
+                  T
+                </span>
+                <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800  dark:text-slate-200">
+                  F
+                </span>
+                <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800  dark:text-slate-200">
+                  S
+                </span>
+                <span className="border dark:border-white border-slate-800 rounded-full max-w-8 max-h-8 min-h-8 min-w-8 text-center py-2 px-2 mx-0.5   text-xs font-semibold text-slate-800 bg-cyan-400  dark:text-slate-200">
+                  S
+                </span>
+              </div>
+              <div className="flex items-center justify-between ">
+                <span className="text-3xl font-bold">
+                  ${excursion.precio_final}
+                </span>
+                <Link
+                  href={"/excursions/" + excursion.slug}
+                  className="rounded-lg bg-cyan-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+                >
+                  {language == "es" ? "Detalles" : "Details"}
+                </Link>
+              </div>
+            </Card>
+          </article>
         );
       })}
     </div>
