@@ -81,9 +81,9 @@ export const CardComponet = ({ excursions }) => {
                   </div>
                 </div>
 
-                <h5 className=" font-semibold text-xs tracking-tight min-h-[100px] max-h-[100px] overflow-hidden ">
+                <p className=" font-semibold text-xs tracking-tight min-h-[100px] max-h-[100px] overflow-hidden ">
                   {excursion.descripcion_resumen}
-                </h5>
+                </p>
               </Link>
 
               <div className="mb-5 mt-2.5 flex items-center">
