@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import dataContacts from "@/data/contacts.json";
-import { Button, Dropdown } from "flowbite-react";
+import { Dropdown } from "flowbite-react";
 import Link from "next/link";
 import avatar from "../../public/assets/avatar2.png";
 import Image from "next/image";
