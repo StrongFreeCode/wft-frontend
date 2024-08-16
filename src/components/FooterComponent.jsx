@@ -1,4 +1,4 @@
-import { useGlobalContext } from '@/helpers/Global';
+
 import { Footer, FooterBrand, FooterCopyright, FooterDivider, FooterLink, FooterLinkGroup } from 'flowbite-react';
 import SocialMediaIcons from './SocialMediaIcons';
 
