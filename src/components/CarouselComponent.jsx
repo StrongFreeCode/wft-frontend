@@ -44,9 +44,9 @@ export const CarouselComponent = () => {
   return (
     <div className="h-56  sm:h-64 xl:h-80 2xl:h-96 overscroll-none">
       <Carousel theme={customTheme}>
-        <Image src={varadero} alt="..." />
-        <Image src={portada} alt="..." />
-        <Image src={tercera} alt="..." />
+        <Image src={varadero} alt="..." width={768} height={90} priority />
+        <Image src={portada} alt="..." width={768} height={90} />
+        <Image src={tercera} alt="..." width={768} height={90} />
       </Carousel>
     </div>
   );

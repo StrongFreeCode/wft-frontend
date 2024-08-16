@@ -43,15 +43,15 @@ export const FooterComponent = () => {
   return (
     <Footer container theme={customTheme}>
       <div className="w-full text-center">
-        {/* <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
+        <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
           <FooterLinkGroup>
             <FooterLink href="/">Home</FooterLink>
             <FooterLink href="/excursions">Excursions</FooterLink>
-            <FooterLink href="/comments">Comments</FooterLink>
+            <FooterLink href="/comments">Reviews</FooterLink>
             <FooterLink href="/about">About</FooterLink>
-            <FooterLink href="/contact">Contact</FooterLink>
+            {/*   <FooterLink href="/contact">Contact</FooterLink> */}
           </FooterLinkGroup>
-        </div> */}
+        </div>
 
         <SocialMediaIcons />
         <div itemScope itemType="http://schema.org/LocalBusiness" className="mt-4">
