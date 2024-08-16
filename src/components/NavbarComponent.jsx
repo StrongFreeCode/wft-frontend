@@ -16,7 +16,7 @@ import { Contact } from "../components/ContactComponent";
 const customTheme = {
   newtheme: {
     base:
-      "md:bg-slate-100  hover:text-black md:px-2 md:py-2.5 md:dark:border-gray-700 md:dark:bg-gray-800 sm:px-4 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600",
+      "md:bg-slate-200  hover:text-black md:px-2 md:py-2.5 md:dark:border-gray-700 md:dark:bg-gray-800 sm:px-4 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600",
   },
   root: {
     base:
