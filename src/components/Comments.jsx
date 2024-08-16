@@ -29,9 +29,9 @@ export default function Comments() {
 
   return (
     <div className="dark:text-slate-400 text-center text-slate-600 h-72">
-      <h1 className="md:text-6xl text-2xl dark:text-white text-center uppercase py-6 font-bold ">
+      <h2 className="md:text-6xl text-2xl dark:text-white text-center uppercase py-6 font-bold ">
         {language == 'es' ? 'Reseñas' : 'Reviews'}
-      </h1>
+      </h2>
       {isLoading ? (
         <div className="h-40 flex justify-center items-center">
           <Spinner />

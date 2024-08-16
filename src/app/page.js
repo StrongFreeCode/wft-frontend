@@ -6,7 +6,7 @@ import { ExcurcionsComponet } from '@/components/ExcurcionsComponent';
 import Comments from '@/components/Comments';
 //import { useFetchData } from '@/hook/useFetchData';
 export const metadata = {
-  title: 'HOME',
+  title: 'WONDERFULLTIME | HOME',
 }
 
 export default async function MyPage() {

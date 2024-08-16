@@ -101,7 +101,7 @@ export const NavbarComponent = () => {
           className="block ml-1 max-w-9 max-h-9 md:hidden"
           onClick={handleClick}
           src={language === "es" ? "/es.ico" : "/en.ico"}
-          alt=""
+          alt="icon lang"
         />
       </div>
       <NavbarCollapse>
@@ -166,7 +166,7 @@ export const NavbarComponent = () => {
           className="ml-1 max-w-9 max-h-9"
           onClick={handleClick}
           src={language === "es" ? "/es.ico" : "/en.ico"}
-          alt=""
+          alt='icon lang'
         />
       </div>
     </Navbar>

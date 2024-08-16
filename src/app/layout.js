@@ -9,9 +9,14 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
   metadataBase: new URL('https://wonderfulltime.com/'),
+  alternates: {
+    canonical: '/',
+
+  },
   title: {
     template: '%s | WONDERFULLTIME',
     default: 'WONDERFULLTIME', // a default is required when creating a template
+    absolute: 'WONDERFULLTIME'
   },
   //generator: 'Next.js',
   applicationName: 'WONDERFULLTIME',
@@ -37,7 +42,7 @@ export const metadata = {
     "Fiestas populares en Cuba",
     "Transporte en Cuba",
     "Reservas naturales en Cuba"],
-  description: "Descubre la magia de Cuba con nuestro sitio web de turismo. Explora playas paradisíacas, la vibrante cultura de La Habana y la rica historia de esta isla caribeña. Desde la música cubana hasta la exquisita gastronomía, te llevaremos en un viaje inolvidable. ¡Bienvenido a Cuba!",
+  description: "Descubre la magia de Cuba con nuestro sitio web de turismo.Explora playas paradisíacas,la vibrante cultura de La Habana y la rica historia de esta isla caribeña",
   authors: [{ name: 'StrongFreeCode' }, { name: 'StrongFreeCode', url: 'https://strongfreecode.com/' }],
   creator: 'StrongFreeCode',
   publisher: 'Franklin Campos',
@@ -74,6 +79,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" type="image/x-icon" href="/assets/wft/logo X en png (16x16).ico" />
+        <meta name="robots" content="index" />
         <ThemeModeScript />
       </head>
 
