@@ -1,7 +1,6 @@
 
 import { NavbarComponent } from "@/components/NavbarComponent"
 import "./page.css";
-import { Roboto } from 'next/font/google'
 import { ThemeModeScript } from 'flowbite-react';
 import { FooterComponent } from "@/components/FooterComponent";
 import { GlobalProvider } from "@/helpers/Global";

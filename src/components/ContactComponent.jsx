@@ -52,6 +52,7 @@ export const Contact = () => {
       dismissOnClick={false}
       className=""
       color=""
+      aria-label="Abrir menú desplegable"
       label={
         <HiPhone className="dark:text-slate-400 text-slate-600 text-xl  " />
       }

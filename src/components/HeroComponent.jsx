@@ -18,7 +18,7 @@ export const HeroSection = () => {
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
           <h1 className="dark:text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-800 dark:from-primary-400 dark:to-secondary-600">
               {language == 'es' ? "Hola, Bienvenidos" : 'Hello, Welcome'}{" "}
             </span>
             <br></br>
@@ -48,21 +48,24 @@ export const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-gray-800 dark:text-gray-200 text-base sm:text-lg mb-6 lg:text-xl">
             {language == 'es' ? `“Viaja con nosotros, crea recuerdos para siempre.”` : `“Travel with us, create memories forever.”`}
           </p>
           <div>
+
             <Link
               href="/about"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full sm:mr-4  bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
+              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3 mr-4"
             >
-              {language == 'es' ? 'Nosotros' : ' About us'}
+              <span className="block bg-white text-black hover:dark:text-gray-800 font-bold hover:bg-slate-300 rounded-full px-5 py-2">
+                {language == 'es' ? 'Nosotros' : ' About us'}
+              </span>
             </Link>
             <Link
               href="/"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              <span className="block bg-black text-grey-300 font-bold hover:bg-gray-800 hover:text-white rounded-full px-5 py-2">
                 {language == 'es' ? 'Revistas' : 'Magazine'}
               </span>
             </Link>
