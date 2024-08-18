@@ -128,7 +128,7 @@ const articlesData = [
 const postsPerPage = 3;
 
 export default function BlogPage() {
-    const [selectedTag, setSelectedTag] = useState(null);
+    const [selectedTags, setSelectedTags] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     const tagColors = tags.reduce((acc, tag, index) => {
@@ -137,10 +137,18 @@ export default function BlogPage() {
     }, {});
 
     const filteredArticles = articlesData.filter(article => {
-        const matchesTag = selectedTag ? article.tags.includes(selectedTag) : true;
+        const matchesTag = selectedTags.length === 0 || selectedTags.every(tag => article.tags.includes(tag));
         const matchesCategory = selectedCategory ? article.category === selectedCategory : true;
         return matchesTag && matchesCategory;
     });
+
+    const handleTagSelect = (tag) => {
+        setSelectedTags(prevTags => [...prevTags, tag]);
+    };
+
+    const handleTagRemove = (tag) => {
+        setSelectedTags(prevTags => prevTags.filter(t => t !== tag));
+    };
 
     return (
         <div className="bg-white font-family-karla">
@@ -154,16 +162,17 @@ export default function BlogPage() {
             <TextHeader />
             <TopicNav categories={categories} onCategorySelect={setSelectedCategory} />
             <ActiveFilters
-                selectedTag={selectedTag}
+                selectedTags={selectedTags}
                 selectedCategory={selectedCategory}
-                onRemoveTag={() => setSelectedTag(null)}
+                onRemoveTag={handleTagRemove}
                 onRemoveCategory={() => setSelectedCategory(null)}
+                tagColors={tagColors}
             />
             <MainContent
                 articles={filteredArticles}
                 tagColors={tagColors}
-                selectedTag={selectedTag}
-                onTagSelect={setSelectedTag}
+                selectedTags={selectedTags}
+                onTagSelect={handleTagSelect}
             />
         </div>
     );
@@ -240,11 +249,11 @@ function TopicNav({ categories, onCategorySelect }) {
     );
 }
 
-function MainContent({ articles, tagColors, selectedTag, onTagSelect }) {
+function MainContent({ articles, tagColors, selectedTags, onTagSelect }) {
     return (
         <div className="container mx-auto flex flex-wrap py-6">
             <PostsSection articles={articles} tagColors={tagColors} />
-            <SidebarSection categories={categories} tags={tags} tagColors={tagColors} selectedTag={selectedTag} onTagSelect={onTagSelect} />
+            <SidebarSection categories={categories} tags={tags} tagColors={tagColors} selectedTags={selectedTags} onTagSelect={onTagSelect} />
         </div>
     );
 }
@@ -335,12 +344,12 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
     );
 }
 
-function SidebarSection({ categories, tags, tagColors, selectedTag, onTagSelect }) {
+function SidebarSection({ categories, tags, tagColors, selectedTags, onTagSelect }) {
     return (
         <aside className="w-full md:w-1/3 flex flex-col items-center px-3">
             <AboutUs />
             <CategoriesDropdown categories={categories} />
-            <Tags tags={tags} tagColors={tagColors} selectedTag={selectedTag} onTagSelect={onTagSelect} />
+            <Tags tags={tags} tagColors={tagColors} selectedTags={selectedTags} onTagSelect={onTagSelect} />
             <Instagram />
         </aside>
     );
@@ -385,7 +394,7 @@ function CategoriesDropdown({ categories }) {
     );
 }
 
-function Tags({ tags, tagColors, selectedTag, onTagSelect }) {
+function Tags({ tags, tagColors, selectedTags, onTagSelect }) {
     return (
         <div className="w-full bg-white shadow flex flex-col my-4 p-6">
             <p className="text-xl font-semibold pb-5">Tags</p>
@@ -394,7 +403,7 @@ function Tags({ tags, tagColors, selectedTag, onTagSelect }) {
                     <a
                         key={index}
                         href="#"
-                        className={`mr-2 mb-2 px-3 py-1 text-sm text-white rounded hover:opacity-75 ${selectedTag === tag ? 'opacity-75' : ''}`}
+                        className={`mr-2 mb-2 px-3 py-1 text-sm text-white rounded hover:opacity-75 ${selectedTags.includes(tag) ? 'opacity-75' : ''}`}
                         style={{ backgroundColor: tagColors[tag] }}
                         onClick={() => onTagSelect(tag)}
                     >
@@ -428,7 +437,7 @@ function Instagram() {
     );
 }
 
-function ActiveFilters({ selectedTag, selectedCategory, onRemoveTag, onRemoveCategory }) {
+function ActiveFilters({ selectedTags, selectedCategory, onRemoveTag, onRemoveCategory, tagColors }) {
     return (
         <div className="flex items-center justify-center my-4">
             {selectedCategory && (
@@ -439,14 +448,14 @@ function ActiveFilters({ selectedTag, selectedCategory, onRemoveTag, onRemoveCat
                     </button>
                 </span>
             )}
-            {selectedTag && (
-                <span className="px-3 py-1 mr-2 text-sm text-white bg-blue-800 rounded hover:bg-blue-700">
-                    {selectedTag}
-                    <button onClick={onRemoveTag} className="ml-2 text-white hover:text-gray-200">
+            {selectedTags.map((tag, index) => (
+                <span key={index} className="px-3 py-1 mr-2 text-sm text-white rounded hover:opacity-75" style={{ backgroundColor: tagColors[tag] }}>
+                    {tag}
+                    <button onClick={() => onRemoveTag(tag)} className="ml-2 text-white hover:text-gray-200">
                         &times;
                     </button>
                 </span>
-            )}
+            ))}
         </div>
     );
 }
