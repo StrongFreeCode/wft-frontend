@@ -143,11 +143,10 @@ export const NavbarComponent = () => {
         >
           {language === "es" ? "Reseñas" : "Reviews"}
         </NavbarLink>
-
-        <NavbarLink
+        {!isProduction && <NavbarLink
           as={Link}
           href="/blogs"
-          disabled={isProduction}
+
           active={pathname === "/blogs"}
           className={`
           ${pathname === "/blogs"
@@ -158,6 +157,8 @@ export const NavbarComponent = () => {
         >
           {language === "es" ? "Blogs" : "Blogs"}<Badge className="bg-success-400 text-slate-600 ml-1 -mt-2">beta</Badge>
         </NavbarLink>
+        }
+
         <NavbarLink
           as={Link}
           href="/about"
