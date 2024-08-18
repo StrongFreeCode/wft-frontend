@@ -36,6 +36,7 @@ const articlesData = [
     {
         imageSrc: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
         category: "Travel",
+        subcategory: "Popular Destinations",
         title: "Exploring the Historic Streets of Old Havana",
         author: "Ana Gomez",
         date: "May 10th, 2023",
@@ -45,6 +46,7 @@ const articlesData = [
     {
         imageSrc: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
         category: "Travel",
+        subcategory: "Hidden Gems",
         title: "Tranquil Beaches of Varadero: A Paradise on Earth",
         author: "Luis Rodriguez",
         date: "June 15th, 2023",
@@ -54,6 +56,7 @@ const articlesData = [
     {
         imageSrc: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
         category: "Travel",
+        subcategory: "Off the Beaten Path",
         title: "Viñales Valley: Where Nature and Culture Thrive",
         author: "Maria Lopez",
         date: "July 20th, 2023",
@@ -63,6 +66,7 @@ const articlesData = [
     {
         imageSrc: "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
         category: "Travel",
+        subcategory: "Adventure Travel",
         title: "Cayo Coco: A Hidden Gem in the Caribbean",
         author: "Carlos Sanchez",
         date: "August 5th, 2023",
@@ -72,6 +76,7 @@ const articlesData = [
     {
         imageSrc: "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
         category: "Travel",
+        subcategory: "Luxury Travel",
         title: "Santiago de Cuba: The Soul of the Caribbean",
         author: "Elena Martinez",
         date: "September 10th, 2023",
@@ -81,6 +86,7 @@ const articlesData = [
     {
         imageSrc: "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
         category: "Travel",
+        subcategory: "Budget Travel",
         title: "The Enchanting Gardens of Soroa",
         author: "Fernando Diaz",
         date: "October 15th, 2023",
@@ -90,6 +96,7 @@ const articlesData = [
     {
         imageSrc: "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
         category: "Travel",
+        subcategory: "Popular Destinations",
         title: "Cayo Levisa: A Private Island Escape",
         author: "Isabel Perez",
         date: "November 20th, 2023",
@@ -99,6 +106,7 @@ const articlesData = [
     {
         imageSrc: "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
         category: "Travel",
+        subcategory: "Hidden Gems",
         title: "The Majestic El Yunque Waterfall",
         author: "Jorge Hernandez",
         date: "December 5th, 2023",
@@ -108,6 +116,7 @@ const articlesData = [
     {
         imageSrc: "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
         category: "Travel",
+        subcategory: "Off the Beaten Path",
         title: "Trinidad: A Living Museum of Colonial Architecture",
         author: "Laura Gomez",
         date: "January 10th, 2024",
@@ -117,6 +126,7 @@ const articlesData = [
     {
         imageSrc: "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
         category: "Travel",
+        subcategory: "Adventure Travel",
         title: "The Breathtaking Bay of Pigs",
         author: "Miguel Torres",
         date: "February 15th, 2024",
@@ -130,6 +140,7 @@ const postsPerPage = 3;
 export default function BlogPage() {
     const [selectedTags, setSelectedTags] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedSubCategory, setSelectedSubCategory] = useState(null);
 
     const tagColors = tags.reduce((acc, tag, index) => {
         acc[tag] = getColor(index, tags.length);
@@ -139,7 +150,8 @@ export default function BlogPage() {
     const filteredArticles = articlesData.filter(article => {
         const matchesTag = selectedTags.length === 0 || selectedTags.every(tag => article.tags.includes(tag));
         const matchesCategory = selectedCategory ? article.category === selectedCategory : true;
-        return matchesTag && matchesCategory;
+        const matchesSubCategory = selectedSubCategory ? article.subcategory === selectedSubCategory : true;
+        return matchesTag && matchesCategory && matchesSubCategory;
     });
 
     const handleTagSelect = (tag) => {
@@ -164,8 +176,10 @@ export default function BlogPage() {
             <ActiveFilters
                 selectedTags={selectedTags}
                 selectedCategory={selectedCategory}
+                selectedSubCategory={selectedSubCategory}
                 onRemoveTag={handleTagRemove}
                 onRemoveCategory={() => setSelectedCategory(null)}
+                onRemoveSubCategory={() => setSelectedSubCategory(null)}
                 tagColors={tagColors}
             />
             <MainContent
@@ -173,6 +187,8 @@ export default function BlogPage() {
                 tagColors={tagColors}
                 selectedTags={selectedTags}
                 onTagSelect={handleTagSelect}
+                categories={categories}
+                onSubCategorySelect={setSelectedSubCategory}
             />
         </div>
     );
@@ -249,11 +265,11 @@ function TopicNav({ categories, onCategorySelect }) {
     );
 }
 
-function MainContent({ articles, tagColors, selectedTags, onTagSelect }) {
+function MainContent({ articles, tagColors, selectedTags, onTagSelect, categories, onSubCategorySelect }) {
     return (
         <div className="container mx-auto flex flex-wrap py-6">
             <PostsSection articles={articles} tagColors={tagColors} />
-            <SidebarSection categories={categories} tags={tags} tagColors={tagColors} selectedTags={selectedTags} onTagSelect={onTagSelect} />
+            <SidebarSection categories={categories} tags={tags} tagColors={tagColors} selectedTags={selectedTags} onTagSelect={onTagSelect} onSubCategorySelect={onSubCategorySelect} />
         </div>
     );
 }
@@ -344,11 +360,11 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
     );
 }
 
-function SidebarSection({ categories, tags, tagColors, selectedTags, onTagSelect }) {
+function SidebarSection({ categories, tags, tagColors, selectedTags, onTagSelect, onSubCategorySelect }) {
     return (
         <aside className="w-full md:w-1/3 flex flex-col items-center px-3">
             <AboutUs />
-            <CategoriesDropdown categories={categories} />
+            <SubCategoriesDropdown categories={categories} onSubCategorySelect={onSubCategorySelect} />
             <Tags tags={tags} tagColors={tagColors} selectedTags={selectedTags} onTagSelect={onTagSelect} />
             <Instagram />
         </aside>
@@ -367,23 +383,60 @@ function AboutUs() {
     );
 }
 
-function CategoriesDropdown({ categories }) {
+function SubCategoriesDropdown({ categories, onSubCategorySelect }) {
     const [open, setOpen] = useState(false);
+    const [subOpen, setSubOpen] = useState({});
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedSubCategory, setSelectedSubCategory] = useState(null);
+
+    const toggleSubCategory = (categoryIndex) => {
+        setSubOpen({
+            ...subOpen,
+            [categoryIndex]: !subOpen[categoryIndex]
+        });
+    };
+
+    const selectSubCategory = (category, subcategory) => {
+        setSelectedCategory(category);
+        setSelectedSubCategory(subcategory);
+        onSubCategorySelect(subcategory);
+        setOpen(false); // Close the dropdown after selecting a sub-category
+    };
 
     return (
-        <div className="w-full bg-white shadow flex flex-col my-4 p-6">
-            <p className="text-xl font-semibold pb-5">Categories</p>
+        <div className="w-full bg-white shadow flex flex-col my-4 p-6 rounded-lg">
+            <p className="text-xl font-semibold pb-5">SubCategories</p>
             <div className="relative">
-                <button onClick={() => setOpen(!open)} className="w-full text-left py-2 px-4 rounded bg-gray-100 hover:bg-gray-200 focus:outline-none">
-                    Select Category <i className={`fas ml-2 ${open ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+                <button
+                    onClick={() => setOpen(!open)}
+                    className="w-full text-left py-3 px-4 rounded bg-gray-100 hover:bg-gray-200 focus:outline-none flex justify-between items-center"
+                >
+                    <span>
+                        {selectedCategory ? `${selectedCategory.name}${selectedSubCategory ? ` > ${selectedSubCategory}` : ''}` : 'Select Category'}
+                    </span>
+                    <i className={`fas ml-2 ${open ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
                 </button>
                 {open && (
-                    <div className="absolute z-10 mt-2 w-full bg-white shadow-lg rounded">
+                    <div className="absolute z-10 mt-2 w-full bg-white shadow-lg rounded-lg overflow-hidden">
                         {categories.map((category, index) => (
                             <div key={index} className="py-1">
-                                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{category.name}</a>
-                                {category.subcategories.map((subcategory, subIndex) => (
-                                    <a key={subIndex} href="#" className="block px-8 py-2 text-sm text-gray-500 hover:bg-gray-100">{subcategory}</a>
+                                <button
+                                    onClick={() => toggleSubCategory(index)}
+                                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex justify-between items-center"
+                                >
+                                    <span>{category.name}</span>
+                                    {category.subcategories.length > 0 && (
+                                        <i className={`fas ml-2 ${subOpen[index] ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+                                    )}
+                                </button>
+                                {subOpen[index] && category.subcategories.map((subcategory, subIndex) => (
+                                    <button
+                                        key={subIndex}
+                                        onClick={() => selectSubCategory(category, subcategory)}
+                                        className="block w-full text-left px-8 py-2 text-sm text-gray-500 hover:bg-gray-100"
+                                    >
+                                        {subcategory}
+                                    </button>
                                 ))}
                             </div>
                         ))}
@@ -437,13 +490,21 @@ function Instagram() {
     );
 }
 
-function ActiveFilters({ selectedTags, selectedCategory, onRemoveTag, onRemoveCategory, tagColors }) {
+function ActiveFilters({ selectedTags, selectedCategory, selectedSubCategory, onRemoveTag, onRemoveCategory, onRemoveSubCategory, tagColors }) {
     return (
         <div className="flex items-center justify-center my-4">
             {selectedCategory && (
                 <span className="px-3 py-1 mr-2 text-sm text-white bg-blue-800 rounded hover:bg-blue-700">
                     {selectedCategory}
                     <button onClick={onRemoveCategory} className="ml-2 text-white hover:text-gray-200">
+                        &times;
+                    </button>
+                </span>
+            )}
+            {selectedSubCategory && (
+                <span className="px-3 py-1 mr-2 text-sm text-white bg-blue-600 rounded hover:bg-blue-500">
+                    {selectedSubCategory}
+                    <button onClick={onRemoveSubCategory} className="ml-2 text-white hover:text-gray-200">
                         &times;
                     </button>
                 </span>
