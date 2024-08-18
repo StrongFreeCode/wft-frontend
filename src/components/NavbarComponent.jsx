@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import {
+  Badge,
   DarkThemeToggle,
   Navbar,
   NavbarBrand,
@@ -141,6 +142,20 @@ export const NavbarComponent = () => {
           `}
         >
           {language === "es" ? "Reseñas" : "Reviews"}
+        </NavbarLink>
+
+        <NavbarLink
+          as={Link}
+          href="/blogs"
+          active={pathname === "/blogs"}
+          className={`
+          ${pathname === "/blogs"
+              ? customTheme.link.active.on
+              : customTheme.link.active.off
+            } ${customTheme.newtheme.base}
+          `}
+        >
+          {language === "es" ? "Blogs" : "Blogs"}<Badge className="bg-success-400 text-slate-600 ml-1 -mt-2">beta</Badge>
         </NavbarLink>
         <NavbarLink
           as={Link}

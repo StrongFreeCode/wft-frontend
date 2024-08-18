@@ -45,6 +45,7 @@ export const FooterComponent = () => {
       <div className="w-full text-center">
         <div className="flex justify-center space-x-4 p-6 ">
           <FooterLinkGroup>
+
             <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/">Home</FooterLink>
             <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/excursions">Excursions</FooterLink>
             <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/comments">Reviews</FooterLink>
@@ -55,7 +56,7 @@ export const FooterComponent = () => {
 
         <SocialMediaIcons />
         <div itemScope itemType="http://schema.org/LocalBusiness" className="mt-4">
-          <div className="flex justify-center">
+          <div className="flex justify-center mb-4">
             <FooterBrand
               href="/assets/wft/logo X en png.png"
               src="/assets/wft/logo X en png.png"
@@ -72,8 +73,15 @@ export const FooterComponent = () => {
           <p itemProp="telephone" className="text-sm text-gray-800 dark:text-gray-300">+5355244394</p>
           <p itemProp="email" className="text-sm text-gray-800 dark:text-gray-300">info@wonderfulltime.com</p>
         </div>
+
         <FooterDivider />
+        <div className='flex text-xs md:text-md justify-center whitespace-nowrap'>
+          <a href="#" className="uppercase px-3">Privacy Policy</a>
+          <a href="#" className="uppercase px-3">Terms & Conditions</a>
+          <a href="#" className="uppercase px-3">Contact Us</a>
+        </div>
         <div className='mt-4'>
+
           <FooterCopyright className='text-gray-800 dark:text-gray-200' href="https://www.strongfreecode.com" by="StrongFreeCode™" year={new Date().getFullYear()} />
         </div>
       </div>
