@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export default function BlogPage() {
-
     return (
         <div className="bg-white font-family-karla">
             <Head>
@@ -19,7 +18,6 @@ export default function BlogPage() {
             <TextHeader />
             <TopicNav />
             <MainContent />
-
         </div>
     );
 };
@@ -76,7 +74,7 @@ function TopicNav() {
             <div className="block sm:hidden">
                 <a
                     href="#"
-                    className="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+                    className=" md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
                     onClick={() => setOpen(!open)}
                 >
                     Topics <i className={`fas ml-2 ${open ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
@@ -106,38 +104,56 @@ function MainContent() {
 }
 
 function PostsSection() {
+    const articles = [
+        {
+            imageSrc: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+            category: "Technology",
+            title: "Lorem Ipsum Dolor Sit Amet Dolor Sit Amet",
+            author: "David Grzyb",
+            date: "April 25th, 2020",
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna..",
+            tags: ['Gadgets', 'AI']
+        },
+        {
+            imageSrc: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+            category: "Automotive, Finance",
+            title: "Lorem Ipsum Dolor Sit Amet Dolor Sit Amet",
+            author: "David Grzyb",
+            date: "January 12th, 2020",
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna..",
+            tags: ['Cars', 'Stocks']
+        },
+        {
+            imageSrc: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+            category: "Sports",
+            title: "Lorem Ipsum Dolor Sit Amet Dolor Sit Amet",
+            author: "David Grzyb",
+            date: "October 22nd, 2019",
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna..",
+            tags: ['Sports']
+        }
+    ];
+
     return (
         <section className="w-full md:w-2/3 flex flex-col items-center px-3">
-            <Article
-                imageSrc="https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                category="Technology"
-                title="Lorem Ipsum Dolor Sit Amet Dolor Sit Amet"
-                author="David Grzyb"
-                date="April 25th, 2020"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna.."
-            />
-            <Article
-                imageSrc="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                category="Automotive, Finance"
-                title="Lorem Ipsum Dolor Sit Amet Dolor Sit Amet"
-                author="David Grzyb"
-                date="January 12th, 2020"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna.."
-            />
-            <Article
-                imageSrc="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                category="Sports"
-                title="Lorem Ipsum Dolor Sit Amet Dolor Sit Amet"
-                author="David Grzyb"
-                date="October 22nd, 2019"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna.."
-            />
+            {articles.map((article, index) => (
+                <Article
+                    key={index}
+                    imageSrc={article.imageSrc}
+                    category={article.category}
+                    title={article.title}
+                    author={article.author}
+                    date={article.date}
+                    content={article.content}
+                    tags={article.tags}
+                />
+            ))}
             <Pagination />
         </section>
     );
 }
 
-function Article({ imageSrc, category, title, author, date, content }) {
+function Article({ imageSrc, category, title, author, date, content, tags }) {
     return (
         <article className="flex flex-col shadow my-4">
             <a href="#" className="hover:opacity-75">
@@ -150,6 +166,11 @@ function Article({ imageSrc, category, title, author, date, content }) {
                     By <a href="#" className="font-semibold hover:text-gray-800">{author}</a>, Published on {date}
                 </p>
                 <a href="#" className="pb-6">{content}</a>
+                <div className="flex flex-wrap pb-6">
+                    {tags.map((tag, index) => (
+                        <a key={index} href="#" className="mr-2 mb-2 px-3 py-1 text-sm text-white rounded hover:opacity-75 bg-blue-500">{tag}</a>
+                    ))}
+                </div>
                 <a href="#" className="uppercase text-gray-800 hover:text-black">Continue Reading <i className="fas fa-arrow-right"></i></a>
             </div>
         </article>
