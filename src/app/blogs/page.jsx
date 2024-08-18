@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export default function BlogPage() {
+
     return (
         <div className="bg-white font-family-karla">
             <Head>
@@ -222,13 +223,14 @@ function CategoriesDropdown() {
 
 function Tags() {
     const tags = ['Technology', 'Automotive', 'Finance', 'Politics', 'Culture', 'Sports'];
+    const colors = ['bg-blue-500', 'bg-green-500', 'bg-red-500', 'bg-yellow-500', 'bg-purple-500', 'bg-pink-500'];
 
     return (
         <div className="w-full bg-white shadow flex flex-col my-4 p-6">
             <p className="text-xl font-semibold pb-5">Tags</p>
             <div className="flex flex-wrap">
                 {tags.map((tag, index) => (
-                    <a key={index} href="#" className="mr-2 mb-2 px-3 py-1 bg-gray-200 text-sm text-gray-700 rounded hover:bg-gray-300">{tag}</a>
+                    <a key={index} href="#" className={`mr-2 mb-2 px-3 py-1 text-sm text-white rounded hover:opacity-75 ${colors[index % colors.length]}`}>{tag}</a>
                 ))}
             </div>
         </div>

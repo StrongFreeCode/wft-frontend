@@ -17,11 +17,16 @@ export const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="dark:text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+          <h2 className="dark:text-white mb-4 text-2xl sm:text-3xl lg:text-5xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-800 dark:from-primary-400 dark:to-secondary-600">
-              {language == 'es' ? "Hola, Bienvenidos" : 'Hello, Welcome'}{" "}
+              {language == 'es' ? "Hola, Bienvenidos a:" : 'Hello, Welcome to:'}{" "}
             </span>
             <br></br>
+          </h2>
+          <h1 className="dark:text-white text-black mb-4 text-3xl sm:text-4xl lg:text-6xl lg:leading-normal font-extrabold">
+            <span className="bg-gradient-to-r  from-blue-800 to-cyan-500 bg-clip-text text-transparent animate-gradient">WONDERFULLTIME</span>
+          </h1>
+          <p>
             <TypeAnimation
               sequence={
                 [
@@ -40,19 +45,17 @@ export const HeroSection = () => {
                   ` de la isla."`,
                   1500,
                   `Únase a nosotros para descubrirlo.`,
-
                 ]}
               className="text-2xl sm:text-3xl lg:text-5xl"
               wrapper="span"
               speed={50}
               repeat={Infinity}
             />
-          </h1>
+          </p>
           <p className="text-gray-800 dark:text-gray-200 text-base sm:text-lg mb-6 lg:text-xl">
             {language == 'es' ? `“Viaja con nosotros, crea recuerdos para siempre.”` : `“Travel with us, create memories forever.”`}
           </p>
           <div>
-
             <Link
               href="/about"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3 mr-4"
@@ -85,11 +88,8 @@ export const HeroSection = () => {
               width={300}
               height={300}
             />
-
           </div>
-
         </motion.div>
-
       </div>
     </section>
   );

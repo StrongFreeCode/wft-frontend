@@ -13,7 +13,7 @@ import {
 import { useGlobalContext } from "@/helpers/Global";
 import { usePathname } from "next/navigation";
 import { Contact } from "../components/ContactComponent";
-
+const isProduction = process.env.NODE_ENV === 'production';
 const customTheme = {
   newtheme: {
     base:
@@ -147,6 +147,7 @@ export const NavbarComponent = () => {
         <NavbarLink
           as={Link}
           href="/blogs"
+          disabled={isProduction}
           active={pathname === "/blogs"}
           className={`
           ${pathname === "/blogs"
