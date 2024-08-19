@@ -273,7 +273,6 @@ function MainContent({ articles, tagColors, selectedTags, onTagSelect, categorie
         </div>
     );
 }
-
 function PostsSection({ articles, tagColors }) {
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -288,6 +287,7 @@ function PostsSection({ articles, tagColors }) {
                         key={index}
                         imageSrc={article.imageSrc}
                         category={article.category}
+                        subcategory={article.subcategory}
                         title={article.title}
                         author={article.author}
                         date={article.date}
@@ -308,14 +308,17 @@ function PostsSection({ articles, tagColors }) {
     );
 }
 
-function Article({ imageSrc, category, title, author, date, content, tags, tagColors }) {
+function Article({ imageSrc, category, subcategory, title, author, date, content, tags, tagColors }) {
     return (
         <article className="flex flex-col shadow-md my-4 shadow-slate-400">
             <a href="#" className="hover:opacity-75">
                 <Image src={imageSrc} alt={title} width={768} height={90} className='w-full max-h-48 object-cover object-center rounded-t-lg' />
             </a>
             <div className="bg-white flex hover:bg-slate-100 flex-col justify-start p-6">
-                <a href="#" className="text-blue-700 text-sm font-bold uppercase pb-4">{category}</a>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <span className="text-blue-700 text-base md:text-lg font-extrabold uppercase pb-4">{category}</span>
+                    <span className="text-gray-600 text-xs font-bold uppercase bg-orange-300 rounded-full px-2 py-1 inline-block">{subcategory}</span>
+                </div>
                 <a href="#" className="text-3xl font-bold hover:text-gray-700 pb-4">{title}</a>
                 <p href="#" className="text-sm pb-3">
                     By <a href="#" className="font-semibold hover:text-gray-800">{author}</a>, Published on {date}
@@ -333,7 +336,6 @@ function Article({ imageSrc, category, title, author, date, content, tags, tagCo
         </article>
     );
 }
-
 function Pagination({ currentPage, totalPages, onPageChange }) {
     const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
@@ -448,25 +450,38 @@ function SubCategoriesDropdown({ categories, onSubCategorySelect }) {
 }
 
 function Tags({ tags, tagColors, selectedTags, onTagSelect }) {
+    const [showAllTags, setShowAllTags] = useState(false);
+
+    const visibleTags = showAllTags ? tags : tags.slice(0, 15);
+    const remainingTagsCount = tags.length - visibleTags.length;
+
     return (
         <div className="w-full bg-white shadow flex flex-col my-4 p-6">
             <p className="text-xl font-semibold pb-5">Tags</p>
             <div className="flex flex-wrap">
-                {tags.map((tag, index) => (
-                    <a
+                {visibleTags.map((tag, index) => (
+                    <button
                         key={index}
-                        href="#"
                         className={`mr-2 mb-2 px-3 py-1 text-sm text-white rounded hover:opacity-75 ${selectedTags.includes(tag) ? 'opacity-75' : ''}`}
                         style={{ backgroundColor: tagColors[tag] }}
                         onClick={() => onTagSelect(tag)}
                     >
                         {tag}
-                    </a>
+                    </button>
                 ))}
+                {(remainingTagsCount > 0 || showAllTags) && (
+                    <button
+                        className="mr-2 mb-2 px-3 py-1 text-sm text-white bg-gray-500 rounded hover:opacity-75"
+                        onClick={() => setShowAllTags(!showAllTags)}
+                    >
+                        {showAllTags ? 'Show less' : `+${remainingTagsCount} more`}
+                    </button>
+                )}
             </div>
         </div>
     );
 }
+
 
 function Instagram() {
     return (
