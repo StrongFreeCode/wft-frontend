@@ -3,7 +3,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Image from 'next/image';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const categories = [
     { name: 'Travel', subcategories: ["Popular Destinations", "Hidden Gems", "Off the Beaten Path", "Adventure Travel", "Luxury Travel", "Budget Travel"] },
@@ -21,6 +21,7 @@ const tags = [
     'El Yunque', 'Colonial', 'Trinidad', 'Bay', 'Pigs'
 ];
 
+
 function getColor(index, totalTags) {
     const baseHue = index * (360 / totalTags);
     const colors = [
@@ -31,7 +32,6 @@ function getColor(index, totalTags) {
     ];
     return colors[index % 4];
 }
-
 const articlesData = [
     {
         imageSrc: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
@@ -336,28 +336,67 @@ function Article({ imageSrc, category, subcategory, title, author, date, content
         </article>
     );
 }
+
 function Pagination({ currentPage, totalPages, onPageChange }) {
-    const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+    const maxPagesToShow = 5; // Número máximo de páginas a mostrar a la vez
+    const halfMaxPagesToShow = Math.floor(maxPagesToShow / 2);
+
+    let startPage = Math.max(currentPage - halfMaxPagesToShow, 1);
+    let endPage = Math.min(startPage + maxPagesToShow - 1, totalPages);
+
+    if (endPage - startPage < maxPagesToShow - 1) {
+        startPage = Math.max(endPage - maxPagesToShow + 1, 1);
+    }
+
+    const pages = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
 
     return (
-        <div className="flex items-center py-8">
+        <div className="flex items-center justify-center py-8">
+            <button
+                onClick={() => onPageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white mr-3 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+                <FaChevronLeft className="text-sm" />
+            </button>
+            {startPage > 1 && (
+                <button
+                    onClick={() => onPageChange(1)}
+                    className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white mx-1"
+                >
+                    1
+                </button>
+            )}
+            {startPage > 2 && (
+                <span className="mx-1">...</span>
+            )}
             {pages.map(page => (
                 <button
                     key={page}
                     onClick={() => onPageChange(page)}
-                    className={`h-10 w-10 ${page === currentPage ? 'bg-blue-800' : 'bg-gray-200'} hover:bg-blue-600 font-semibold text-white text-sm flex items-center justify-center`}
+                    className={`h-10 w-10 flex items-center justify-center rounded-full ${page === currentPage ? 'bg-blue-800 text-white' : 'bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white'} mx-1`}
                 >
                     {page}
                 </button>
             ))}
-            {currentPage < totalPages && (
+            {endPage < totalPages - 1 && (
+                <span className="mx-1">...</span>
+            )}
+            {endPage < totalPages && (
                 <button
-                    onClick={() => onPageChange(currentPage + 1)}
-                    className="h-10 w-10 font-semibold text-gray-800 hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center ml-3"
+                    onClick={() => onPageChange(totalPages)}
+                    className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white mx-1"
                 >
-                    Next <i className="fas fa-arrow-right ml-2"></i>
+                    {totalPages}
                 </button>
             )}
+            <button
+                onClick={() => onPageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white ml-3 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+                <FaChevronRight className="text-sm" />
+            </button>
         </div>
     );
 }
