@@ -5,7 +5,7 @@ import { useState } from 'react';
 import TopBarNav from './components/TopBarNav';
 import TextHeader from './components/TextHeader';
 import TopicNav from './components/TopicNav';
-import ActiveFilters from './components/ActibeFilters';
+import ActiveFilters from './components/ActiveFilters';
 import MainContent from './components/MainContent';
 
 const categories = [
@@ -137,12 +137,14 @@ const articlesData = [
         tags: ['Bay', 'Pigs']
     }
 ];
-
+const articlesPerPage = 3;
 
 export default function BlogPage() {
     const [selectedTags, setSelectedTags] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedSubCategory, setSelectedSubCategory] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+
 
     const tagColors = tags.reduce((acc, tag, index) => {
         acc[tag] = getColor(index, tags.length);
@@ -158,10 +160,22 @@ export default function BlogPage() {
 
     const handleTagSelect = (tag) => {
         setSelectedTags(prevTags => [...prevTags, tag]);
+        setCurrentPage(1)
     };
 
     const handleTagRemove = (tag) => {
         setSelectedTags(prevTags => prevTags.filter(t => t !== tag));
+        setCurrentPage(1)
+    };
+
+    const handleCategorySelect = (category) => {
+        setSelectedCategory(category);
+        setCurrentPage(1); // Resetear la página al seleccionar una categoría
+    };
+
+    const handleSubCategorySelect = (subCategory) => {
+        setSelectedSubCategory(subCategory);
+        setCurrentPage(1); // Resetear la página al seleccionar una subcategoría
     };
 
     return (
@@ -174,7 +188,7 @@ export default function BlogPage() {
 
             <TopBarNav />
             <TextHeader />
-            <TopicNav categories={categories} onCategorySelect={setSelectedCategory} />
+            <TopicNav categories={categories} onCategorySelect={handleCategorySelect} />
             <ActiveFilters
                 selectedTags={selectedTags}
                 selectedCategory={selectedCategory}
@@ -191,7 +205,10 @@ export default function BlogPage() {
                 onTagSelect={handleTagSelect}
                 categories={categories}
                 tags={tags}
-                onSubCategorySelect={setSelectedSubCategory}
+                onSubCategorySelect={handleSubCategorySelect}
+                currentPage={currentPage}
+                onPageChange={setCurrentPage}
+                articlesPerPage={articlesPerPage}
             />
         </div>
     );
