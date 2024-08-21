@@ -1,4 +1,4 @@
-import { FaRemoveFormat, FaTrash } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
 
 export default function ActiveFilters({ selectedTags, selectedCategory, selectedSubCategory, onRemoveTag, onRemoveCategory, onRemoveSubCategory, tagColors }) {
     const hasFilters = selectedCategory || selectedSubCategory || selectedTags.length > 0;
@@ -10,11 +10,11 @@ export default function ActiveFilters({ selectedTags, selectedCategory, selected
     };
 
     return (
-        <div className="flex items-center justify-center my-4 h-12">
+        <div className="flex items-center justify-center my-4 h-12 flex-wrap">
             {selectedCategory && (
                 <span
                     onClick={onRemoveCategory}
-                    className="px-3 py-1 mr-2 text-sm text-white bg-blue-800 rounded cursor-pointer hover:bg-blue-700 hover:shadow-md transition duration-300 ease-in-out"
+                    className="px-3 py-1 mr-2 mb-2 text-sm text-white bg-blue-800 rounded cursor-pointer hover:bg-blue-700 hover:shadow-md transition duration-300 ease-in-out"
                 >
                     {selectedCategory}
                     <button
@@ -28,7 +28,7 @@ export default function ActiveFilters({ selectedTags, selectedCategory, selected
             {selectedSubCategory && (
                 <span
                     onClick={onRemoveSubCategory}
-                    className="px-3 py-1 mr-2 text-sm text-white bg-blue-600 rounded cursor-pointer hover:bg-blue-500 hover:shadow-md transition duration-300 ease-in-out"
+                    className="px-3 py-1 mr-2 mb-2 text-sm text-white bg-blue-600 rounded cursor-pointer hover:bg-blue-500 hover:shadow-md transition duration-300 ease-in-out"
                 >
                     {selectedSubCategory}
                     <button
@@ -43,7 +43,7 @@ export default function ActiveFilters({ selectedTags, selectedCategory, selected
                 <span
                     key={index}
                     onClick={() => onRemoveTag(tag)}
-                    className="px-3 py-1 mr-2 text-sm text-white rounded cursor-pointer hover:opacity-75 hover:shadow-md transition duration-300 ease-in-out"
+                    className="px-3 py-1 mr-2 mb-2 text-sm text-white rounded cursor-pointer hover:opacity-75 hover:shadow-md transition duration-300 ease-in-out"
                     style={{ backgroundColor: tagColors[tag] }}
                 >
                     {tag}
@@ -58,9 +58,9 @@ export default function ActiveFilters({ selectedTags, selectedCategory, selected
             {hasFilters && (
                 <button
                     onClick={handleResetFilters}
-                    className="animate-pulse flex flex-nowrap items-center px-3 py-1 text-sm text-white bg-red-600 rounded cursor-pointer hover:bg-red-500 hover:shadow-md transition duration-300 ease-in-out"
+                    className="animate-pulse flex flex-nowrap items-center px-3 py-1 mb-2 text-sm text-white bg-red-600 rounded cursor-pointer hover:bg-red-500 hover:shadow-md transition duration-300 ease-in-out"
                 >
-                    <FaTrash /> Reset Filters
+                    <FaTrash className="mr-2" /> Reset Filters
                 </button>
             )}
         </div>
