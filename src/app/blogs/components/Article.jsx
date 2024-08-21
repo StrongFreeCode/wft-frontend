@@ -3,7 +3,7 @@ import { calculateTimeRead } from '../utils/ArticleList';
 
 export default function Article({ imageSrc, category, subcategory, title, author, date, content, tags, tagColors, onTagSelect, onSubCategorySelect }) {
     return (
-        <article className="flex  flex-col shadow-md my-4 shadow-slate-400 dark:shadow-gray-800 rounded-t-lg">
+        <article className="flex   flex-col shadow-md my-4 shadow-slate-400 dark:shadow-gray-800 rounded-t-lg">
             <button onClick={handleArticleClick} className="hover:opacity-75">
                 <Image src={imageSrc} alt={title} width={768} height={90} className='w-full max-h-48 object-cover object-center rounded-t-lg' />
             </button>
