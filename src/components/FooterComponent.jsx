@@ -1,4 +1,3 @@
-
 import { Footer, FooterBrand, FooterCopyright, FooterDivider, FooterLink, FooterLinkGroup } from 'flowbite-react';
 import SocialMediaIcons from './SocialMediaIcons';
 
@@ -27,7 +26,7 @@ const customTheme = {
     "base": "w-full my-6 border-gray-300 sm:mx-auto dark:border-gray-700 lg:my-8"
   },
   "copyright": {
-    "base": "text-sm sm:text-center",
+    "base": "text-sm sm:text-center text-gray-800 dark:text-gray-200",
     "href": "ml-1 hover:underline",
     "span": "ml-1"
   },
@@ -45,12 +44,10 @@ export const FooterComponent = () => {
       <div className="w-full text-center">
         <div className="flex justify-center space-x-4 p-6 ">
           <FooterLinkGroup>
-
             <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/">Home</FooterLink>
             <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/excursions">Excursions</FooterLink>
             <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/comments">Reviews</FooterLink>
             <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/about">About</FooterLink>
-            {/*   <FooterLink href="/contact">Contact</FooterLink> */}
           </FooterLinkGroup>
         </div>
 
@@ -76,12 +73,11 @@ export const FooterComponent = () => {
 
         <FooterDivider />
         <div className='flex text-xs md:text-md justify-center whitespace-nowrap'>
-          <a href="#" className="uppercase px-3">Privacy Policy</a>
-          <a href="#" className="uppercase px-3">Terms & Conditions</a>
-          <a href="#" className="uppercase px-3">Contact Us</a>
+          <a href="#" className="uppercase px-3 text-gray-800 dark:text-gray-200">Privacy Policy</a>
+          <a href="#" className="uppercase px-3 text-gray-800 dark:text-gray-200">Terms & Conditions</a>
+          <a href="#" className="uppercase px-3 text-gray-800 dark:text-gray-200">Contact Us</a>
         </div>
         <div className='mt-4'>
-
           <FooterCopyright className='text-gray-800 dark:text-gray-200' href="https://www.strongfreecode.com" by="StrongFreeCode™" year={new Date().getFullYear()} />
         </div>
       </div>

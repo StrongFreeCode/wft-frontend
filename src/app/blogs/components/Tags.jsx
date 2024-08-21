@@ -1,4 +1,4 @@
-// app/blog/components/Tags.jsx
+'use client'
 import { useState } from 'react';
 
 export default function Tags({ tags, tagColors, selectedTags, onTagSelect }) {
@@ -8,8 +8,8 @@ export default function Tags({ tags, tagColors, selectedTags, onTagSelect }) {
     const remainingTagsCount = tags.length - visibleTags.length;
 
     return (
-        <div className="w-full bg-white shadow flex flex-col my-4 p-6">
-            <p className="text-xl font-semibold pb-5">Tags</p>
+        <div className="w-full bg-white dark:bg-gray-800 rounded-md shadow-slate-400 dark:shadow-gray-700 shadow-md flex flex-col my-4 p-6">
+            <p className="text-xl font-semibold pb-5 text-gray-900 dark:text-white">Tags</p>
             <div className="flex flex-wrap">
                 {visibleTags.map((tag, index) => (
                     <button
@@ -23,7 +23,7 @@ export default function Tags({ tags, tagColors, selectedTags, onTagSelect }) {
                 ))}
                 {(remainingTagsCount > 0 || showAllTags) && (
                     <button
-                        className="mr-2 mb-2 px-3 py-1 text-sm text-white bg-gray-500 rounded hover:opacity-75"
+                        className="mr-2 mb-2 px-3 py-1 text-sm text-white bg-gray-500 dark:bg-gray-700 rounded hover:opacity-75"
                         onClick={() => setShowAllTags(!showAllTags)}
                     >
                         {showAllTags ? 'Show less' : `+${remainingTagsCount} more`}

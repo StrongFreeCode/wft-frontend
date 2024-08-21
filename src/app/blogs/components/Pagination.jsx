@@ -32,7 +32,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
                 </button>
             )}
             {startPage > 2 && (
-                <span className="mx-1">...</span>
+                <span className="mx-1  dark:text-white font-bold">...</span>
             )}
             {pages.map(page => (
                 <button
@@ -44,7 +44,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
                 </button>
             ))}
             {endPage < totalPages - 1 && (
-                <span className="mx-1">...</span>
+                <span className="mx-1 dark:text-white font-bold">...</span>
             )}
             {endPage < totalPages && (
                 <button
