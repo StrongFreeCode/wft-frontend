@@ -5,24 +5,24 @@ export default function TopBarNav() {
     return (
         <nav className="w-full py-4 bg-blue-800 shadow">
             <div className="w-full container mx-auto flex flex-wrap items-center justify-between">
-                <nav>
-                    <ul className="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
-                        <li><a className="hover:text-gray-200 hover:underline px-4" href="https://strongfreecode.com">StrongFreeCode</a></li>
-                        <li><a className="hover:text-gray-200 hover:underline px-4" href="https://lashopy.strongfreecode.com">LaShopy</a></li>
+                <nav className="w-full md:w-auto">
+                    <ul className="flex flex-col items-center justify-center font-bold text-sm text-white uppercase no-underline md:flex-row">
+                        <li><a className="hover:text-gray-200 hover:underline px-4 py-2 md:py-0" href="https://strongfreecode.com">StrongFreeCode</a></li>
+                        <li><a className="hover:text-gray-200 hover:underline px-4 py-2 md:py-0" href="https://lashopy.strongfreecode.com">LaShopy</a></li>
                     </ul>
                 </nav>
-                <div className="flex items-center text-lg no-underline text-white pr-6">
+                <div className="flex items-center text-lg no-underline text-white mt-4 md:mt-0 justify-center md:justify-end w-full md:w-auto">
                     <a className="" href="#">
-                        <FaFacebook></FaFacebook>
+                        <FaFacebook />
                     </a>
                     <a className="pl-6" href="#">
-                        <FaInstagram></FaInstagram>
+                        <FaInstagram />
                     </a>
                     <a className="pl-6" href="#">
-                        <FaTwitter></FaTwitter>
+                        <FaTwitter />
                     </a>
                     <a className="pl-6" href="#">
-                        <FaLinkedin></FaLinkedin>
+                        <FaLinkedin />
                     </a>
                 </div>
             </div>
