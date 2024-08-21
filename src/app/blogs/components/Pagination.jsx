@@ -2,7 +2,7 @@
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 export default function Pagination({ currentPage, totalPages, onPageChange }) {
-    const maxPagesToShow = 5; // Número máximo de páginas a mostrar a la vez
+    const maxPagesToShow = 3;
     const halfMaxPagesToShow = Math.floor(maxPagesToShow / 2);
 
     let startPage = Math.max(currentPage - halfMaxPagesToShow, 1);
@@ -15,18 +15,18 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
     const pages = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
 
     return (
-        <div className="flex items-center justify-center py-8">
+        <div className="flex items-center justify-center py-8 ">
             <button
                 onClick={() => onPageChange(currentPage - 1)}
                 disabled={currentPage === 1}
-                className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white mr-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="h-8 w-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white mr-3 disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 <FaChevronLeft className="text-sm" />
             </button>
             {startPage > 1 && (
                 <button
                     onClick={() => onPageChange(1)}
-                    className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white mx-1"
+                    className="h-8 w-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white mx-1"
                 >
                     1
                 </button>
@@ -38,7 +38,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
                 <button
                     key={page}
                     onClick={() => onPageChange(page)}
-                    className={`h-10 w-10 flex items-center justify-center rounded-full ${page === currentPage ? 'bg-blue-800 text-white' : 'bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white'} mx-1`}
+                    className={`h-8 w-8 flex items-center justify-center rounded-full ${page === currentPage ? 'bg-blue-800 text-white' : 'bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white'} mx-1`}
                 >
                     {page}
                 </button>
@@ -49,7 +49,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
             {endPage < totalPages && (
                 <button
                     onClick={() => onPageChange(totalPages)}
-                    className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white mx-1"
+                    className="h-8 w-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-800 hover:bg-blue-600 hover:text-white mx-1"
                 >
                     {totalPages}
                 </button>
@@ -57,7 +57,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
             <button
                 onClick={() => onPageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}
-                className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white ml-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="h-8 w-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white ml-3 disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 <FaChevronRight className="text-sm" />
             </button>
