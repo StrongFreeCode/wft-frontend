@@ -30,7 +30,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <p className="text-slate-200">
+          <p className="dark:text-slate-200 text-slate-800 ">
             <TypeAnimation
               sequence={
                 [
