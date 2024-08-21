@@ -1,4 +1,4 @@
-// app/blog/components/SubCategoriesDropdown.jsx
+'use client'
 import { useState } from 'react';
 
 export default function SubCategoriesDropdown({ categories, onSubCategorySelect }) {
@@ -22,7 +22,7 @@ export default function SubCategoriesDropdown({ categories, onSubCategorySelect 
     };
 
     return (
-        <div className="w-full bg-white shadow flex flex-col my-4 p-6 rounded-lg">
+        <div className="w-full bg-white shadow-slate-400 shadow-md flex flex-col my-4 p-6 rounded-lg">
             <p className="text-xl font-semibold pb-5">SubCategories</p>
             <div className="relative">
                 <button

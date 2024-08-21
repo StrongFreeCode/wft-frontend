@@ -1,14 +1,12 @@
-// app/blog/components/PostsSection.jsx
-import { useState } from 'react';
 import Article from './Article';
 import Pagination from './Pagination';
 
-export default function PostsSection({ articles, tagColors, currentPage, onPageChange, articlesPerPage }) {
+export default function PostsSection({ articles, tagColors, currentPage, onPageChange, articlesPerPage, onTagSelect, onSubCategorySelect }) {
     const startIndex = (currentPage - 1) * articlesPerPage;
     const visibleArticles = articles.slice(startIndex, startIndex + articlesPerPage);
 
     return (
-        <section className="w-full md:w-2/3 flex flex-col items-center px-3">
+        <section className="w-full md:w-2/3 flex flex-col items-center px-3  ">
             {visibleArticles.length > 0 ? (
                 visibleArticles.map((article, index) => (
                     <Article
@@ -22,6 +20,8 @@ export default function PostsSection({ articles, tagColors, currentPage, onPageC
                         content={article.content}
                         tags={article.tags}
                         tagColors={tagColors}
+                        onTagSelect={onTagSelect}
+                        onSubCategorySelect={onSubCategorySelect}
                     />
                 ))
             ) : (

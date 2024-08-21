@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Instagram() {
     return (
-        <div className="w-full bg-white shadow flex flex-col my-4 p-6">
+        <div className="w-full bg-white rounded-md shadow-slate-400 shadow-md flex flex-col my-4 p-6">
             <p className="text-xl font-semibold pb-5">Instagram</p>
             <div className="grid grid-cols-3 gap-3">
                 <Image className="hover:opacity-75" src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Instagram 1" width={150} height={150} />

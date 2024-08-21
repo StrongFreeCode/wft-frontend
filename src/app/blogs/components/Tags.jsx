@@ -1,4 +1,4 @@
-// app/blog/components/Tags.jsx
+'use client'
 import { useState } from 'react';
 
 export default function Tags({ tags, tagColors, selectedTags, onTagSelect }) {
@@ -8,7 +8,7 @@ export default function Tags({ tags, tagColors, selectedTags, onTagSelect }) {
     const remainingTagsCount = tags.length - visibleTags.length;
 
     return (
-        <div className="w-full bg-white shadow flex flex-col my-4 p-6">
+        <div className="w-full bg-white rounded-md shadow-slate-400 shadow-md flex flex-col my-4 p-6">
             <p className="text-xl font-semibold pb-5">Tags</p>
             <div className="flex flex-wrap">
                 {visibleTags.map((tag, index) => (
