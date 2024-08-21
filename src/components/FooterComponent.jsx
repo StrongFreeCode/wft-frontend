@@ -62,7 +62,7 @@ export const FooterComponent = () => {
             />
           </div>
           <div itemProp="address" itemScope itemType="http://schema.org/PostalAddress" className="text-sm text-gray-800 dark:text-gray-300">
-            <span itemProp="streetAddress">434 principal street</span>,
+            {/*    <span itemProp="streetAddress">434 principal street</span>, */}
             <span itemProp="addressLocality">La Havana</span>,
             <span itemProp="addressRegion">Cuba</span>,
             <span itemProp="postalCode">10700</span>
