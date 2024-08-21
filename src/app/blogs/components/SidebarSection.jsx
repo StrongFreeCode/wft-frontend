@@ -1,80 +1,112 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Newsletter from './Newsletter';
 import SubCategoriesDropdown from './SubCategoriesDropdown';
 import Tags from './Tags';
 import Instagram from './Instagram';
-import Newsletter from './Newsletter';
+import { FaFilter, FaTimes, FaEnvelope, FaList, FaTags, FaInstagram, FaEye, FaEyeSlash } from 'react-icons/fa';
 
-export default function SidebarSection({ categories, tags, tagColors, selectedTags, onTagSelect, onSubCategorySelect }) {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [hiddenComponents, setHiddenComponents] = useState([]);
+const Sidebar = ({ categories, tags, tagColors, selectedTags, onSubCategorySelect, onTagSelect }) => {
+    const [showFilterIcon, setShowFilterIcon] = useState(false);
+    const [showSlideBar, setShowSlideBar] = useState(false);
+    const [showNewsletter, setShowNewsletter] = useState(true);
+    const [showSubCategories, setShowSubCategories] = useState(true);
+    const [showTags, setShowTags] = useState(true);
+    const [showInstagram, setShowInstagram] = useState(true);
 
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
+    useEffect(() => {
+        const handleResize = () => {
+            setShowFilterIcon(window.innerWidth < 768); // Cambia 768 por el ancho en el que el aside se oculta
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const toggleSlideBar = () => {
+        setShowSlideBar(!showSlideBar);
     };
 
-    const hideComponent = (componentName) => {
-        setHiddenComponents([...hiddenComponents, componentName]);
-    };
+    const toggleComponent = (component) => {
+        if (window.innerWidth >= 768) return; // No toggle components in md view
 
-    const showComponent = (componentName) => {
-        setHiddenComponents(hiddenComponents.filter(name => name !== componentName));
+        switch (component) {
+            case 'subCategories':
+                setShowSubCategories(!showSubCategories);
+                break;
+            case 'tags':
+                setShowTags(!showTags);
+                break;
+            default:
+                break;
+        }
     };
-
-    const isComponentHidden = (componentName) => hiddenComponents.includes(componentName);
 
     return (
-        <div>
-            {/* Botón para abrir/cerrar el sidebar en mobile */}
-            <button onClick={toggleSidebar} className="md:hidden fixed bottom-4 right-4 z-50 p-4 bg-blue-500 text-white rounded-full">
-                ☰
-            </button>
-
-            {/* Sidebar */}
-            <aside className={`fixed inset-y-0 right-0 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0 md:relative md:flex md:flex-col md:items-center md:px-3`} style={{ maxHeight: '100vh', overflowY: 'auto' }}>
-                <button onClick={toggleSidebar} className="md:hidden absolute top-4 right-4">
-                    X
-                </button>
-                <div className="p-4">
-                    {!isComponentHidden('Newsletter') && (
-                        <div className="relative">
-                            <button onClick={() => hideComponent('Newsletter')} className="absolute top-0 right-0 text-sm text-white">X</button>
-                            <Newsletter />
-                        </div>
-                    )}
-                    {!isComponentHidden('SubCategoriesDropdown') && (
-                        <div className="relative mt-4">
-                            <button onClick={() => hideComponent('SubCategoriesDropdown')} className="absolute top-0 right-0 text-sm text-white">X</button>
-                            <SubCategoriesDropdown categories={categories} onSubCategorySelect={onSubCategorySelect} />
-                        </div>
-                    )}
-                    {!isComponentHidden('Tags') && (
-                        <div className="relative mt-4">
-                            <button onClick={() => hideComponent('Tags')} className="absolute top-0 right-0 text-sm text-white">X</button>
-                            <Tags tags={tags} tagColors={tagColors} selectedTags={selectedTags} onTagSelect={onTagSelect} />
-                        </div>
-                    )}
-                    {!isComponentHidden('Instagram') && (
-                        <div className="relative mt-4">
-                            <button onClick={() => hideComponent('Instagram')} className="absolute top-0 right-0 text-sm text-white">X</button>
-                            <Instagram />
-                        </div>
-                    )}
-                </div>
-                <div className="p-4">
-                    {isComponentHidden('Newsletter') && (
-                        <button onClick={() => showComponent('Newsletter')} className="block mb-2 text-sm">Mostrar Newsletter</button>
-                    )}
-                    {isComponentHidden('SubCategoriesDropdown') && (
-                        <button onClick={() => showComponent('SubCategoriesDropdown')} className="block mb-2 text-sm">Mostrar Categorías</button>
-                    )}
-                    {isComponentHidden('Tags') && (
-                        <button onClick={() => showComponent('Tags')} className="block mb-2 text-sm">Mostrar Etiquetas</button>
-                    )}
-                    {isComponentHidden('Instagram') && (
-                        <button onClick={() => showComponent('Instagram')} className="block mb-2 text-sm">Mostrar Instagram</button>
-                    )}
-                </div>
+        <>
+            <aside className={`w-full md:w-1/3 hidden md:flex flex-col items-center px-3 ${showFilterIcon ? 'hidden' : ''}`}>
+                <Newsletter />
+                <SubCategoriesDropdown categories={categories} onSubCategorySelect={onSubCategorySelect} />
+                <Tags tags={tags} tagColors={tagColors} selectedTags={selectedTags} onTagSelect={onTagSelect} />
+                <Instagram />
             </aside>
-        </div>
+            <div className='md:hidden'>
+                <Newsletter />
+                <Instagram />
+            </div>
+            {showFilterIcon && (
+                <>
+                    <div
+                        className="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg cursor-pointer"
+                        onClick={toggleSlideBar}
+                    >
+                        <FaFilter />
+                    </div>
+                    <div
+                        className={`fixed top-0 right-0 h-full w-64 bg-slate-200 dark:bg-slate-400 shadow-lg transform transition-transform duration-300 ease-in-out ${showSlideBar ? 'translate-x-0' : 'translate-x-full'}`}
+                    >
+                        <div className="flex flex-col items-center px-3 py-4 relative h-full">
+                            <button
+                                className="absolute top-1 right-2 mb-2 text-lg text-gray-500 hover:text-gray-700"
+                                onClick={toggleSlideBar}
+                            >
+                                <FaTimes />
+                            </button>
+                            <div className="w-full mt-4 flex flex-col space-y-2">
+
+                                <button
+                                    className="flex rounded-lg items-center space-x-2 w-full py-2 px-4 hover:bg-gray-100"
+                                    onClick={() => toggleComponent('subCategories')}
+                                >
+                                    {showSubCategories ? <FaEye /> : <FaEyeSlash />}
+                                    <FaList />
+                                    <span>SubCategories</span>
+                                </button>
+                                <button
+                                    className="flex  rounded-lg items-center space-x-2 w-full py-2 px-4 hover:bg-gray-100"
+                                    onClick={() => toggleComponent('tags')}
+                                >
+                                    {showTags ? <FaEye /> : <FaEyeSlash />}
+                                    <FaTags />
+                                    <span>Tags</span>
+                                </button>
+
+                            </div>
+                            <div className="w-full flex-grow overflow-y-auto">
+
+                                {showSubCategories && <SubCategoriesDropdown categories={categories} onSubCategorySelect={onSubCategorySelect} />}
+                                {showTags && <Tags tags={tags} tagColors={tagColors} selectedTags={selectedTags} onTagSelect={onTagSelect} />}
+
+                            </div>
+                        </div>
+                    </div>
+                </>
+            )}
+        </>
     );
-}
+};
+
+export default Sidebar;
