@@ -63,19 +63,19 @@ const Sidebar = ({ categories, tags, tagColors, selectedTags, onSubCategorySelec
                         className="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg cursor-pointer"
                         onClick={toggleSlideBar}
                     >
-                        <FaFilter />
+                        <FaFilter className='text-2xl' />
                     </div>
                     <div
                         className={`fixed top-0 right-0 h-full w-64 bg-slate-200 dark:bg-slate-400 shadow-lg transform transition-transform duration-300 ease-in-out ${showSlideBar ? 'translate-x-0' : 'translate-x-full'}`}
                     >
                         <div className="flex flex-col items-center px-3 py-4 relative h-full">
                             <button
-                                className="absolute top-1 right-2 mb-2 text-lg text-gray-500 hover:text-gray-700"
+                                className="absolute top-1 right-2  text-lg text-gray-500 hover:text-gray-700"
                                 onClick={toggleSlideBar}
                             >
-                                <FaTimes />
+                                <FaTimes className='text-2xl my-4 mr-2' />
                             </button>
-                            <div className="w-full mt-4 flex flex-col space-y-2">
+                            <div className="w-full mt-8 flex flex-col space-y-2">
 
                                 <button
                                     className="flex rounded-lg items-center space-x-2 w-full py-2 px-4 hover:bg-gray-100"
