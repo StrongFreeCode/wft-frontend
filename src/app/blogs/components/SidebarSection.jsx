@@ -26,6 +26,19 @@ const Sidebar = ({ categories, tags, tagColors, selectedTags, onSubCategorySelec
         };
     }, []);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (showSlideBar && !event.target.closest('.sidebar-content')) {
+                setShowSlideBar(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showSlideBar]);
+
     const toggleSlideBar = () => {
         setShowSlideBar(!showSlideBar);
     };
@@ -66,7 +79,7 @@ const Sidebar = ({ categories, tags, tagColors, selectedTags, onSubCategorySelec
                         <FaFilter className='text-2xl' />
                     </div>
                     <div
-                        className={`fixed top-0 right-0 h-full w-64 bg-slate-200 dark:bg-slate-400 shadow-lg transform transition-transform duration-300 ease-in-out ${showSlideBar ? 'translate-x-0' : 'translate-x-full'}`}
+                        className={`fixed top-0 right-0 h-full w-64 bg-slate-200 dark:bg-slate-400 shadow-lg transform transition-transform duration-300 ease-in-out ${showSlideBar ? 'translate-x-0' : 'translate-x-full'} sidebar-content`}
                     >
                         <div className="flex flex-col items-center px-3 py-4 relative h-full">
                             <button
