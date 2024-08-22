@@ -66,7 +66,7 @@ export const CardComment = ({ excursions }) => {
           theme={customTheme}
           key={excursion.id}
         >
-          <Link href={"/excursions/" + excursion.slug}>
+          <Link href={`/${language}/excursions/${excursion.slug}`}>
             <div className="flex content-center justify-between">
               <h1 className="text-lg font-semibold">{excursion.nombre}</h1>
             </div>
@@ -82,15 +82,15 @@ export const CardComment = ({ excursions }) => {
               {isLoading ? "Loading..." : `${Rate(excursion.id).toFixed(2)} of ${Reviews(excursion.id)} ${language == 'es' ? 'Reseñas' : 'Reviews'}`}
             </span>
             <ModalComponent
-              texto={language == "es" ? "Danos su commentario" : "Give us your feedback"}
+              texto={language == "es" ? "Danos tu comentario" : "Give us your feedback"}
               idDatos={excursion.id}
             />
           </div>
           <Link
-            href={"/comments/" + excursion.slug}
+            href={`/${language}/reviews/${excursion.slug}`}
             className="rounded-lg bg-cyan-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
           >
-            {language == "es" ? "Ver reseñas" : "See review"}
+            {language == "es" ? "Ver reseñas" : "See reviews"}
           </Link>
         </Card>
       ))}

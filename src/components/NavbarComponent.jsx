@@ -127,7 +127,7 @@ export const NavbarComponent = () => {
       <NavbarCollapse>
         {renderNavbarLink("/", t('home'), pathname === `/${language}`)}
         {renderNavbarLink("/excursions", t('excursions'), pathname === `/${language}/excursions`)}
-        {renderNavbarLink("/comments", t('reviews'), pathname === `/${language}/comments`)}
+        {renderNavbarLink("/reviews", t('reviews'), pathname === `/${language}/reviews`)}
         {renderNavbarLink("/blogs", t('blogs'), pathname === `/${language}/blogs`)}
         {renderNavbarLink("/about", t('about'), pathname === `/${language}/about`)}
       </NavbarCollapse>

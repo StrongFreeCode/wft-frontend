@@ -40,7 +40,7 @@ export const Details = ({ datos, resultado, isLoading }) => {
                   <span className="ml-3">
                     {resultado.promedio.toFixed(2)}/
                     <Link
-                      href={`/comments/${datos.slug}`}
+                      href={`/${language}/reviews/${datos.slug}`}
                       className="underline hover:text-blue-600"
                     >
                       {resultado.contadorValoraciones}
@@ -50,12 +50,7 @@ export const Details = ({ datos, resultado, isLoading }) => {
                 </span>)}
                 <span className="flex ml-3 pl-3 py-2 border-l-2 space-x-2 underline hover:text-blue-600">
                   <div className="flex flex-row-1 justify-center items-center ">
-                    {/*  <Link href={`/comments/${datos.id}`}>
-                      {" "}
-                      {language == "es"
-                        ? "Danos su commentario"
-                        : "Give us your feedback"}
-                    </Link> */}
+
                     <ModalComponent
                       texto={
                         language == "es"
@@ -88,12 +83,12 @@ export const Details = ({ datos, resultado, isLoading }) => {
               <p className="leading-relaxed  text-justify px-4">
                 {datos.descripcion}
               </p>
-              ¡
+
               <div className="flex px-4 ">
                 <span className="title-font font-medium text-2xl items-center justify-center flex text-slate-900 dark:text-white">
                   {language == "es" ? "Precio" : "Price"} {datos.precio_final}€
                 </span>
-                {/* <Link href={'/pago'}>PAGO</Link> */}
+
                 <a
                   href={`https://wa.me/${whatsapp.number}?text=${whatsapp.text}`}
                   target="_blank"

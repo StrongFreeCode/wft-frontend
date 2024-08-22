@@ -1,5 +1,7 @@
+'use client'
 import { Footer, FooterBrand, FooterCopyright, FooterDivider, FooterLink, FooterLinkGroup } from 'flowbite-react';
 import SocialMediaIcons from './SocialMediaIcons';
+import { useGlobalContext } from '@/helpers/Global';
 
 const customTheme = {
   "root": {
@@ -38,16 +40,17 @@ const customTheme = {
 }
 
 export const FooterComponent = () => {
+  const { language } = useGlobalContext()
 
   return (
     <Footer container theme={customTheme} className='border-t-4 border-dotted border-black dark:border-white'>
       <div className="w-full text-center">
         <div className="flex justify-center space-x-4 p-6 ">
           <FooterLinkGroup>
-            <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/">Home</FooterLink>
-            <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/excursions">Excursions</FooterLink>
-            <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/comments">Reviews</FooterLink>
-            <FooterLink className={'text-gray-800 dark:text-gray-200'} href="/about">About</FooterLink>
+            <FooterLink className={'text-gray-800 dark:text-gray-200'} href={`/${language}`}>Home</FooterLink>
+            <FooterLink className={'text-gray-800 dark:text-gray-200'} href={`/${language}/excursions`}>Excursions</FooterLink>
+            <FooterLink className={'text-gray-800 dark:text-gray-200'} href={`/${language}/reviews`}>Reviews</FooterLink>
+            <FooterLink className={'text-gray-800 dark:text-gray-200'} href={`/${language}/about`}>About</FooterLink>
           </FooterLinkGroup>
         </div>
 
