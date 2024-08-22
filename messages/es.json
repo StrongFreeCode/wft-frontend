@@ -1,5 +1,12 @@
 {
   "HomePage": {
     "title": "hola mundo!"
+  },
+  "Navbar": {
+    "home": "Inicio",
+    "excursions": "Excursiones",
+    "reviews": "Reseñas",
+    "blogs": "Blogs",
+    "about": "Acerca"
   }
 }

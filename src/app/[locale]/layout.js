@@ -1,12 +1,14 @@
 
 import { NavbarComponent } from "@/components/NavbarComponent"
-import "./page.css";
+import "./global.css";
 import { ThemeModeScript } from 'flowbite-react';
 import { FooterComponent } from "@/components/FooterComponent";
 import { GlobalProvider } from "@/helpers/Global";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from 'next-intl/server';
 
 export const metadata = {
   metadataBase: new URL('https://wonderfulltime.com/'),
@@ -75,9 +77,11 @@ export const metadata = {
 
 }
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children, params: { locale } }) {
+
+  const messages = await getMessages();
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link rel="icon" type="image/x-icon" href="/assets/wft/logo X en png (16x16).ico" />
         <meta name="robots" content="index" />
@@ -85,21 +89,23 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="dark:bg-slate-700  drak:bg-clip-text dark:bg-gradient-to-r dark:from-primary-800 dark:to-secondary-900">
-        <div className="">
-          <GlobalProvider>
-            <header className="">
-              <NavbarComponent />
-            </header>
-            <main className="">
-              {children}
-              <Analytics />
-              <SpeedInsights />
-            </main>
-            <footer className="">
-              <FooterComponent />
-            </footer>
-          </GlobalProvider>
-        </div>
+        <NextIntlClientProvider messages={messages}>
+          <div className="">
+            <GlobalProvider>
+              <header className="">
+                <NavbarComponent />
+              </header>
+              <main className="">
+                {children}
+                <Analytics />
+                <SpeedInsights />
+              </main>
+              <footer className="">
+                <FooterComponent />
+              </footer>
+            </GlobalProvider>
+          </div>
+        </NextIntlClientProvider>
       </body>
       <GoogleAnalytics gaId="G-J9VX435LXW" />
     </html>

@@ -1,12 +1,14 @@
-import Link from 'next/link'
- 
+'use client';
+
+import Error from 'next/error';
+
 export default function NotFound() {
   return (
-    <div className='h-screen text-center flex flex-col justify-center items-center'>
-      <h2>Not Found</h2>
-      
-      <p>Could not find requested resource</p>
-      <Link href="/" className='text-blue-500'>Return Home</Link>
-    </div>
-  )
+    <html lang="en">
+      <body>
+
+        <Error statusCode={404} />
+      </body>
+    </html>
+  );
 }
