@@ -127,9 +127,9 @@ const CookiePolicy = () => {
     const selectedContent = content[language];
 
     return (
-        <div className="min-h-screen bg-gray-100 dark:bg-gray-800">
-            <div className="container mx-auto py-12 px-4">
-                <div className="bg-white dark:bg-gray-700 shadow-md rounded-lg p-6">
+        <div className="min-h-screen bg-gray-100 dark:bg-gray-600">
+            <div className="md:container md:mx-auto py-12 px-4">
+                <div className="bg-white dark:bg-gray-700 text-justify shadow-md rounded-lg p-6">
                     <header className="text-center mb-6">
                         <h2 className="text-3xl font-bold text-gray-800 dark:text-white">{selectedContent.title}</h2>
                         <h4 className="text-xl text-gray-600 dark:text-gray-300">{selectedContent.subtitle}</h4>
