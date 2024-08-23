@@ -11,7 +11,9 @@ export const HeroSection = () => {
   const { language } = useGlobalContext()
 
   const mainText = {
-    es: `Descubre cuba con
+
+    es: `Bienvenido a Cuba
+
 Un conjunto de playas, cenotes, arte y religión conforman toda una cultura por conocer y disfrutar en el archipiélago constituido por la isla mayor de las Antillas llamada Cuba, la Isla de la Juventud (antes Isla de Pinos), y 4,195 cayos, islotes e islas.
 Entre la salsa que contagia con su ritmo cadente, hermosos autos "americanos", tabacos, mojitos ... ¡ven y disfruta de la atmósfera cubana! Desde La Habana, en auto clásico de alquiler, descubrirá esta hermosa isla.
 Ciudades con arquitectura colonial, parques naturales y playas paradisíacas lo están esperando. Los encuentros con las calles de las ciudades coloniales son una oportunidad para despertar todos sus sentidos: olor a tabaco flotando en las calles, café, notas de ron y rumba compartidas son un tiempo maravilloso para el disfrute.
@@ -127,10 +129,12 @@ const TextDisplay = ({ language, mainText }) => {
   const displayText = showFullText ? text : text.slice(0, 300) + (text.length > 300 ? '...' : '');
 
   return (
+
     <div className="text-justify mr-4 mt-4 text-slate-500 dark:text-white font-semibold">
       <p>{displayText}</p>
       {text.length > 200 && (
         <button className="text-blue-500 hover:text-blue-700" onClick={() => setShowFullText(!showFullText)}>
+
           {showFullText ? 'Leer menos' : 'Leer más'}
         </button>
       )}
