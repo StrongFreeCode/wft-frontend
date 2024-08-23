@@ -23,6 +23,7 @@ export default async function MyPage() {
       <CultureAndLifeInCuba />
       <OptimizedContent />
 
+
     </Flowbite>
   );
 }
