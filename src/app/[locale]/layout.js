@@ -10,18 +10,24 @@ import { Analytics } from "@vercel/analytics/react"
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from 'next-intl/server';
 
+import ScrollToTopButton from "@/components/ScrollToTopButton";
+
+
 export const metadata = {
   metadataBase: new URL('https://wonderfulltime.com/'),
   alternates: {
-    canonical: '/',
+
+    canonical: '/en',
+
 
   },
   title: {
     template: '%s | WONDERFULLTIME',
-    default: 'WONDERFULLTIME', // a default is required when creating a template
+
+    default: 'WONDERFULLTIME',
     absolute: 'WONDERFULLTIME'
   },
-  //generator: 'Next.js',
+
   applicationName: 'WONDERFULLTIME',
   referrer: 'origin-when-cross-origin',
   keywords: [
@@ -97,6 +103,9 @@ export default async function RootLayout({ children, params: { locale } }) {
               </header>
               <main className="">
                 {children}
+
+                <ScrollToTopButton />
+
                 <Analytics />
                 <SpeedInsights />
               </main>

@@ -11,7 +11,9 @@ export const HeroSection = () => {
   const { language } = useGlobalContext()
 
   const mainText = {
+
     es: `Bienvenido a Cuba
+
 Un conjunto de playas, cenotes, arte y religión conforman toda una cultura por conocer y disfrutar en el archipiélago constituido por la isla mayor de las Antillas llamada Cuba, la Isla de la Juventud (antes Isla de Pinos), y 4,195 cayos, islotes e islas.
 Entre la salsa que contagia con su ritmo cadente, hermosos autos "americanos", tabacos, mojitos ... ¡ven y disfruta de la atmósfera cubana! Desde La Habana, en auto clásico de alquiler, descubrirá esta hermosa isla.
 Ciudades con arquitectura colonial, parques naturales y playas paradisíacas lo están esperando. Los encuentros con las calles de las ciudades coloniales son una oportunidad para despertar todos sus sentidos: olor a tabaco flotando en las calles, café, notas de ron y rumba compartidas son un tiempo maravilloso para el disfrute.
@@ -51,8 +53,8 @@ Cities with colonial architecture, natural parks and paradisiacal beaches are wa
       <div className="pt-4">
 
         <h1 className="dark:text-white text-center  text-black mb-4  lg:leading-normal font-extrabold">
-          <span className="text-transparent text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-800 dark:from-primary-400 dark:to-secondary-600">
-            {language == 'es' ? "Hola, Bienvenidos a" : 'Hello, Welcome to'}{" "}
+          <span className="text-transparent text-xl md:text-2xl bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-800 dark:from-primary-400 dark:to-secondary-600">
+            {language == 'es' ? "Explora los Tesoros de la Isla" : 'Explore the Treasures of the Island'}{" "}
           </span><br></br>
           <span className="bg-gradient-to-r text-center justify-center text-3xl md:text-4xl lg:text-6xl  from-blue-800 to-cyan-500 bg-clip-text text-transparent animate-gradient">WONDERFULLTIME</span>
           <p className="text-gray-800 dark:text-gray-200 text-base sm:text-lg mb-6 lg:text-xl">
@@ -127,10 +129,12 @@ const TextDisplay = ({ language, mainText }) => {
   const displayText = showFullText ? text : text.slice(0, 300) + (text.length > 300 ? '...' : '');
 
   return (
-    <div className="text-justify mr-4 mt-4 dark:text-white">
+
+    <div className="text-justify mr-4 mt-4 text-slate-500 dark:text-white font-semibold">
       <p>{displayText}</p>
       {text.length > 200 && (
-        <button onClick={() => setShowFullText(!showFullText)}>
+        <button className="text-blue-500 hover:text-blue-700" onClick={() => setShowFullText(!showFullText)}>
+
           {showFullText ? 'Leer menos' : 'Leer más'}
         </button>
       )}
