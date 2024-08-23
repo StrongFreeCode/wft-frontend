@@ -73,7 +73,7 @@ const Sidebar = ({ categories, tags, tagColors, selectedTags, onSubCategorySelec
             {showFilterIcon && (
                 <>
                     <div
-                        className="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg cursor-pointer"
+                        className="fixed bottom-4 right-6 bg-blue-500 text-white p-2 rounded-full shadow-lg cursor-pointer"
                         onClick={toggleSlideBar}
                     >
                         <FaFilter className='text-2xl' />
