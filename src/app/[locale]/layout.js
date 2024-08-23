@@ -13,15 +13,15 @@ import { getMessages } from 'next-intl/server';
 export const metadata = {
   metadataBase: new URL('https://wonderfulltime.com/'),
   alternates: {
-    canonical: '/',
+    canonical: '/en',
 
   },
   title: {
     template: '%s | WONDERFULLTIME',
-    default: 'WONDERFULLTIME', // a default is required when creating a template
+    default: 'WONDERFULLTIME',
     absolute: 'WONDERFULLTIME'
   },
-  //generator: 'Next.js',
+
   applicationName: 'WONDERFULLTIME',
   referrer: 'origin-when-cross-origin',
   keywords: [

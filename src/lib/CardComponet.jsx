@@ -72,9 +72,9 @@ export const CardComponet = ({ excursions }) => {
                 <div className="flex content-center justify-between ">
                   <h2>{excursion.nombre}</h2>
                   <div className="text-xs">
-                    <h3 className="">
+                    <p className="">
                       {rate.isLoading ? <Spinner size={'sm'} /> : rate.value == 0 ? "0" : rate.value ? rate.value.toFixed(2) : "N/A"} / {reviews.isLoading ? <Spinner size={'sm'} /> : reviews.value} {language == 'es' ? 'Reseñas' : 'Reviews'}
-                    </h3>
+                    </p>
                     {
                       !rate.isLoading && opinions ? <MostrarEstrellas puntuacion={rate.value} /> : <Spinner size={'xs'} />
                     }

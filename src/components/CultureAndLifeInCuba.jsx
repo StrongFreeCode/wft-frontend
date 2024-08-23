@@ -1,0 +1,27 @@
+// components/CultureAndLifeInCuba.js
+'use client'
+import { useGlobalContext } from '@/helpers/Global';
+
+const CultureAndLifeInCuba = () => {
+    const { language } = useGlobalContext();
+
+    const content = {
+        es: {
+            title: 'Cultura y Vida en Cuba',
+            text: "Cuba es un crisol de culturas, donde la influencia española se mezcla con la herencia africana y caribeña para crear una identidad única. La isla es famosa por su música, con ritmos como la salsa, el son y la rumba que resuenan en cada esquina. La danza es una parte integral de la vida cubana, con bailes tradicionales que reflejan la alegría y la pasión del pueblo...\n\nLa arquitectura colonial de ciudades como La Habana Vieja y Trinidad transporta a los visitantes a otra época, con edificios coloridos y calles empedradas que cuentan historias de siglos pasados. Estas ciudades son testigos del legado histórico de Cuba y han sido declaradas Patrimonio de la Humanidad por la UNESCO.\n\nLa gastronomía cubana es una delicia para los sentidos, con platos tradicionales como el 'Ropa Vieja' (carne desmechada), 'Moros y Cristianos' (arroz con frijoles negros) y el 'Pan de Plátano' (pan de plátano). Los restaurantes y paladares populares ofrecen una experiencia culinaria auténtica, donde los sabores locales se combinan con la hospitalidad cálida de los cubanos.\n\nLa vida en Cuba es una mezcla de tradición y modernidad. Los parques y plazas son el corazón de las comunidades, donde los cubanos se reúnen para socializar, jugar al dominó o simplemente disfrutar de la vida al aire libre. La cultura del 'fiesta' es omnipresente, con festivales y celebraciones que honran la música, la danza y la historia de la isla.\n\nLa educación y la salud son prioridades en Cuba, con un sistema de atención médica universal y una red de escuelas y universidades que han producido algunas de las mentes más brillantes de la región. La isla también es conocida por su programa de medicina, que ha enviado médicos a todo el mundo para brindar ayuda humanitaria.\n\nEl medio ambiente de Cuba es diversificado y único, con ecosistemas como el Parque Nacional Viñales y la Reserva de la Biosfera del Archipiélago de Sabana-Camagüey que albergan una rica biodiversidad. Las playas de arena blanca y las aguas cristalinas de Varadero atraen a visitantes de todo el mundo, mientras que los humedales y las selvas ofrecen un refugio para especies en peligro de extinción.\n\nEn resumen, Cuba es una isla que ofrece una experiencia inigualable, donde la historia, la cultura, la naturaleza y la hospitalidad se combinan para crear un destino único. Cada rincón de la isla tiene una historia que contar y una experiencia que ofrecer, haciendo de cada visita una aventura inolvidable.",
+        },
+        en: {
+            title: 'Culture and Life in Cuba',
+            text: "Cuba is a melting pot of cultures, where Spanish influence blends with African and Caribbean heritage to create a unique identity. The island is famous for its music, with rhythms like salsa, son, and rumba resonating in every corner. Dance is an integral part of Cuban life, with traditional dances reflecting the joy and passion of the people.\n\nThe colonial architecture of cities like Old Havana and Trinidad transports visitors to another era, with colorful buildings and cobblestone streets that tell stories of centuries past. These cities are witnesses to Cuba's historical legacy and have been declared World Heritage Sites by UNESCO.\n\nCuban cuisine is a delight for the senses, with traditional dishes like 'Ropa Vieja' (shredded beef), 'Moros y Cristianos' (rice with black beans), and 'Plátano Bread' (banana bread). Local restaurants and paladares offer an authentic culinary experience, where local flavors are combined with the warm hospitality of Cubans.\n\nLife in Cuba is a mix of tradition and modernity. Parks and squares are the heart of communities, where Cubans gather to socialize, play dominoes, or simply enjoy the outdoors. The culture of 'fiesta' is omnipresent, with festivals and celebrations that honor music, dance, and the history of the island.\n\nEducation and health are priorities in Cuba, with a universal healthcare system and a network of schools and universities that have produced some of the brightest minds in the region. The island is also known for its medical program, which has sent doctors around the world to provide humanitarian aid.\n\nCuba's environment is diverse and unique, with ecosystems like Viñales National Park and the Sabana-Camagüey Archipelago Biosphere Reserve hosting rich biodiversity. White sandy beaches and crystal-clear waters of Varadero attract visitors from around the world, while wetlands and jungles offer refuge to endangered species.\n\nIn summary, Cuba is an island that offers an unparalleled experience, where history, culture, nature, and hospitality combine to create a unique destination. Every corner of the island has a story to tell and an experience to offer, making each visit an unforgettable adventure.",
+        },
+    };
+
+    return (
+        <div className="dark:bg-gray-800 p-6 mb-4 rounded-lg shadow-md text-justify mt-2 mx-2">
+            <h2 className="text-2xl text-center font-bold mb-4 dark:text-white">{content[language].title}</h2>
+            <p className="text-gray-700 dark:text-gray-300">{content[language].text}</p>
+        </div>
+    );
+};
+
+export default CultureAndLifeInCuba;
