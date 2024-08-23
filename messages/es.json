@@ -8,5 +8,54 @@
     "reviews": "Reseñas",
     "blogs": "Blogs",
     "about": "Acerca"
+  },
+
+  "PrivacyPolicy": {
+    "Title": "PRIVACY POLICY OF THE WEBSITE",
+    "Website": "wonderfulltime.com",
+    "Data Controller": {
+      "Name": "",
+      "ID": "",
+      "Address": "Havana, Cuba, 10700",
+      "Phone": "5353878045",
+      "Email": "info@wonderfulltime.com"
+    },
+    "Applicable Laws": [
+      "GDPR (EU) 2016/679",
+      "LOPD-GDD 3/2018",
+      "RDLOPD 1720/2007",
+      "LSSI-CE 34/2002"
+    ],
+    "Data Processing Principles": [
+      "Lawfulness, fairness and transparency",
+      "Purpose limitation",
+      "Data minimization",
+      "Accuracy",
+      "Storage limitation",
+      "Integrity and confidentiality",
+      "Proactive responsibility"
+    ],
+    "Categories of Personal Data": "Identifying data",
+    "Legal Basis": "Consent",
+    "Purposes of Processing": "Facilitate, streamline and fulfill the commitments established between the Website and the User",
+    "Retention Periods": "1 year",
+    "Data Recipients": "Not shared with third parties",
+    "Data for Minors": "Only over 14 years old",
+    "Data Security": "Necessary technical and organizational measures are adopted",
+    "User Rights": [
+      "Access",
+      "Rectification",
+      "Erasure",
+      "Restriction of processing",
+      "Data portability",
+      "Objection",
+      "Not to be subject to a decision based solely on automated processing"
+    ],
+    "Links to Third Parties": "The owners of those websites will have their own data protection policies",
+    "Complaints": "Spanish Data Protection Agency (AEPD)"
+  },
+  "AcceptanceandChangesinthePrivacyPolicy": {
+    "Text": "Using the Website will imply acceptance of its Privacy Policy. The right to modify the Privacy Policy is reserved.",
+    "Last Update": "Adapted to GDPR and LOPD-GDD"
   }
 }

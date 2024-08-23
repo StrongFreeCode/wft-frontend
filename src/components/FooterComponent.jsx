@@ -2,6 +2,7 @@
 import { Footer, FooterBrand, FooterCopyright, FooterDivider, FooterLink, FooterLinkGroup } from 'flowbite-react';
 import SocialMediaIcons from './SocialMediaIcons';
 import { useGlobalContext } from '@/helpers/Global';
+import Link from 'next/link';
 
 const customTheme = {
   "root": {
@@ -76,9 +77,10 @@ export const FooterComponent = () => {
 
         <FooterDivider />
         <div className='flex text-xs md:text-md justify-center whitespace-nowrap'>
-          <a href="#" className="uppercase px-3 text-gray-800 dark:text-gray-200">Privacy Policy</a>
-          <a href="#" className="uppercase px-3 text-gray-800 dark:text-gray-200">Terms & Conditions</a>
-          <a href="#" className="uppercase px-3 text-gray-800 dark:text-gray-200">Contact Us</a>
+          <Link href={`/${language}/privacy-policy`} className="uppercase px-3 text-gray-800 dark:text-gray-200">Privacy Policy</Link>
+          <Link href={`/${language}/cookiepolicy`} className="uppercase px-3 text-gray-800 dark:text-gray-200">Cookie Policy</Link>
+          <Link href={`/${language}/legal-notice`} className="uppercase px-3 text-gray-800 dark:text-gray-200">Terms & Conditions</Link>
+          <Link href={`/${language}/contacus`} className="uppercase px-3 text-gray-800 dark:text-gray-200">Contact Us</Link>
         </div>
         <div className='mt-4'>
           <FooterCopyright className='text-gray-800 dark:text-gray-200' href="https://www.strongfreecode.com" by="StrongFreeCode™" year={new Date().getFullYear()} />
