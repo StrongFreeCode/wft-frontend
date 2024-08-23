@@ -14,6 +14,7 @@ import { useGlobalContext } from "@/helpers/Global";
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslations } from 'next-intl';
 import { Contact } from "../components/ContactComponent";
+import Image from "next/image";
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -101,7 +102,9 @@ export const NavbarComponent = () => {
     <Navbar fluid theme={customTheme}>
       <NavbarToggle />
       <NavbarBrand as={Link} href="/">
-        <img
+        <Image
+          width={50}
+          height={50}
           src="/assets/wft/logo X en png.png"
           className="h-12 ml-12 md:ml-0 sm:h-16"
           alt="Flowbite React Logo"
@@ -142,7 +145,9 @@ export const NavbarComponent = () => {
           <option className={`dark:text-slate-800`} value="es">Español</option>
           <option className={`dark:text-slate-800`} value="en">English</option>
         </select>
-        <img
+        <Image
+          width={50}
+          height={50}
           className="ml-1 max-w-9 max-h-9"
           src={language === "es" ? "/es.ico" : "/en.ico"}
           alt="icon lang"

@@ -7,6 +7,7 @@ import Link from "next/link";
 import ModalComponent from "./ModalComponent";
 import { Spinner } from "flowbite-react";
 import { services } from "@/data/servicios";
+import Image from "next/image";
 
 
 
@@ -24,7 +25,9 @@ export const Details = ({ datos, resultado, isLoading }) => {
       <section className="dark:text-gray-400 dark:bg-gray-900 body-font overflow-hidden">
         <div className="md:container px-2 py-4 md:px-5 md:py-6 md:mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
-            <img
+            <Image
+              width={500}
+              height={500}
               alt="ecommerce"
               className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
               src={"/assets/yainie" + datos.images[0].url}
