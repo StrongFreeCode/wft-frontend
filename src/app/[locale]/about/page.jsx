@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import about from "../../data/about.json";
+import about from "@/data/about.json";
 import { Caveat, Inter, Roboto } from "next/font/google";
 import { Valores } from "@/components/Valores";
 import { useGlobalContext } from "@/helpers/Global";

@@ -1,7 +1,4 @@
 
-
-import "../page.css";
-
 export const metadata = {
 
 }

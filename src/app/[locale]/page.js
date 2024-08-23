@@ -12,6 +12,7 @@ export const metadata = {
 export default async function MyPage() {
 
   return (
+
     <Flowbite>
       <CarouselComponent />
       <HeroSection />

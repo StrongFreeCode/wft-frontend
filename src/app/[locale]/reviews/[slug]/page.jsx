@@ -5,7 +5,7 @@ import { useGlobalContext } from "@/helpers/Global";
 import useOpinions from "@/hook/useOpinions";
 import { Spinner } from "flowbite-react";
 import React, { useEffect, useState } from "react";
-import excursionsData from '../../../data/excursions_lang.json'
+import excursionsData from '@/data/excursions_lang.json'
 
 
 const getExcursionIdBySlug = (slug) => {

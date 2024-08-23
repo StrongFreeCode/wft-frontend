@@ -64,11 +64,11 @@ export default function BlogPage() {
 
     return (
         <div className="bg-white font-family-karla dark:bg-slate-600">
-            <Head>
+            {/*  <Head>
                 <title>WONDERFULLTIME | BLOG</title>
                 <meta name="description" content="Welcome to our blog" />
                 <link rel="icon" href="/favicon.ico" />
-            </Head>
+            </Head> */}
 
             <TopBarNav />
             <TextHeader />
