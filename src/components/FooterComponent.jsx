@@ -76,7 +76,7 @@ export const FooterComponent = () => {
         </div>
 
         <FooterDivider />
-        <div className='flex text-xs md:text-md justify-center whitespace-nowrap'>
+        <div className='flex text-xs md:text-md justify-center '>
           <Link href={`/${language}/privacy-policy`} className="uppercase px-3 text-gray-800 dark:text-gray-200">Privacy Policy</Link>
           <Link href={`/${language}/cookiepolicy`} className="uppercase px-3 text-gray-800 dark:text-gray-200">Cookie Policy</Link>
           <Link href={`/${language}/legal-notice`} className="uppercase px-3 text-gray-800 dark:text-gray-200">Terms & Conditions</Link>
