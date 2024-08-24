@@ -138,6 +138,8 @@ export const NavbarComponent = () => {
       <div className="hidden md:flex md:flex-cols-1">
         <Contact />
         <DarkThemeToggle />
+
+        <label hidden className={`text-xs`}>Language</label>
         <select
           className="ml-1 max-w-9 max-h-9 bg-transparent dark:text-slate-100"
           value={language}
@@ -150,7 +152,7 @@ export const NavbarComponent = () => {
           loading="lazy"
           width={30}
           height={20}
-          className=""
+
           src={language === "es" ? "/es.ico" : "/en.ico"}
           alt="icon lang"
         />

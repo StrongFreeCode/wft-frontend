@@ -9,8 +9,12 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from 'next-intl/server';
+import dynamic from "next/dynamic";
 
-import ScrollToTopButton from "@/components/ScrollToTopButton";
+const ScrollToTopButton = dynamic(() => import("@/components/ScrollToTopButton"), {
+  ssr: false,
+  loading: () => <div>Loading...</div>
+});
 
 
 export const metadata = {
