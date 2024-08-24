@@ -23,7 +23,7 @@ export const Tour = () => {
                 src="/assets/images/IMG1.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
-                loading="lazy"
+
               />
             </a>
             <h2 className="mb-2 text-lg font-semibold text-gray-900">
@@ -57,7 +57,7 @@ export const Tour = () => {
                 src="/assets/images/IMG2.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
-                loading="lazy"
+
               />
             </a>
             <h2 className="mb-2 text-lg font-semibold text-gray-900">
@@ -90,7 +90,7 @@ export const Tour = () => {
                 src="/assets/images/IMG8.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
-                loading="lazy"
+
               />
             </a>
             <h2 className="mb-2 text-lg font-semibold text-gray-900">
@@ -123,7 +123,7 @@ export const Tour = () => {
                 src="/assets/images/IMG3.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
-                loading="lazy"
+
               />
             </a>
             <h2 className="mb-2 text-lg font-semibold text-gray-900">
@@ -157,7 +157,7 @@ export const Tour = () => {
                 src="/assets/images/IMG4.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
-                loading="lazy"
+
               />
             </a>
             <h2 className="mb-2 text-lg font-semibold text-gray-900">
@@ -188,7 +188,7 @@ export const Tour = () => {
                 src="/assets/images/IMG5.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
-                loading="lazy"
+
               />
             </a>
             <h2 className="mb-2 text-lg font-semibold text-gray-900">
