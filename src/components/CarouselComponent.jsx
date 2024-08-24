@@ -45,7 +45,7 @@ export const CarouselComponent = () => {
     <div className="h-56  sm:h-64 xl:h-80 2xl:h-96 overscroll-none">
       <Carousel theme={customTheme}>
         <Image
-          loading="lazy" src={varadero} alt="..." width={768} height={90} />
+          priority src={varadero} alt="..." width={768} height={90} />
         <Image
           loading="lazy" src={portada} alt="..." width={768} height={90} />
         <Image
