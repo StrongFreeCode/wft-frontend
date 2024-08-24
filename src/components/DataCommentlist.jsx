@@ -27,7 +27,7 @@ export default function DataCommentlist({ email, text, rate, create }) {
 
         <p className="bg-transparent text-center text-xl mt-2 w-full h-full">
           “{shortText}”
-          <span className="justify-end text-slate-700 underline hover:text-slate-800"><button onClick={() => setOpenModal(true)} className="bg-transparent ">
+          <span className="justify-end text-slate-700 underline hover:text-slate-800"><button aria-label="OpenModal" onClick={() => setOpenModal(true)} className="bg-transparent ">
             {" "}{text.length < 100 ? '' : 'Ver mas'}
           </button></span>
         </p>
