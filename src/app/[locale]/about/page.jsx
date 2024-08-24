@@ -77,15 +77,17 @@ export default function Example() {
           <Image
             width={300}
             height={300}
-            className=" h-[300px] w-[300px] object-cover  rounded-full"
+            className="  object-cover  rounded-full"
             src="\assets\wft\logo X en png.webp"
             alt=""
+            loading="lazy"
           />
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-12">
         <div className="flex justify-center items-center">
           <Image
+            loading="lazy"
             width={300}
             height={300}
             className=" h-[300px] w-[300px] object-cover  rounded-sm hover:scale-105 transition duration-500"
@@ -136,6 +138,7 @@ export default function Example() {
         </div>
         <div className="flex justify-center items-center mx-auto">
           <Image
+            loading="lazy"
             width={500}
             height={500}
             className=" h-full w-full object-cover  "

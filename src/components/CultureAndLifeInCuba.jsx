@@ -17,9 +17,9 @@ const CultureAndLifeInCuba = () => {
     };
 
     return (
-        <div className="dark:bg-gray-800 p-6 mb-4 rounded-lg shadow-md text-justify mt-2 mx-2">
+        <div className="dark:bg-gray-800 p-6 mb-4 bg-slate-300 rounded-lg shadow-md text-justify mt-2 mx-2">
             <h2 className="text-2xl text-center font-bold mb-4 dark:text-white">{content[language].title}</h2>
-            <p className="text-gray-700 dark:text-gray-300">{content[language].text}</p>
+            <p className="text-gray-800 font-serif  dark:text-gray-300">{content[language].text}</p>
         </div>
     );
 };

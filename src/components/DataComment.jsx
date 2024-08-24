@@ -29,7 +29,7 @@ export default function DataComment({ email, text, rate, create }) {
       <div className="">
         <p className="text-xl">
           “{shortText}”
-          <span className="justify-end text-slate-700 dark:text-blue-300 underline hover:text-slate-800"><button onClick={() => setOpenModal(true)} className="bg-transparent ">
+          <span className="justify-end text-blue-700 dark:text-blue-300 underline hover:text-slate-800"><button onClick={() => setOpenModal(true)} className="bg-transparent ">
             {" "}{text.length < 100 ? '' : ' Ver mas'}
           </button></span>
         </p>

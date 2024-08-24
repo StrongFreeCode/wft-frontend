@@ -103,10 +103,11 @@ export const NavbarComponent = () => {
       <NavbarToggle />
       <NavbarBrand as={Link} href="/">
         <Image
+          loading="lazy"
           width={50}
           height={50}
           src="/assets/wft/logo X en png.webp"
-          className="h-12 ml-12 md:ml-0 sm:h-16"
+          className=""
           alt="Flowbite React Logo"
         />
         <span className="self-center hidden text-xl font-semibold md:block whitespace-nowrap dark:text-white">
@@ -146,9 +147,10 @@ export const NavbarComponent = () => {
           <option className={`dark:text-slate-800`} value="en">English</option>
         </select>
         <Image
-          width={50}
-          height={50}
-          className="ml-1 max-w-9 max-h-9"
+          loading="lazy"
+          width={30}
+          height={20}
+          className=""
           src={language === "es" ? "/es.ico" : "/en.ico"}
           alt="icon lang"
         />

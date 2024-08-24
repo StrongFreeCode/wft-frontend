@@ -66,17 +66,18 @@ export const metadata = {
     siteName: 'wonderfulltime',
     images: [
       {
-        url: '/assets/wft/logo X en jpg.jpg', // Must be an absolute URL
+        url: '/assets/wft/logo X en jpg.webp', // Must be an absolute URL
         width: 800,
         height: 600,
       },
       {
-        url: '/assets/wft/logo X en jpg.jpg', // Must be an absolute URL
+        url: '/assets/wft/logo X en jpg.webp', // Must be an absolute URL
         width: 1800,
         height: 1600,
         alt: 'wonderfulltime logo',
       },
     ],
+
     locale: 'en_US',
     type: 'website',
   },

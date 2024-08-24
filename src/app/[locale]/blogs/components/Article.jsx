@@ -5,7 +5,8 @@ export default function Article({ imageSrc, category, subcategory, title, author
     return (
         <article className="flex   flex-col shadow-md my-4 shadow-slate-400 dark:shadow-gray-800 rounded-t-lg">
             <button onClick={handleArticleClick} className="hover:opacity-75">
-                <Image src={imageSrc} alt={title} width={768} height={90} className='w-full max-h-48 object-cover object-center rounded-t-lg' />
+                <Image
+                    loading="lazy" src={imageSrc} alt={title} width={768} height={90} className='w-full max-h-48 object-cover object-center rounded-t-lg' />
             </button>
             <div className="bg-white dark:bg-gray-800 flex hover:bg-slate-100 dark:hover:bg-gray-700 flex-col justify-start p-6">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">

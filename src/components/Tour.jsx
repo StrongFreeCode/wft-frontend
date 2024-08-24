@@ -17,6 +17,7 @@ export const Tour = () => {
           <div>
             <a href="#">
               <Image
+                loading="lazy"
                 width={500}
                 height={500}
                 src="/assets/images/IMG1.jpg"
@@ -50,6 +51,7 @@ export const Tour = () => {
           <div>
             <a href="#">
               <Image
+                loading="lazy"
                 width={500}
                 height={500}
                 src="/assets/images/IMG2.jpg"
@@ -82,6 +84,7 @@ export const Tour = () => {
           <div>
             <a href="#">
               <Image
+                loading="lazy"
                 width={500}
                 height={500}
                 src="/assets/images/IMG8.jpg"
@@ -114,6 +117,7 @@ export const Tour = () => {
           <div>
             <a href="#">
               <Image
+                loading="lazy"
                 width={500}
                 height={500}
                 src="/assets/images/IMG3.jpg"
@@ -147,6 +151,7 @@ export const Tour = () => {
           <div>
             <a href="#">
               <Image
+                loading="lazy"
                 width={500}
                 height={500}
                 src="/assets/images/IMG4.jpg"
@@ -177,6 +182,7 @@ export const Tour = () => {
           <div>
             <a href="#">
               <Image
+                loading="lazy"
                 width={500}
                 height={500}
                 src="/assets/images/IMG5.jpg"
