@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Image from "next/image";
+
 export const Tour = () => {
   return (
     <>
@@ -14,7 +16,9 @@ export const Tour = () => {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
           <div>
             <a href="#">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/assets/images/IMG1.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
@@ -38,14 +42,16 @@ export const Tour = () => {
                 href="#"
                 className="font-medium text-gray-900 hover:text-purple-700"
               >
-               Reservation
+                Reservation
               </a>
               • April 16, 2020
             </p>
           </div>
           <div>
             <a href="#">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/assets/images/IMG2.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
@@ -68,14 +74,16 @@ export const Tour = () => {
                 href="#"
                 className="font-medium text-gray-900 hover:text-purple-700"
               >
-               Reservation
+                Reservation
               </a>
               • April 16, 2020
             </p>
           </div>
           <div>
             <a href="#">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/assets/images/IMG8.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
@@ -98,14 +106,16 @@ export const Tour = () => {
                 href="#"
                 className="font-medium text-gray-900 hover:text-purple-700"
               >
-               Reservation
+                Reservation
               </a>
               • April 16, 2020
             </p>
           </div>
           <div>
             <a href="#">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/assets/images/IMG3.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
@@ -129,14 +139,16 @@ export const Tour = () => {
                 href="#"
                 className="font-medium text-gray-900 hover:text-purple-700"
               >
-               Reservation
+                Reservation
               </a>
               • April 16, 2020
             </p>
           </div>
           <div>
             <a href="#">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/assets/images/IMG4.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
@@ -157,14 +169,16 @@ export const Tour = () => {
                 href="#"
                 className="font-medium text-gray-900 hover:text-purple-700"
               >
-               Reservation
+                Reservation
               </a>
               • April 16, 2020
             </p>
           </div>
           <div>
             <a href="#">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/assets/images/IMG5.jpg"
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
                 alt="Kutty"
@@ -187,7 +201,7 @@ export const Tour = () => {
                 href="#"
                 className="font-medium text-gray-900 hover:text-purple-700"
               >
-               Reservation
+                Reservation
               </a>
               • April 16, 2020
             </p>

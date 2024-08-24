@@ -1,6 +1,7 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import { useGlobalContext } from "@/helpers/Global";
+import Image from "next/image";
 import React from "react";
 import { FaClock } from "react-icons/fa";
 
@@ -39,7 +40,9 @@ export const Places = ({ datos }) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-1 lg:grid-cols-5 ">
             {datos.images.map((i) => (
               <div key={crypto.randomUUID()} className="flex justify-center items-center">
-                <img
+                <Image
+                  width={200}
+                  height={200}
                   className="sm:w-[200px] sm:h-[200px] object-cover  rounded-lg shadow-lg dark:shadow-slate-400 shadow-slate-900 transform transition duration-500 hover:scale-105"
                   src={i.url}
                   alt={datos.nombre}

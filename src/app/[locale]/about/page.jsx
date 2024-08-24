@@ -6,6 +6,7 @@ import { Valores } from "@/components/Valores";
 import { useGlobalContext } from "@/helpers/Global";
 import { useEffect, useState } from "react";
 import { Spinner } from "flowbite-react";
+import Image from "next/image";
 
 const inter = Inter({
   weight: ["700"],
@@ -73,16 +74,20 @@ export default function Example() {
           </div>
         </div>
         <div className=" order-1 md:order-2 flex justify-center mt-4 md:my-auto">
-          <img
+          <Image
+            width={300}
+            height={300}
             className=" h-[300px] w-[300px] object-cover  rounded-full"
-            src="\assets\wft\logo X en png.png"
+            src="\assets\wft\logo X en png.webp"
             alt=""
           />
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-12">
         <div className="flex justify-center items-center">
-          <img
+          <Image
+            width={300}
+            height={300}
             className=" h-[300px] w-[300px] object-cover  rounded-sm hover:scale-105 transition duration-500"
             src="/assets/cuba-beach-car.jpg"
             alt=""
@@ -130,9 +135,11 @@ export default function Example() {
           </div>
         </div>
         <div className="flex justify-center items-center mx-auto">
-          <img
+          <Image
+            width={500}
+            height={500}
             className=" h-full w-full object-cover  "
-            src="\assets\varadero.jpg"
+            src="\assets\wft\varadero.webp"
             alt=""
           />
         </div>

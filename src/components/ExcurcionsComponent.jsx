@@ -20,10 +20,11 @@ export const ExcurcionsComponet = () => {
       <div className="bg-gradient-to-r from-blue-800 to-cyan-700 bg-teal-400 bg-cover  bg-no-repeat">
         <div className="content-center ">
 
-          <h2 className="mb-2 text-2xl font-extrabold text-center dark:text-white sm:text-3xl lg:text-5xl lg:leading-normal ">
+          <h2 className="mb-2 p-2 text-2xl font-extrabold text-center dark:text-white sm:text-3xl lg:text-5xl lg:leading-normal ">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-cyan-400">
               {language == "es" ? "Descubre Cuba" : "Discover Cuba"}
             </span>{" "}
+            <p className="text-white dark:text-gray-200 text-justify text-xs mx-2"> {language == 'es' ? `En Wonderfulltime, te invitamos a explorar la asombrosa belleza natural de nuestra isla. Cada rincón de este paraíso ofrece un tesoro único, desde playas de arena dorada hasta selvas exuberantes. Nuestros tours están diseñados para que vivas una experiencia inmersiva, creando recuerdos que durarán toda la vida. Únete a nosotros en este viaje extraordinario y descubre por qué Wonderfulltime es el destino ideal para los amantes de la aventura y la relajación.` : `At Wonderfulltime, we invite you to explore the breathtaking natural beauty of our island. Every corner of this paradise offers a unique treasure, from golden sandy beaches to lush jungles. Our tours are designed to provide an immersive experience, creating memories that will last a lifetime. Join us on this extraordinary journey and discover why Wonderfulltime is the perfect destination for adventure and relaxation seekers.`}</p>
           </h2>
           <h3 className="z-10 text-2xl font-extrabold text-center dark:text-white sm:text-3xl lg:text-5xl lg:leading-normal ">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-cyan-400">
@@ -52,6 +53,7 @@ export const ExcurcionsComponet = () => {
             <CardComponet excursions={excursionsFiltered} />
           </div>
         </div>
+
       </div>
       <div className="  relative  ">
         <span className="bg-slate-400  bg-transparent opacity-80 text-red-600 fixed bottom-0 ml-3 py-2 px-2 rounded-lg mb-2 ">

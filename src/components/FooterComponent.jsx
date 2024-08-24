@@ -59,8 +59,8 @@ export const FooterComponent = () => {
         <div itemScope itemType="http://schema.org/LocalBusiness" className="mt-4">
           <div className="flex justify-center mb-4">
             <FooterBrand
-              href="/assets/wft/logo X en png.png"
-              src="/assets/wft/logo X en png.png"
+              href="/assets/wft/logo X en png.webp"
+              src="/assets/wft/logo X en png.webp"
               alt="Logo de WFT"
               name="WonderFullTime"
             />

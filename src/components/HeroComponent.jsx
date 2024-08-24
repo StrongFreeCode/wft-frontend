@@ -91,7 +91,7 @@ Cities with colonial architecture, natural parks and paradisiacal beaches are wa
           <div>
             <div className="">
               <Image
-                src="/assets/wft/logo X en png.png"
+                src="/assets/wft/logo X en png.webp"
                 alt="hero image"
                 className="rounded-full w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] relative"
                 width={300}
