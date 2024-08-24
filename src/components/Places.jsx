@@ -41,6 +41,7 @@ export const Places = ({ datos }) => {
             {datos.images.map((i) => (
               <div key={crypto.randomUUID()} className="flex justify-center items-center">
                 <Image
+                  loading="lazy"
                   width={200}
                   height={200}
                   className="sm:w-[200px] sm:h-[200px] object-cover  rounded-lg shadow-lg dark:shadow-slate-400 shadow-slate-900 transform transition duration-500 hover:scale-105"

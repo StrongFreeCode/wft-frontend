@@ -26,6 +26,7 @@ export const Details = ({ datos, resultado, isLoading }) => {
         <div className="md:container px-2 py-4 md:px-5 md:py-6 md:mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <Image
+              loading="lazy"
               width={500}
               height={500}
               alt="ecommerce"

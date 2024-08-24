@@ -27,38 +27,40 @@ const OptimizedContent = () => {
             "Transporte en Cuba": "El transporte en Cuba, desde los clásicos coches estadounidenses hasta los autobuses y taxis, ofrece una experiencia única. Explorar la isla es una aventura en sí misma.",
             "Reservas naturales en Cuba": "Las reservas naturales en Cuba, como la Reserva de la Biosfera del Archipiélago de Sabana-Camagüey y el Parque Nacional Viñales, protegen una rica biodiversidad y ofrecen oportunidades para explorar la naturaleza cubana."
         },
-        en: {
-            "Turismo en Cuba": "Cuba, with its rich history, vibrant culture, and beautiful beaches, offers a unique tourist experience. From the lively Havana to the tranquil beaches of Varadero, every corner of the island has something special to offer.",
-            "Playas cubanas": "Cuban beaches, such as those in Varadero and Cayo Coco, are famous for their white sands and crystal-clear waters. Ideal for relaxing and enjoying the sun, they are a tropical paradise for beach lovers.",
-            "La Habana": "Havana, the capital of Cuba, is a melting pot of colonial architecture, live music, and delicious cuisine. Its cobblestone streets and colorful buildings tell stories of a glorious past.",
+
+        "en": {
+            "Tourism in Cuba": "Cuba, with its rich history, vibrant culture, and beautiful beaches, offers a unique tourist experience. From the lively Havana to the tranquil beaches of Varadero, every corner of the island has something special to offer.",
+            "Cuban Beaches": "Cuban beaches, such as those in Varadero and Cayo Coco, are famous for their white sands and crystal-clear waters. Ideal for relaxing and enjoying the sun, they are a tropical paradise for beach lovers.",
+            "Havana": "Havana, the capital of Cuba, is a melting pot of colonial architecture, live music, and delicious cuisine. Its cobblestone streets and colorful buildings tell stories of a glorious past.",
             "Varadero": "Varadero, known for its long stretch of beach, offers not only sun and sand but also opportunities for diving and exploring the Caribbean Sea. Its luxury hotels and resorts make Varadero a perfect destination for vacations.",
-            "Cultura cubana": "Cuban culture is manifested in its music, dance, art, and traditions. Salsa and son resonate in every corner, while popular festivals celebrate the rich heritage of the island.",
+            "Cuban Culture": "Cuban culture is manifested in its music, dance, art, and traditions. Salsa and son resonate in every corner, while popular festivals celebrate the rich heritage of the island.",
             "Cayo Coco": "Cayo Coco, with its untouched beaches and natural reserves, is a sanctuary for nature lovers and divers. Its coral reefs and marine life make this cay a world-class diving destination.",
-            "Rutas de senderismo": "Cuba offers unique hiking routes through its national parks and natural reserves. From Viñales National Park to the mountains of Sierra Maestra, outdoor enthusiasts will find a paradise.",
-            "Música cubana": "Cuban music, with rhythms like salsa, son, and rumba, is an integral part of life on the island. Its vibrant rhythm infects everyone who listens.",
-            "Historia de Cuba": "Cuba's history is rich and varied, from the colonial era to the revolution. Cities like Havana and Trinidad are witnesses to this past, with monuments and museums that tell the story of the island.",
-            "Gastronomía cubana": "Cuban cuisine, with dishes like 'Ropa Vieja' and 'Moros y Cristianos', combines unique flavors that reflect the multicultural heritage of the island. Local restaurants offer an authentic culinary experience.",
-            "Arte en Cuba": "Art in Cuba is diverse and vibrant, from painting and sculpture to theater and dance. Havana, in particular, is a center of contemporary art with renowned galleries and museums.",
-            "Hoteles en Cuba": "Hotels in Cuba, from the elegant colonial hotels in Havana to the all-inclusive resorts in Varadero, offer a wide range of options to suit all tastes and budgets.",
-            "Tradiciones cubanas": "Cuban traditions, such as popular festivals and religious celebrations, reflect the rich cultural heritage of the island. These traditions are kept alive through music, dance, and food.",
-            "Naturaleza en Cuba": "Nature in Cuba is diverse and preserved, with national parks, natural reserves, and wetlands that host rich biodiversity. It is a paradise for nature lovers and wildlife enthusiasts.",
-            "Eventos en Cuba": "Events in Cuba, from music festivals to cultural celebrations, offer a window into the life and culture of the island. These events are an opportunity to experience the energy and joy of Cuba.",
-            "Arquitectura cubana": "Cuban architecture, with its mix of colonial and modern styles, is an architectural jewel. Cities like Havana and Trinidad are living examples of this rich architectural heritage.",
-            "Buceo en Cuba": "Diving in Cuba, especially in places like Cayo Coco and the Isle of Youth, offers some of the best diving experiences in the Caribbean. Its clear waters and coral reefs attract divers from around the world.",
-            "Fiestas populares en Cuba": "Popular festivals in Cuba, such as the Havana Carnival and religious celebrations, are a manifestation of joy and community. These festivals are a feast for the senses.",
-            "Transporte en Cuba": "Transport in Cuba, from classic American cars to buses and taxis, offers a unique experience. Exploring the island is an adventure in itself.",
-            "Reservas naturales en Cuba": "Natural reserves in Cuba, such as the Sabana-Camagüey Archipelago Biosphere Reserve and Viñales National Park, protect rich biodiversity and offer opportunities to explore Cuban nature."
+            "Hiking Routes": "Cuba offers unique hiking routes through its national parks and natural reserves. From Viñales National Park to the mountains of Sierra Maestra, outdoor enthusiasts will find a paradise.",
+            "Cuban Music": "Cuban music, with rhythms like salsa, son, and rumba, is an integral part of life on the island. Its vibrant rhythm infects everyone who listens.",
+            "Cuba's History": "Cuba's history is rich and varied, from the colonial era to the revolution. Cities like Havana and Trinidad are witnesses to this past, with monuments and museums that tell the story of the island.",
+            "Cuban Cuisine": "Cuban cuisine, with dishes like 'Ropa Vieja' and 'Moros y Cristianos', combines unique flavors that reflect the multicultural heritage of the island. Local restaurants offer an authentic culinary experience.",
+            "Art in Cuba": "Art in Cuba is diverse and vibrant, from painting and sculpture to theater and dance. Havana, in particular, is a center of contemporary art with renowned galleries and museums.",
+            "Hotels in Cuba": "Hotels in Cuba, from the elegant colonial hotels in Havana to the all-inclusive resorts in Varadero, offer a wide range of options to suit all tastes and budgets.",
+            "Cuban Traditions": "Cuban traditions, such as popular festivals and religious celebrations, reflect the rich cultural heritage of the island. These traditions are kept alive through music, dance, and food.",
+            "Nature in Cuba": "Nature in Cuba is diverse and preserved, with national parks, natural reserves, and wetlands that host rich biodiversity. It is a paradise for nature lovers and wildlife enthusiasts.",
+            "Events in Cuba": "Events in Cuba, from music festivals to cultural celebrations, offer a window into the life and culture of the island. These events are an opportunity to experience the energy and joy of Cuba.",
+            "Cuban Architecture": "Cuban architecture, with its mix of colonial and modern styles, is an architectural jewel. Cities like Havana and Trinidad are living examples of this rich architectural heritage.",
+            "Diving in Cuba": "Diving in Cuba, especially in places like Cayo Coco and the Isle of Youth, offers some of the best diving experiences in the Caribbean. Its clear waters and coral reefs attract divers from around the world.",
+            "Popular Festivals in Cuba": "Popular festivals in Cuba, such as the Havana Carnival and religious celebrations, are a manifestation of joy and community. These festivals are a feast for the senses.",
+            "Transport in Cuba": "Transport in Cuba, from classic American cars to buses and taxis, offers a unique experience. Exploring the island is an adventure in itself.",
+            "Natural Reserves in Cuba": "Natural reserves in Cuba, such as the Sabana-Camagüey Archipelago Biosphere Reserve and Viñales National Park, protect rich biodiversity and offer opportunities to explore Cuban nature."
         }
+
     };
 
     return (
-        <div className="bg-white dark:bg-gray-800 my-2 mx-2 p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-4 dark:text-white">{language == 'es' ? `"Información de interes"` : `"Interest Information"`} </h2>
+        <div className="bg-slate-300 dark:bg-gray-800 my-2 mx-2 p-6 rounded-lg shadow-md">
+            {/* <h2 className="text-2xl font-bold mb-4 dark:text-white">{language == 'es' ? `"Información de interes"` : `"Interest Information"`} </h2> */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {Object.keys(content[language]).map((key) => (
                     <div key={key} className="mb-4">
                         <h3 className="text-xl font-bold mb-2 dark:text-white">{key}</h3>
-                        <p className="text-gray-700 dark:text-gray-300">{content[language][key]}</p>
+                        <p className="text-gray-700 font-serif dark:text-gray-300">{content[language][key]}</p>
                     </div>
                 ))}
             </div>

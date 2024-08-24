@@ -91,9 +91,10 @@ Cities with colonial architecture, natural parks and paradisiacal beaches are wa
           <div>
             <div className="">
               <Image
+                loading="lazy"
                 src="/assets/wft/logo X en png.webp"
                 alt="hero image"
-                className="rounded-full w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] relative"
+                className="rounded-full relative"
                 width={300}
                 height={300}
               />
@@ -133,7 +134,7 @@ const TextDisplay = ({ language, mainText }) => {
     <div className="text-justify mr-4 mt-4 text-slate-500 dark:text-white font-semibold">
       <p>{displayText}</p>
       {text.length > 200 && (
-        <button className="text-blue-500 hover:text-blue-700" onClick={() => setShowFullText(!showFullText)}>
+        <button className="text-gray-800 hover:text-blue-700" onClick={() => setShowFullText(!showFullText)}>
 
           {showFullText ? 'Leer menos' : 'Leer más'}
         </button>

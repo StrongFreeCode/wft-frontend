@@ -82,6 +82,7 @@ export const Contact = () => {
           <div className="flex flex-col shadow-2xl dark:shadow-slate-600 m-0 p-2 w-full dark:bg-slate-700 bg-slate-200 rounded-lg hover:scale-105 transition duration-300">
             <div className="flex flex-col-1 justify-left items-center ">
               <Image
+                loading="lazy"
                 className="rounded-full"
                 alt="una imagen de avatar"
                 src={avatar}

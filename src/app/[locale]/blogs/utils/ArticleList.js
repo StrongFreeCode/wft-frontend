@@ -415,7 +415,8 @@ const ArticleList = () => {
                 {articles.map((article, index) => (
                     <article key={index} className="flex flex-col shadow my-4">
                         <a href="#" className="hover:opacity-75">
-                            <Image src={article.imageSrc} alt={article.title} width={768} height={400} />
+                            <Image
+                                loading="lazy" src={article.imageSrc} alt={article.title} width={768} height={400} />
                         </a>
                         <div className="bg-white flex flex-col justify-start p-6">
                             <span className="text-blue-700 text-sm font-bold uppercase pb-4">{article.category}</span>
