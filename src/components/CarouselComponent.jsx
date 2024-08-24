@@ -1,8 +1,8 @@
 import { Carousel } from "flowbite-react";
 import Image from "next/image";
-import varadero from "../../public/assets/yainie/playa-varadero-cuba.jpg";
-import portada from "../../public/assets/yainie/portada.webp";
-import tercera from "../../public/assets/yainie/1b847c_e65f6f4f99024d9382b5b6650e7136c2~mv2.webp";
+import varadero from "../../public/assets/yainie/playa-varadero-cuba.webp";
+import portada from "../../public/assets/yainie/portada2.webp";
+import tercera from "../../public/assets/yainie/portada3.webp";
 
 const customTheme = {
   root: {
@@ -45,11 +45,29 @@ export const CarouselComponent = () => {
     <div className="h-56  sm:h-64 xl:h-80 2xl:h-96 overscroll-none">
       <Carousel theme={customTheme}>
         <Image
-          priority src={varadero} alt="..." width={768} height={90} />
+          priority
+          src={varadero}
+          alt="playa varadero"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          width={768}
+          height={90}
+        />
         <Image
-          loading="lazy" src={portada} alt="..." width={768} height={90} />
+          loading="lazy"
+          src={portada}
+          alt="Valle viñales"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          width={768}
+          height={90}
+        />
         <Image
-          loading="lazy" src={tercera} alt="..." width={768} height={90} />
+          loading="lazy"
+          src={tercera}
+          alt="Habana vieja"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          width={768}
+          height={90}
+        />
       </Carousel>
     </div>
   );

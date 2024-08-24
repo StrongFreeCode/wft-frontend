@@ -119,6 +119,7 @@ export const NavbarComponent = () => {
           <Contact />
         </div>
         <DarkThemeToggle className="block md:hidden" />
+        <label hidden className={`text-xs`}>Language</label>
         <select
           className="block ml-1 max-w-9 max-h-9 md:hidden dark:text-slate-100 bg-transparent"
           value={language}
