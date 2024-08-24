@@ -1,5 +1,5 @@
-/** @type {import('next').NextConfig} */
-import createNextIntlPlugin from 'next-intl/plugin'
+import withBundleAnalyzer from '@next/bundle-analyzer';
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
 
@@ -7,11 +7,15 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                hostname: 'images.unsplash.com'
-            }
-        ]
-    }
-
+                hostname: 'images.unsplash.com',
+            },
+        ],
+    },
+    webpack: (config, { isServer }) => {
+        // Personaliza la configuración de Webpack aquí si es necesario
+        return config;
+    },
+    // Otras configuraciones de Next.js
 };
-export default withNextIntl(nextConfig);
-///export default nextConfig;
+
+export default withBundleAnalyzer({ enabled: process.env.ANALYZE === 'true' })(withNextIntl(nextConfig));
