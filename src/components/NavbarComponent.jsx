@@ -105,7 +105,7 @@ export const NavbarComponent = () => {
         <Image
           width={50}
           height={50}
-          src="/assets/wft/logo X en png.png"
+          src="/assets/wft/logo X en png.webp"
           className="h-12 ml-12 md:ml-0 sm:h-16"
           alt="Flowbite React Logo"
         />

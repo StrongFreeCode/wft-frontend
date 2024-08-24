@@ -78,7 +78,7 @@ export default function Example() {
             width={300}
             height={300}
             className=" h-[300px] w-[300px] object-cover  rounded-full"
-            src="\assets\wft\logo X en png.png"
+            src="\assets\wft\logo X en png.webp"
             alt=""
           />
         </div>
@@ -139,7 +139,7 @@ export default function Example() {
             width={500}
             height={500}
             className=" h-full w-full object-cover  "
-            src="\assets\varadero.jpg"
+            src="\assets\wft\varadero.webp"
             alt=""
           />
         </div>

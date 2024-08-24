@@ -60,7 +60,7 @@
       ],
       "images": [
         { "id": 20, "url": "/img-2068-1-1-large.jpg" },
-        { "id": 13, "url": "/Varadero.jpg" }
+        { "id": 13, "url": "/Varadero.webp" }
       ],
       "created_at": "2024-04-14T12:39:05.000000Z",
       "updated_at": "2024-04-14T12:39:05.000000Z"
@@ -129,7 +129,7 @@
           ]
         }
       ],
-      "images": [{ "id": 15, "url": "/cienaga de zapata.jpg" }],
+      "images": [{ "id": 15, "url": "/cienaga de zapata.webp" }],
       "created_at": "2024-04-14T12:39:05.000000Z",
       "updated_at": "2024-04-14T12:39:05.000000Z"
     },
@@ -219,7 +219,7 @@
         }
       ],
 
-      "images": [{ "id": 3, "url": "/trinidad.jpg" }],
+      "images": [{ "id": 3, "url": "/trinidad.webp" }],
       "created_at": "2024-04-14T12:39:06.000000Z",
       "updated_at": "2024-04-14T12:39:06.000000Z"
     },
@@ -322,7 +322,7 @@
         }
       ],
 
-      "images": [{ "id": 3, "url": "/La-Habana.jpg" }],
+      "images": [{ "id": 3, "url": "/La-Habana.webp" }],
       "created_at": "2024-04-14T12:39:06.000000Z",
       "updated_at": "2024-04-14T12:39:06.000000Z"
     },
@@ -366,7 +366,7 @@
           "images": [
             {
               "id": 5,
-              "url": "/assets/images/Cuevas de saturno/1611942391-cueva-saturno-excursion-obligatoria-vas-varadero.jpg"
+              "url": "/assets/images/Cuevas de saturno/1611942391-cueva-saturno-excursion-obligatoria-vas-Varadero.webp"
             }
           ]
         },
@@ -392,8 +392,8 @@
         }
       ],
       "images": [
-        { "id": 20, "url": "/varadero-playa.jpg" },
-        { "id": 13, "url": "/Varadero.jpg" }
+        { "id": 20, "url": "/varadero-playa.webp" },
+        { "id": 13, "url": "/Varadero.webp" }
       ],
       "created_at": "2024-04-14T12:39:05.000000Z",
       "updated_at": "2024-04-14T12:39:05.000000Z"
@@ -460,7 +460,7 @@
       ],
       "images": [
         { "id": 20, "url": "/img-2068-1-1-large.jpg" },
-        { "id": 13, "url": "/Varadero.jpg" }
+        { "id": 13, "url": "/Varadero.webp" }
       ],
       "created_at": "2024-04-14T12:39:05.000000Z",
       "updated_at": "2024-04-14T12:39:05.000000Z"
@@ -529,7 +529,7 @@
           ]
         }
       ],
-      "images": [{ "id": 15, "url": "/cienaga de zapata.jpg" }],
+      "images": [{ "id": 15, "url": "/cienaga de zapata.webp" }],
       "created_at": "2024-04-14T12:39:05.000000Z",
       "updated_at": "2024-04-14T12:39:05.000000Z"
     },
@@ -619,7 +619,7 @@
         }
       ],
 
-      "images": [{ "id": 3, "url": "/trinidad.jpg" }],
+      "images": [{ "id": 3, "url": "/trinidad.webp" }],
       "created_at": "2024-04-14T12:39:06.000000Z",
       "updated_at": "2024-04-14T12:39:06.000000Z"
     },
@@ -722,7 +722,7 @@
         }
       ],
 
-      "images": [{ "id": 3, "url": "/La-Habana.jpg" }],
+      "images": [{ "id": 3, "url": "/La-Habana.webp" }],
       "created_at": "2024-04-14T12:39:06.000000Z",
       "updated_at": "2024-04-14T12:39:06.000000Z"
     },
@@ -766,7 +766,7 @@
           "images": [
             {
               "id": 5,
-              "url": "/assets/images/Cuevas de saturno/1611942391-cueva-saturno-excursion-obligatoria-vas-varadero.jpg"
+              "url": "/assets/images/Cuevas de saturno/1611942391-cueva-saturno-excursion-obligatoria-vas-Varadero.webp"
             }
           ]
         },
@@ -792,8 +792,8 @@
         }
       ],
       "images": [
-        { "id": 20, "url": "/varadero-playa.jpg" },
-        { "id": 13, "url": "/Varadero.jpg" }
+        { "id": 20, "url": "/varadero-playa.webp" },
+        { "id": 13, "url": "/Varadero.webp" }
       ],
       "created_at": "2024-04-14T12:39:05.000000Z",
       "updated_at": "2024-04-14T12:39:05.000000Z"
