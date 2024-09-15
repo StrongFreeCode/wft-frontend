@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { useGlobalContext } from '@/helpers/Global';
-
+import dataContacts from "../../../data/contacts.json";
 const ContactUs = () => {
     const { language } = useGlobalContext();
 
@@ -26,8 +26,22 @@ const ContactUs = () => {
 
     const selectedContent = content[language];
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        const subject = e.target.subject.value;
+        const message = e.target.message.value;
+
+        // Create the mailto link
+        const mailtoLink = `mailto:${dataContacts.contacts[1].email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`;
+
+        // Open the user's email client
+        window.location.href = mailtoLink;
+    };
+
     return (
-        <div className=" bg-gray-100 dark:bg-gray-600 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="bg-gray-100 dark:bg-gray-600 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+
             <div className="max-w-md w-full space-y-8">
                 <div>
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white">
@@ -37,7 +51,7 @@ const ContactUs = () => {
                         {selectedContent.description}
                     </p>
                 </div>
-                <form className="mt-8 space-y-6" action="#" method="POST">
+                <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
                     <input type="hidden" name="remember" value="true" />
                     <div className="rounded-md shadow-sm -space-y-px">
                         <div>

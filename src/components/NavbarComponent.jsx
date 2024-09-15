@@ -133,7 +133,7 @@ export const NavbarComponent = () => {
         {renderNavbarLink("/", t('home'), pathname === `/${language}`)}
         {renderNavbarLink("/excursions", t('excursions'), pathname === `/${language}/excursions`)}
         {renderNavbarLink("/reviews", t('reviews'), pathname === `/${language}/reviews`)}
-        {renderNavbarLink("/blogs", t('blogs'), pathname === `/${language}/blogs`)}
+        {/*    {renderNavbarLink("/blogs", t('blogs'), pathname === `/${language}/blogs`)} */}
         {renderNavbarLink("/about", t('about'), pathname === `/${language}/about`)}
       </NavbarCollapse>
       <div className="hidden md:flex md:flex-cols-1">

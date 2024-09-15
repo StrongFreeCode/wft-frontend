@@ -3,6 +3,7 @@ import { Footer, FooterBrand, FooterCopyright, FooterDivider, FooterLink, Footer
 import SocialMediaIcons from './SocialMediaIcons';
 import { useGlobalContext } from '@/helpers/Global';
 import Link from 'next/link';
+import dataContacts from "../data/contacts.json";
 
 const customTheme = {
   "root": {
@@ -71,8 +72,8 @@ export const FooterComponent = () => {
             <span itemProp="addressRegion">Cuba</span>,
             <span itemProp="postalCode">10700</span>
           </div>
-          <p itemProp="telephone" className="text-sm text-gray-800 dark:text-gray-300">+5355244394</p>
-          <p itemProp="email" className="text-sm text-gray-800 dark:text-gray-300">info@wonderfulltime.com</p>
+          <p itemProp="telephone" className="text-sm text-gray-800 dark:text-gray-300">{dataContacts.contacts[1].number}</p>
+          <p itemProp="email" className="text-sm text-gray-800 dark:text-gray-300">{dataContacts.contacts[1].email}</p>
         </div>
 
         <FooterDivider />
